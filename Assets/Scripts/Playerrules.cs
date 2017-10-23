@@ -7,10 +7,14 @@ public class Playerrules : MonoBehaviour
 	public int row;
 	public int column;
 	GameObject player;
+	public Transform weaponSpawn;
+	public GameObject weapon;
+	GameObject currentWeapon;
 	// Use this for initialization
 	void Start () 
 	{
 		transform.position = new Vector2 (row, column);
+		currentWeapon = weapon;
 	}
 	
 
@@ -25,10 +29,19 @@ public class Playerrules : MonoBehaviour
 			move(0, 1);
 		else if (Input.GetKeyDown("down"))
 			move(0, -1);
-			
-		
-	}
 
+		//base attack 
+		else if (Input.GetKeyDown("left ctrl"))
+		{
+			Instantiate(currentWeapon, weaponSpawn.position, weaponSpawn.rotation); 
+		}
+	}
+	/*
+	void attack(int x, int y)
+	{
+		
+
+	}*/
 	void move(int x, int y)
 	{
 		Vector2 start = transform.position;
