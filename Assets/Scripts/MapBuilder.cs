@@ -5,7 +5,8 @@ using System.Collections.Generic;
 public class MapBuilder : MonoBehaviour {
 
 	public int columns = 3; 										//Number of columns in our game board.
-	public int rows = 3;											//Number of rows in our game board.
+	public int rows = 3;	
+	public int time;//Number of rows in our game board.
 	public GameObject[] floorTiles;									//Array of floor prefabs.
 	
 	private Transform mapholder;
@@ -36,10 +37,10 @@ public class MapBuilder : MonoBehaviour {
 			//Instantiate Board and set boardHolder to its transform.
 			mapholder = new GameObject ("Map").transform;
 			
-			//Loop along x axis, starting from -1 (to fill corner) with floor or outerwall edge tiles.
+			//Loop along x axis, 
 			for(int x = 0; x < columns; x++)
 			{
-				//Loop along y axis, starting from -1 to place floor or outerwall tiles.
+				//Loop along y axis,.
 				for(int y = 0; y < rows; y++)
 				{
 					//Choose a random tile from our array of floor tile prefabs and prepare to instantiate it.
@@ -48,8 +49,7 @@ public class MapBuilder : MonoBehaviour {
 					
 					
 					//Instantiate the GameObject instance using the prefab chosen for toInstantiate at the Vector3 corresponding to current grid position in loop, cast it to GameObject.
-					GameObject instance =
-						Instantiate (toInstantiate, new Vector3 (x, y, 0f), Quaternion.identity) as GameObject;
+					GameObject instance = Instantiate (toInstantiate, new Vector3 (x, y, 0f), Quaternion.identity) as GameObject;
 					
 					//Set the parent of our newly instantiated object instance to boardHolder, this is just organizational to avoid cluttering hierarchy.
 					instance.transform.SetParent (mapholder);

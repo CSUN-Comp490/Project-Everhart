@@ -6,10 +6,7 @@ public class Weaponrules : MonoBehaviour {
 	public int range;
 	// Use this for initialization
 	void Start () {
-		Vector2 start = transform.position;
-		Vector2 end = start + new Vector2 (0, range);
-		transform.position = end;
-		StartCoroutine (swing ());
+				StartCoroutine (swing ());
 	}
 	
 	// Update is called once per frame
