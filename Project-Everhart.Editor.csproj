@@ -467,6 +467,9 @@
     <None Include="Assets\Tiled2Unity\Imported\rightPathOne.tiled2unity.xml" />
     <None Include="Assets\Tiled2Unity\Imported\rightPathTwo.tiled2unity.xml" />
     <None Include="Assets\Tiled2Unity\Imported\rightPathZero.tiled2unity.xml" />
+    <None Include="Assets\Tiled2Unity\Imported\sampleLargeRoom.tiled2unity.xml" />
+    <None Include="Assets\Tiled2Unity\Imported\sampleMediumRoom.tiled2unity.xml" />
+    <None Include="Assets\Tiled2Unity\Imported\sampleSmallRoom.tiled2unity.xml" />
     <None Include="Assets\Tiled2Unity\Imported\smallRoom.tiled2unity.xml" />
     <None Include="Assets\Tiled2Unity\Imported\start.tiled2unity.xml" />
     <None Include="Assets\Tiled2Unity\License.txt" />
