@@ -1,0 +1,24 @@
+﻿# Tiled2Unity generated file. Do not modify by hand.
+# Wavefront file for 'exit_mesh_0002.obj'
+
+# Vertices (Count = 4)
+v -3.2 -6.4 0
+v -6.4 -6.4 0
+v -6.4 -3.2 0
+v -3.2 -3.2 0
+
+# Texture cooridinates (Count = 4)
+vt 0.21875 0.8736842
+vt 0.234375 0.8736842
+vt 0.234375 0.8842105
+vt 0.21875 0.8842105
+
+# Normal
+vn 0 0 -1
+
+# Mesh description
+g exit_mesh_0002
+
+# Faces
+f 1/1/1 2/2/1 3/3/1 4/4/1
+
