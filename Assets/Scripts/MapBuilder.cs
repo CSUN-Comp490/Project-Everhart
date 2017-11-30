@@ -4,9 +4,9 @@ using System.Collections.Generic;
 
 public class MapBuilder : MonoBehaviour {
 
-	public int columns = 3; 										//Number of columns in our game board.
-	public int rows = 3;											//Number of rows in our game board.
-	public GameObject[] floorTiles;									//Array of floor prefabs.
+	public int columns = 3; 		  //Number of columns in our game board.
+	public int rows = 3;			  //Number of rows in our game board.
+	public GameObject[] floorTiles;	  //Array of floor prefabs.
 	
 	private Transform mapholder;
 	//A list of possible locations to place tiles.
