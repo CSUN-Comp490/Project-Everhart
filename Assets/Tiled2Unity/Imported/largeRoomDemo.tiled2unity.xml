@@ -1,7 +1,7 @@
 ﻿<?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <!--Tiled2Unity generated xml data-->
 <!--Do not modify by hand-->
-<!--Last exported: 11/30/2017 3:01:49 PM-->
+<!--Last exported: 11/30/2017 6:34:18 PM-->
 <Tiled2Unity version="1.0.13.0">
   <AssignMaterial mesh="largeRoomDemo_mesh_0001" material="terrain" />
   <AssignMaterial mesh="largeRoomDemo_mesh_0002" material="chunkMapNoGrid" />
@@ -120,21 +120,11 @@
     </GameObject>
     <GameObject name="Wall Collisions" x="0" y="0" z="0">
       <ObjectLayer offsetX="0" offsetY="0" color="#ff808080" />
-      <GameObject name="RectangleObject" x="0" y="0" rotation="0" layer="">
-        <RectangleObjectComponent tmx-object-id="38" tmx-object-name="" tmx-object-type="" tmx-object-x="0" tmx-object-y="0" tmx-object-width="800" tmx-object-height="64" tmx-object-rotation="0" />
-        <BoxCollider2D width="80" height="6.4" />
-      </GameObject>
-      <GameObject name="RectangleObject" x="73.6" y="-6.4" rotation="0" layer="">
-        <RectangleObjectComponent tmx-object-id="40" tmx-object-name="" tmx-object-type="" tmx-object-x="736" tmx-object-y="64" tmx-object-width="64" tmx-object-height="736" tmx-object-rotation="0" />
-        <BoxCollider2D width="6.4" height="73.6" />
-      </GameObject>
-      <GameObject name="RectangleObject" x="0" y="-6.4" rotation="0" layer="">
-        <RectangleObjectComponent tmx-object-id="42" tmx-object-name="" tmx-object-type="" tmx-object-x="0" tmx-object-y="64" tmx-object-width="64" tmx-object-height="672" tmx-object-rotation="0" />
-        <BoxCollider2D width="6.4" height="67.2000046" />
-      </GameObject>
-      <GameObject name="RectangleObject" x="0" y="-73.6" rotation="0" layer="">
-        <RectangleObjectComponent tmx-object-id="41" tmx-object-name="" tmx-object-type="" tmx-object-x="0" tmx-object-y="736" tmx-object-width="736" tmx-object-height="64" tmx-object-rotation="0" />
-        <BoxCollider2D width="73.6" height="6.4" />
+      <GameObject name="PolylineObject" x="0" y="0" rotation="0" layer="">
+        <PolylineObjectComponent tmx-object-id="43" tmx-object-name="" tmx-object-type="" tmx-object-x="0" tmx-object-y="0" tmx-object-width="0" tmx-object-height="0" tmx-object-rotation="0" />
+        <EdgeCollider2D>
+          <Points>0,0 80,0 80,-80 0,-80 0,-6.4 6.4,-6.4 6.4,-73.6 73.6,-73.6 73.6,-6.4 0,-6.4 0,0</Points>
+        </EdgeCollider2D>
       </GameObject>
     </GameObject>
     <GameObject name="Exit Collisions" x="0" y="0" z="0">
