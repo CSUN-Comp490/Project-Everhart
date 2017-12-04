@@ -13,8 +13,22 @@ public class Playerrules : MonoBehaviour
 	public GameObject weapon;
 	GameObject currentWeapon;
     private Animator anim;
+    public GameObject d_sword;
+    public GameObject l_sword;
+    public GameObject r_sword;
+
+
+
+    public GameObject[] swordDirections;
+    /*
+    [0] = up
+    [1] = down  
+    [2] = left 
+    [3] = right
+     */
     
 
+    
 	// Use this for initialization
 	void Start () 
 	{
@@ -23,7 +37,7 @@ public class Playerrules : MonoBehaviour
 
         transform.position = new Vector2 (row, column);
         
-		currentWeapon = weapon;
+		currentWeapon = d_sword;
 	}
 
 
@@ -35,54 +49,62 @@ public class Playerrules : MonoBehaviour
         if (Input.GetKeyDown("right"))
         {
 
+            if (moveStatus == true)
+            {
+                row = 1;
+                column = 0;
 
-            row = 1;
-            column = 0;
+                anim.SetInteger("xAxis", row);
+                anim.SetInteger("YAxis", column);
 
-            anim.SetInteger("xAxis", row);
-            anim.SetInteger("YAxis", column);
-
-            move(row, column);
-
+                move(row, column);
+            }
         }
+
         else if (Input.GetKeyDown("left"))
         {
+            if (moveStatus == true)
+            {
+                row = -1;
+                column = 0;
 
-            row = -1;
-            column = 0;
+                anim.SetInteger("xAxis", row);
+                anim.SetInteger("YAxis", column);
 
-            anim.SetInteger("xAxis", row);
-            anim.SetInteger("YAxis", column);
+                move(row, column);
 
-            move(row, column);
-
-
+            }
         }
 
         else if (Input.GetKeyDown("up"))
         {
+            if (moveStatus == true)
+            {
+                row = 0;
+                column = 1;
 
-            row = 0;
-            column = 1;
 
+                anim.SetInteger("xAxis", row);
+                anim.SetInteger("YAxis", column);
 
-            anim.SetInteger("xAxis", row);
-            anim.SetInteger("YAxis", column);
-
-            move(row, column);
-
+                move(row, column);
+            }
         }
 
         else if (Input.GetKeyDown("down"))
         {
+            if (moveStatus == true)
+            {
+                row = 0;
+                column = -1;
 
-            row = 0;
-            column = -1;
+                anim.SetInteger("xAxis", row);
+                anim.SetInteger("YAxis", column);
 
-            anim.SetInteger("xAxis", row);
-            anim.SetInteger("YAxis", column);
+                move(row, column);
 
-            move(row, column);
+            }
+
         }
 
 
@@ -91,13 +113,15 @@ public class Playerrules : MonoBehaviour
         else if (Input.GetKeyDown("w")) //attack foward
         {
 
-            row = 0;
-            column = 1;
+          
+                row = 0;
+                column = 1;
 
-            anim.SetInteger("xAxis", row);
-            anim.SetInteger("YAxis", column);
-
-            attack(0, 0);
+                anim.SetInteger("xAxis", row);
+                anim.SetInteger("YAxis", column);
+                currentWeapon = swordDirections[0];
+                attack(0, 0);
+            
         }
         else if (Input.GetKeyDown("s")) //attack down
         {
@@ -106,6 +130,7 @@ public class Playerrules : MonoBehaviour
 
             anim.SetInteger("xAxis", row);
             anim.SetInteger("YAxis", column);
+            currentWeapon = swordDirections[1];
 
             attack(0, -2);
         }
@@ -117,6 +142,7 @@ public class Playerrules : MonoBehaviour
 
             anim.SetInteger("xAxis", row);
             anim.SetInteger("YAxis", column);
+            currentWeapon = swordDirections[2];
 
             attack(-1, -1);
         }
@@ -129,7 +155,7 @@ public class Playerrules : MonoBehaviour
 
             anim.SetInteger("xAxis", row);
             anim.SetInteger("YAxis", column);
-
+            currentWeapon = swordDirections[3];
 
             attack(1, -1);
         }
@@ -145,8 +171,7 @@ public class Playerrules : MonoBehaviour
 
             anim.SetInteger("xAxis", row);
             anim.SetInteger("YAxis", column);
-
-
+            currentWeapon = swordDirections[0];
             attack(0, 1);
         }
         else if (Input.GetKeyDown("2")) //attack left
@@ -157,7 +182,7 @@ public class Playerrules : MonoBehaviour
 
             anim.SetInteger("xAxis", row);
             anim.SetInteger("YAxis", column);
-
+            currentWeapon = swordDirections[2];
 
             attack(-2, -1);
 
@@ -171,6 +196,7 @@ public class Playerrules : MonoBehaviour
 
             anim.SetInteger("xAxis", row);
             anim.SetInteger("YAxis", column);
+            currentWeapon = swordDirections[3];
             attack(2, -1);
 
         }
@@ -183,7 +209,7 @@ public class Playerrules : MonoBehaviour
 
             anim.SetInteger("xAxis", row);
             anim.SetInteger("YAxis", column);
-
+            currentWeapon = swordDirections[1];
             attack(0, -3);
         }
 
