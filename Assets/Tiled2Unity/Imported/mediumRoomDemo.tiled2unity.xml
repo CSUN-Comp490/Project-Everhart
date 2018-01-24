@@ -1,7 +1,7 @@
 ﻿<?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <!--Tiled2Unity generated xml data-->
 <!--Do not modify by hand-->
-<!--Last exported: 11/30/2017 6:34:43 PM-->
+<!--Last exported: 1/24/2018 12:07:30 PM-->
 <Tiled2Unity version="1.0.13.0">
   <AssignMaterial mesh="mediumRoomDemo_mesh_0001" material="terrain" />
   <AssignMaterial mesh="mediumRoomDemo_mesh_0002" material="chunkMapNoGrid" />
@@ -10,6 +10,12 @@
     <GameObject name="Walls" x="0" y="0" z="0">
       <TileLayer offsetX="0" offsetY="0" />
       <GameObject name="terrain" x="0" y="0" mesh="mediumRoomDemo_mesh_0001" sortingLayerName="" sortingOrder="0" opacity="1" />
+      <GameObject name="Collision">
+        <PolygonCollider2D>
+          <Path>60.8,0 0,0 0,-60.8 60.8,-60.8</Path>
+          <Path>57.6,-57.6 3.2,-57.6 3.2,-3.2 57.6,-3.2</Path>
+        </PolygonCollider2D>
+      </GameObject>
     </GameObject>
     <GameObject name="Floor" x="0" y="0" z="0">
       <TileLayer offsetX="0" offsetY="0" />
@@ -104,11 +110,21 @@
     </GameObject>
     <GameObject name="Wall Collisions" x="0" y="0" z="0">
       <ObjectLayer offsetX="0" offsetY="0" color="#ff808080" />
-      <GameObject name="PolylineObject" x="0" y="0" rotation="0" layer="">
-        <PolylineObjectComponent tmx-object-id="37" tmx-object-name="" tmx-object-type="" tmx-object-x="0" tmx-object-y="0" tmx-object-width="0" tmx-object-height="0" tmx-object-rotation="0" />
-        <EdgeCollider2D>
-          <Points>0,0 60.8,0 60.8,-60.8 0,-60.8 0,-6.4 6.4,-6.4 6.4,-54.4 54.4,-54.4 54.4,-6.4 0,-6.4 0,0</Points>
-        </EdgeCollider2D>
+      <GameObject name="RectangleObject" x="0" y="0" rotation="0" layer="">
+        <RectangleObjectComponent tmx-object-id="38" tmx-object-name="" tmx-object-type="" tmx-object-x="0" tmx-object-y="0" tmx-object-width="608" tmx-object-height="64" tmx-object-rotation="0" />
+        <BoxCollider2D width="60.8" height="6.4" />
+      </GameObject>
+      <GameObject name="RectangleObject" x="54.4" y="-6.4" rotation="0" layer="">
+        <RectangleObjectComponent tmx-object-id="40" tmx-object-name="" tmx-object-type="" tmx-object-x="544" tmx-object-y="64" tmx-object-width="64" tmx-object-height="480" tmx-object-rotation="0" />
+        <BoxCollider2D width="6.4" height="48" />
+      </GameObject>
+      <GameObject name="RectangleObject" x="0" y="-6.4" rotation="0" layer="">
+        <RectangleObjectComponent tmx-object-id="41" tmx-object-name="" tmx-object-type="" tmx-object-x="0" tmx-object-y="64" tmx-object-width="64" tmx-object-height="480" tmx-object-rotation="0" />
+        <BoxCollider2D width="6.4" height="48" />
+      </GameObject>
+      <GameObject name="RectangleObject" x="0" y="-54.4" rotation="0" layer="">
+        <RectangleObjectComponent tmx-object-id="42" tmx-object-name="" tmx-object-type="" tmx-object-x="0" tmx-object-y="544" tmx-object-width="608" tmx-object-height="64" tmx-object-rotation="0" />
+        <BoxCollider2D width="60.8" height="6.4" />
       </GameObject>
     </GameObject>
     <GameObject name="Entrance Collisions" x="0" y="0" z="0">
