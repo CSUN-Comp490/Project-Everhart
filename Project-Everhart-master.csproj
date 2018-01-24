@@ -1,0 +1,459 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>10.0.20506</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{F10F2637-96A3-F6F0-1ABA-4E756C9A2277}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AssemblyName>Assembly-CSharp</AssemblyName>
+    <FileAlignment>512</FileAlignment>
+    <ProjectTypeGuids>{E097FAD1-6243-4DAD-9C02-E9B9EFC3FFC1};{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}</ProjectTypeGuids>
+    <TargetFrameworkIdentifier>.NETFramework</TargetFrameworkIdentifier>
+    <TargetFrameworkVersion>v3.5</TargetFrameworkVersion>
+    <TargetFrameworkProfile>Unity Subset v3.5</TargetFrameworkProfile>
+    <CompilerResponseFile></CompilerResponseFile>
+    <UnityProjectType>Game:1</UnityProjectType>
+    <UnityBuildTarget>StandaloneWindows:5</UnityBuildTarget>
+    <UnityVersion>2017.2.0f3</UnityVersion>
+    <RootNamespace></RootNamespace>
+    <LangVersion>4</LangVersion>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>Temp\UnityVS_bin\Debug\</OutputPath>
+    <IntermediateOutputPath>Temp\UnityVS_obj\Debug\</IntermediateOutputPath>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <DefineConstants>DEBUG;TRACE;UNITY_5_3_OR_NEWER;UNITY_5_4_OR_NEWER;UNITY_5_5_OR_NEWER;UNITY_5_6_OR_NEWER;UNITY_2017_1_OR_NEWER;UNITY_2017_2_OR_NEWER;UNITY_2017_2_0;UNITY_2017_2;UNITY_2017;UNITY_ANALYTICS;ENABLE_AUDIO;ENABLE_CACHING;ENABLE_CLOTH;ENABLE_DUCK_TYPING;ENABLE_GENERICS;ENABLE_PVR_GI;ENABLE_MICROPHONE;ENABLE_MULTIPLE_DISPLAYS;ENABLE_PHYSICS;ENABLE_SPRITERENDERER_FLIPPING;ENABLE_SPRITES;ENABLE_GRID;ENABLE_TILEMAP;ENABLE_TERRAIN;ENABLE_RAKNET;ENABLE_DIRECTOR;ENABLE_UNET;ENABLE_LZMA;ENABLE_UNITYEVENTS;ENABLE_WEBCAM;ENABLE_WWW;ENABLE_CLOUD_SERVICES_COLLAB;ENABLE_CLOUD_SERVICES_COLLAB_SOFTLOCKS;ENABLE_CLOUD_SERVICES_ADS;ENABLE_CLOUD_HUB;ENABLE_CLOUD_PROJECT_ID;ENABLE_CLOUD_SERVICES_USE_WEBREQUEST;ENABLE_CLOUD_SERVICES_UNET;ENABLE_CLOUD_SERVICES_BUILD;ENABLE_CLOUD_LICENSE;ENABLE_EDITOR_HUB;ENABLE_EDITOR_HUB_LICENSE;ENABLE_WEBSOCKET_CLIENT;ENABLE_DIRECTOR_AUDIO;ENABLE_TIMELINE;ENABLE_EDITOR_METRICS;ENABLE_EDITOR_METRICS_CACHING;ENABLE_NATIVE_ARRAY;ENABLE_SPRITE_MASKING;INCLUDE_DYNAMIC_GI;INCLUDE_GI;ENABLE_MONO_BDWGC;PLATFORM_SUPPORTS_MONO;RENDER_SOFTWARE_CURSOR;INCLUDE_PUBNUB;ENABLE_PLAYMODE_TESTS_RUNNER;ENABLE_VIDEO;ENABLE_RMGUI;ENABLE_PACKMAN;ENABLE_CUSTOM_RENDER_TEXTURE;ENABLE_STYLE_SHEETS;PLATFORM_STANDALONE_WIN;PLATFORM_STANDALONE;UNITY_STANDALONE_WIN;UNITY_STANDALONE;ENABLE_SUBSTANCE;ENABLE_RUNTIME_GI;ENABLE_MOVIES;ENABLE_NETWORK;ENABLE_CRUNCH_TEXTURE_COMPRESSION;ENABLE_UNITYWEBREQUEST;ENABLE_CLOUD_SERVICES;ENABLE_CLOUD_SERVICES_ANALYTICS;ENABLE_CLOUD_SERVICES_PURCHASING;ENABLE_CLOUD_SERVICES_CRASH_REPORTING;ENABLE_EVENT_QUEUE;ENABLE_CLUSTERINPUT;ENABLE_VR;ENABLE_AR;ENABLE_SPATIALTRACKING;ENABLE_WEBSOCKET_HOST;ENABLE_MONO;NET_2_0_SUBSET;ENABLE_PROFILER;DEBUG;TRACE;UNITY_ASSERTIONS;UNITY_EDITOR;UNITY_EDITOR_64;UNITY_EDITOR_WIN;ENABLE_NATIVE_ARRAY_CHECKS;UNITY_TEAM_LICENSE;ENABLE_VSTU</DefineConstants>
+    <AllowUnsafeBlocks>true</AllowUnsafeBlocks>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>Temp\UnityVS_bin\Release\</OutputPath>
+    <IntermediateOutputPath>Temp\UnityVS_obj\Release\</IntermediateOutputPath>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <DefineConstants>TRACE;UNITY_5_3_OR_NEWER;UNITY_5_4_OR_NEWER;UNITY_5_5_OR_NEWER;UNITY_5_6_OR_NEWER;UNITY_2017_1_OR_NEWER;UNITY_2017_2_OR_NEWER;UNITY_2017_2_0;UNITY_2017_2;UNITY_2017;UNITY_ANALYTICS;ENABLE_AUDIO;ENABLE_CACHING;ENABLE_CLOTH;ENABLE_DUCK_TYPING;ENABLE_GENERICS;ENABLE_PVR_GI;ENABLE_MICROPHONE;ENABLE_MULTIPLE_DISPLAYS;ENABLE_PHYSICS;ENABLE_SPRITERENDERER_FLIPPING;ENABLE_SPRITES;ENABLE_GRID;ENABLE_TILEMAP;ENABLE_TERRAIN;ENABLE_RAKNET;ENABLE_DIRECTOR;ENABLE_UNET;ENABLE_LZMA;ENABLE_UNITYEVENTS;ENABLE_WEBCAM;ENABLE_WWW;ENABLE_CLOUD_SERVICES_COLLAB;ENABLE_CLOUD_SERVICES_COLLAB_SOFTLOCKS;ENABLE_CLOUD_SERVICES_ADS;ENABLE_CLOUD_HUB;ENABLE_CLOUD_PROJECT_ID;ENABLE_CLOUD_SERVICES_USE_WEBREQUEST;ENABLE_CLOUD_SERVICES_UNET;ENABLE_CLOUD_SERVICES_BUILD;ENABLE_CLOUD_LICENSE;ENABLE_EDITOR_HUB;ENABLE_EDITOR_HUB_LICENSE;ENABLE_WEBSOCKET_CLIENT;ENABLE_DIRECTOR_AUDIO;ENABLE_TIMELINE;ENABLE_EDITOR_METRICS;ENABLE_EDITOR_METRICS_CACHING;ENABLE_NATIVE_ARRAY;ENABLE_SPRITE_MASKING;INCLUDE_DYNAMIC_GI;INCLUDE_GI;ENABLE_MONO_BDWGC;PLATFORM_SUPPORTS_MONO;RENDER_SOFTWARE_CURSOR;INCLUDE_PUBNUB;ENABLE_PLAYMODE_TESTS_RUNNER;ENABLE_VIDEO;ENABLE_RMGUI;ENABLE_PACKMAN;ENABLE_CUSTOM_RENDER_TEXTURE;ENABLE_STYLE_SHEETS;PLATFORM_STANDALONE_WIN;PLATFORM_STANDALONE;UNITY_STANDALONE_WIN;UNITY_STANDALONE;ENABLE_SUBSTANCE;ENABLE_RUNTIME_GI;ENABLE_MOVIES;ENABLE_NETWORK;ENABLE_CRUNCH_TEXTURE_COMPRESSION;ENABLE_UNITYWEBREQUEST;ENABLE_CLOUD_SERVICES;ENABLE_CLOUD_SERVICES_ANALYTICS;ENABLE_CLOUD_SERVICES_PURCHASING;ENABLE_CLOUD_SERVICES_CRASH_REPORTING;ENABLE_EVENT_QUEUE;ENABLE_CLUSTERINPUT;ENABLE_VR;ENABLE_AR;ENABLE_SPATIALTRACKING;ENABLE_WEBSOCKET_HOST;ENABLE_MONO;NET_2_0_SUBSET;ENABLE_PROFILER;DEBUG;TRACE;UNITY_ASSERTIONS;UNITY_EDITOR;UNITY_EDITOR_64;UNITY_EDITOR_WIN;ENABLE_NATIVE_ARRAY_CHECKS;UNITY_TEAM_LICENSE;ENABLE_VSTU</DefineConstants>
+    <AllowUnsafeBlocks>true</AllowUnsafeBlocks>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="mscorlib" />
+    <Reference Include="System" />
+    <Reference Include="System.XML" />
+    <Reference Include="System.Core" />
+    <Reference Include="Boo.Lang" />
+    <Reference Include="UnityScript.Lang" />
+    <Reference Include="System.Runtime.Serialization" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="UnityEditor">
+      <HintPath>A:/Unity/Editor/Data/Managed/UnityEditor.dll</HintPath>
+    </Reference>
+    <Reference Include="UnityEngine">
+      <HintPath>A:/Unity/Editor/Data/Managed/UnityEngine/UnityEngine.dll</HintPath>
+    </Reference>
+    <Reference Include="UnityEngine.CoreModule">
+      <HintPath>A:/Unity/Editor/Data/Managed/UnityEngine/UnityEngine.CoreModule.dll</HintPath>
+    </Reference>
+    <Reference Include="UnityEngine.AccessibilityModule">
+      <HintPath>A:/Unity/Editor/Data/Managed/UnityEngine/UnityEngine.AccessibilityModule.dll</HintPath>
+    </Reference>
+    <Reference Include="UnityEngine.ParticleSystemModule">
+      <HintPath>A:/Unity/Editor/Data/Managed/UnityEngine/UnityEngine.ParticleSystemModule.dll</HintPath>
+    </Reference>
+    <Reference Include="UnityEngine.PhysicsModule">
+      <HintPath>A:/Unity/Editor/Data/Managed/UnityEngine/UnityEngine.PhysicsModule.dll</HintPath>
+    </Reference>
+    <Reference Include="UnityEngine.VehiclesModule">
+      <HintPath>A:/Unity/Editor/Data/Managed/UnityEngine/UnityEngine.VehiclesModule.dll</HintPath>
+    </Reference>
+    <Reference Include="UnityEngine.ClothModule">
+      <HintPath>A:/Unity/Editor/Data/Managed/UnityEngine/UnityEngine.ClothModule.dll</HintPath>
+    </Reference>
+    <Reference Include="UnityEngine.AIModule">
+      <HintPath>A:/Unity/Editor/Data/Managed/UnityEngine/UnityEngine.AIModule.dll</HintPath>
+    </Reference>
+    <Reference Include="UnityEngine.AnimationModule">
+      <HintPath>A:/Unity/Editor/Data/Managed/UnityEngine/UnityEngine.AnimationModule.dll</HintPath>
+    </Reference>
+    <Reference Include="UnityEngine.TextRenderingModule">
+      <HintPath>A:/Unity/Editor/Data/Managed/UnityEngine/UnityEngine.TextRenderingModule.dll</HintPath>
+    </Reference>
+    <Reference Include="UnityEngine.UIModule">
+      <HintPath>A:/Unity/Editor/Data/Managed/UnityEngine/UnityEngine.UIModule.dll</HintPath>
+    </Reference>
+    <Reference Include="UnityEngine.TerrainPhysicsModule">
+      <HintPath>A:/Unity/Editor/Data/Managed/UnityEngine/UnityEngine.TerrainPhysicsModule.dll</HintPath>
+    </Reference>
+    <Reference Include="UnityEngine.IMGUIModule">
+      <HintPath>A:/Unity/Editor/Data/Managed/UnityEngine/UnityEngine.IMGUIModule.dll</HintPath>
+    </Reference>
+    <Reference Include="UnityEngine.UnityWebRequestModule">
+      <HintPath>A:/Unity/Editor/Data/Managed/UnityEngine/UnityEngine.UnityWebRequestModule.dll</HintPath>
+    </Reference>
+    <Reference Include="UnityEngine.UnityWebRequestAudioModule">
+      <HintPath>A:/Unity/Editor/Data/Managed/UnityEngine/UnityEngine.UnityWebRequestAudioModule.dll</HintPath>
+    </Reference>
+    <Reference Include="UnityEngine.UnityWebRequestTextureModule">
+      <HintPath>A:/Unity/Editor/Data/Managed/UnityEngine/UnityEngine.UnityWebRequestTextureModule.dll</HintPath>
+    </Reference>
+    <Reference Include="UnityEngine.UnityWebRequestWWWModule">
+      <HintPath>A:/Unity/Editor/Data/Managed/UnityEngine/UnityEngine.UnityWebRequestWWWModule.dll</HintPath>
+    </Reference>
+    <Reference Include="UnityEngine.ClusterInputModule">
+      <HintPath>A:/Unity/Editor/Data/Managed/UnityEngine/UnityEngine.ClusterInputModule.dll</HintPath>
+    </Reference>
+    <Reference Include="UnityEngine.ClusterRendererModule">
+      <HintPath>A:/Unity/Editor/Data/Managed/UnityEngine/UnityEngine.ClusterRendererModule.dll</HintPath>
+    </Reference>
+    <Reference Include="UnityEngine.UNETModule">
+      <HintPath>A:/Unity/Editor/Data/Managed/UnityEngine/UnityEngine.UNETModule.dll</HintPath>
+    </Reference>
+    <Reference Include="UnityEngine.DirectorModule">
+      <HintPath>A:/Unity/Editor/Data/Managed/UnityEngine/UnityEngine.DirectorModule.dll</HintPath>
+    </Reference>
+    <Reference Include="UnityEngine.UnityAnalyticsModule">
+      <HintPath>A:/Unity/Editor/Data/Managed/UnityEngine/UnityEngine.UnityAnalyticsModule.dll</HintPath>
+    </Reference>
+    <Reference Include="UnityEngine.CrashReportingModule">
+      <HintPath>A:/Unity/Editor/Data/Managed/UnityEngine/UnityEngine.CrashReportingModule.dll</HintPath>
+    </Reference>
+    <Reference Include="UnityEngine.PerformanceReportingModule">
+      <HintPath>A:/Unity/Editor/Data/Managed/UnityEngine/UnityEngine.PerformanceReportingModule.dll</HintPath>
+    </Reference>
+    <Reference Include="UnityEngine.UnityConnectModule">
+      <HintPath>A:/Unity/Editor/Data/Managed/UnityEngine/UnityEngine.UnityConnectModule.dll</HintPath>
+    </Reference>
+    <Reference Include="UnityEngine.WebModule">
+      <HintPath>A:/Unity/Editor/Data/Managed/UnityEngine/UnityEngine.WebModule.dll</HintPath>
+    </Reference>
+    <Reference Include="UnityEngine.ARModule">
+      <HintPath>A:/Unity/Editor/Data/Managed/UnityEngine/UnityEngine.ARModule.dll</HintPath>
+    </Reference>
+    <Reference Include="UnityEngine.VRModule">
+      <HintPath>A:/Unity/Editor/Data/Managed/UnityEngine/UnityEngine.VRModule.dll</HintPath>
+    </Reference>
+    <Reference Include="UnityEngine.UIElementsModule">
+      <HintPath>A:/Unity/Editor/Data/Managed/UnityEngine/UnityEngine.UIElementsModule.dll</HintPath>
+    </Reference>
+    <Reference Include="UnityEngine.StyleSheetsModule">
+      <HintPath>A:/Unity/Editor/Data/Managed/UnityEngine/UnityEngine.StyleSheetsModule.dll</HintPath>
+    </Reference>
+    <Reference Include="UnityEngine.AudioModule">
+      <HintPath>A:/Unity/Editor/Data/Managed/UnityEngine/UnityEngine.AudioModule.dll</HintPath>
+    </Reference>
+    <Reference Include="UnityEngine.GameCenterModule">
+      <HintPath>A:/Unity/Editor/Data/Managed/UnityEngine/UnityEngine.GameCenterModule.dll</HintPath>
+    </Reference>
+    <Reference Include="UnityEngine.GridModule">
+      <HintPath>A:/Unity/Editor/Data/Managed/UnityEngine/UnityEngine.GridModule.dll</HintPath>
+    </Reference>
+    <Reference Include="UnityEngine.ImageConversionModule">
+      <HintPath>A:/Unity/Editor/Data/Managed/UnityEngine/UnityEngine.ImageConversionModule.dll</HintPath>
+    </Reference>
+    <Reference Include="UnityEngine.InputModule">
+      <HintPath>A:/Unity/Editor/Data/Managed/UnityEngine/UnityEngine.InputModule.dll</HintPath>
+    </Reference>
+    <Reference Include="UnityEngine.JSONSerializeModule">
+      <HintPath>A:/Unity/Editor/Data/Managed/UnityEngine/UnityEngine.JSONSerializeModule.dll</HintPath>
+    </Reference>
+    <Reference Include="UnityEngine.ParticlesLegacyModule">
+      <HintPath>A:/Unity/Editor/Data/Managed/UnityEngine/UnityEngine.ParticlesLegacyModule.dll</HintPath>
+    </Reference>
+    <Reference Include="UnityEngine.Physics2DModule">
+      <HintPath>A:/Unity/Editor/Data/Managed/UnityEngine/UnityEngine.Physics2DModule.dll</HintPath>
+    </Reference>
+    <Reference Include="UnityEngine.ScreenCaptureModule">
+      <HintPath>A:/Unity/Editor/Data/Managed/UnityEngine/UnityEngine.ScreenCaptureModule.dll</HintPath>
+    </Reference>
+    <Reference Include="UnityEngine.SpriteMaskModule">
+      <HintPath>A:/Unity/Editor/Data/Managed/UnityEngine/UnityEngine.SpriteMaskModule.dll</HintPath>
+    </Reference>
+    <Reference Include="UnityEngine.TerrainModule">
+      <HintPath>A:/Unity/Editor/Data/Managed/UnityEngine/UnityEngine.TerrainModule.dll</HintPath>
+    </Reference>
+    <Reference Include="UnityEngine.TilemapModule">
+      <HintPath>A:/Unity/Editor/Data/Managed/UnityEngine/UnityEngine.TilemapModule.dll</HintPath>
+    </Reference>
+    <Reference Include="UnityEngine.VideoModule">
+      <HintPath>A:/Unity/Editor/Data/Managed/UnityEngine/UnityEngine.VideoModule.dll</HintPath>
+    </Reference>
+    <Reference Include="UnityEngine.WindModule">
+      <HintPath>A:/Unity/Editor/Data/Managed/UnityEngine/UnityEngine.WindModule.dll</HintPath>
+    </Reference>
+    <Reference Include="UnityEngine.UI">
+      <HintPath>A:/Unity/Editor/Data/UnityExtensions/Unity/GUISystem/UnityEngine.UI.dll</HintPath>
+    </Reference>
+    <Reference Include="UnityEngine.Networking">
+      <HintPath>A:/Unity/Editor/Data/UnityExtensions/Unity/Networking/UnityEngine.Networking.dll</HintPath>
+    </Reference>
+    <Reference Include="UnityEngine.TestRunner">
+      <HintPath>A:/Unity/Editor/Data/UnityExtensions/Unity/TestRunner/UnityEngine.TestRunner.dll</HintPath>
+    </Reference>
+    <Reference Include="nunit.framework">
+      <HintPath>A:/Unity/Editor/Data/UnityExtensions/Unity/TestRunner/net35/unity-custom/nunit.framework.dll</HintPath>
+    </Reference>
+    <Reference Include="UnityEngine.Timeline">
+      <HintPath>A:/Unity/Editor/Data/UnityExtensions/Unity/Timeline/RuntimeEditor/UnityEngine.Timeline.dll</HintPath>
+    </Reference>
+    <Reference Include="UnityEngine.UIAutomation">
+      <HintPath>A:/Unity/Editor/Data/UnityExtensions/Unity/UIAutomation/UnityEngine.UIAutomation.dll</HintPath>
+    </Reference>
+    <Reference Include="UnityEngine.GoogleAudioSpatializer">
+      <HintPath>A:/Unity/Editor/Data/UnityExtensions/Unity/UnityGoogleAudioSpatializer/RuntimeEditor/UnityEngine.GoogleAudioSpatializer.dll</HintPath>
+    </Reference>
+    <Reference Include="UnityEngine.HoloLens">
+      <HintPath>A:/Unity/Editor/Data/UnityExtensions/Unity/UnityHoloLens/RuntimeEditor/UnityEngine.HoloLens.dll</HintPath>
+    </Reference>
+    <Reference Include="UnityEngine.SpatialTracking">
+      <HintPath>A:/Unity/Editor/Data/UnityExtensions/Unity/UnitySpatialTracking/RuntimeEditor/UnityEngine.SpatialTracking.dll</HintPath>
+    </Reference>
+    <Reference Include="UnityEngine.Analytics">
+      <HintPath>C:/Users/Bishop/AppData/LocalLow/Unity/cache/packages/packages.unity.com/com.unity.analytics@1.0.1/UnityEngine.Analytics.dll</HintPath>
+    </Reference>
+    <Reference Include="UnityEngine.Purchasing">
+      <HintPath>C:/Users/Bishop/AppData/LocalLow/Unity/cache/packages/packages.unity.com/com.unity.purchasing@1.0.1/UnityEngine.Purchasing.dll</HintPath>
+    </Reference>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Assets\Scripts\CoinBehavior.cs" />
+    <Compile Include="Assets\Scripts\Control.cs" />
+    <Compile Include="Assets\Scripts\Exit.cs" />
+    <Compile Include="Assets\Scripts\Gameover.cs" />
+    <Compile Include="Assets\Scripts\MapBuilder.cs" />
+    <Compile Include="Assets\Scripts\MockMenuCode.cs" />
+    <Compile Include="Assets\Scripts\Playerrules.cs" />
+    <Compile Include="Assets\Scripts\potpower.cs" />
+    <Compile Include="Assets\Scripts\ScoreManager.cs" />
+    <Compile Include="Assets\Scripts\Skeleton.cs" />
+    <Compile Include="Assets\Scripts\Teleport.cs" />
+    <Compile Include="Assets\Scripts\Trap.cs" />
+    <Compile Include="Assets\Scripts\Weaponrules.cs" />
+    <Compile Include="Assets\Tiled2Unity\Scripts\Runtime\CircleObject.cs" />
+    <Compile Include="Assets\Tiled2Unity\Scripts\Runtime\GameObjectExtensions.cs" />
+    <Compile Include="Assets\Tiled2Unity\Scripts\Runtime\GPUInstancing.cs" />
+    <Compile Include="Assets\Tiled2Unity\Scripts\Runtime\GroupLayer.cs" />
+    <Compile Include="Assets\Tiled2Unity\Scripts\Runtime\ImportBehaviour.cs" />
+    <Compile Include="Assets\Tiled2Unity\Scripts\Runtime\Layer.cs" />
+    <Compile Include="Assets\Tiled2Unity\Scripts\Runtime\Log.cs" />
+    <Compile Include="Assets\Tiled2Unity\Scripts\Runtime\ObjectLayer.cs" />
+    <Compile Include="Assets\Tiled2Unity\Scripts\Runtime\PolygonObject.cs" />
+    <Compile Include="Assets\Tiled2Unity\Scripts\Runtime\PolylineObject.cs" />
+    <Compile Include="Assets\Tiled2Unity\Scripts\Runtime\RectangleObject.cs" />
+    <Compile Include="Assets\Tiled2Unity\Scripts\Runtime\SortingLayerExposed.cs" />
+    <Compile Include="Assets\Tiled2Unity\Scripts\Runtime\SpriteDepthInMap.cs" />
+    <Compile Include="Assets\Tiled2Unity\Scripts\Runtime\TileAnimator.cs" />
+    <Compile Include="Assets\Tiled2Unity\Scripts\Runtime\TiledMap.cs" />
+    <Compile Include="Assets\Tiled2Unity\Scripts\Runtime\TileLayer.cs" />
+    <Compile Include="Assets\Tiled2Unity\Scripts\Runtime\TileObject.cs" />
+    <Compile Include="Assets\Tiled2Unity\Scripts\Runtime\TmxObject.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Assets\Tiled2Unity\Imported\_ReadMe.txt" />
+    <None Include="Assets\Tiled2Unity\Imported\empty.tiled2unity.xml" />
+    <None Include="Assets\Tiled2Unity\Imported\entrance.tiled2unity.xml" />
+    <None Include="Assets\Tiled2Unity\Imported\exit.tiled2unity.xml" />
+    <None Include="Assets\Tiled2Unity\Imported\finalExit.tiled2unity.xml" />
+    <None Include="Assets\Tiled2Unity\Imported\finalRoomBoss.tiled2unity.xml" />
+    <None Include="Assets\Tiled2Unity\Imported\finalRoomWalls.tiled2unity.xml" />
+    <None Include="Assets\Tiled2Unity\Imported\finish.tiled2unity.xml" />
+    <None Include="Assets\Tiled2Unity\Imported\floor1.tiled2unity.xml" />
+    <None Include="Assets\Tiled2Unity\Imported\floor10.tiled2unity.xml" />
+    <None Include="Assets\Tiled2Unity\Imported\floor100.tiled2unity.xml" />
+    <None Include="Assets\Tiled2Unity\Imported\floor101.tiled2unity.xml" />
+    <None Include="Assets\Tiled2Unity\Imported\floor102.tiled2unity.xml" />
+    <None Include="Assets\Tiled2Unity\Imported\floor103.tiled2unity.xml" />
+    <None Include="Assets\Tiled2Unity\Imported\floor104.tiled2unity.xml" />
+    <None Include="Assets\Tiled2Unity\Imported\floor105.tiled2unity.xml" />
+    <None Include="Assets\Tiled2Unity\Imported\floor106.tiled2unity.xml" />
+    <None Include="Assets\Tiled2Unity\Imported\floor107.tiled2unity.xml" />
+    <None Include="Assets\Tiled2Unity\Imported\floor108.tiled2unity.xml" />
+    <None Include="Assets\Tiled2Unity\Imported\floor109.tiled2unity.xml" />
+    <None Include="Assets\Tiled2Unity\Imported\floor11.tiled2unity.xml" />
+    <None Include="Assets\Tiled2Unity\Imported\floor110.tiled2unity.xml" />
+    <None Include="Assets\Tiled2Unity\Imported\floor111.tiled2unity.xml" />
+    <None Include="Assets\Tiled2Unity\Imported\floor112.tiled2unity.xml" />
+    <None Include="Assets\Tiled2Unity\Imported\floor113.tiled2unity.xml" />
+    <None Include="Assets\Tiled2Unity\Imported\floor114.tiled2unity.xml" />
+    <None Include="Assets\Tiled2Unity\Imported\floor115.tiled2unity.xml" />
+    <None Include="Assets\Tiled2Unity\Imported\floor116.tiled2unity.xml" />
+    <None Include="Assets\Tiled2Unity\Imported\floor117.tiled2unity.xml" />
+    <None Include="Assets\Tiled2Unity\Imported\floor118.tiled2unity.xml" />
+    <None Include="Assets\Tiled2Unity\Imported\floor119.tiled2unity.xml" />
+    <None Include="Assets\Tiled2Unity\Imported\floor12.tiled2unity.xml" />
+    <None Include="Assets\Tiled2Unity\Imported\floor120.tiled2unity.xml" />
+    <None Include="Assets\Tiled2Unity\Imported\floor121.tiled2unity.xml" />
+    <None Include="Assets\Tiled2Unity\Imported\floor122.tiled2unity.xml" />
+    <None Include="Assets\Tiled2Unity\Imported\floor123.tiled2unity.xml" />
+    <None Include="Assets\Tiled2Unity\Imported\floor124.tiled2unity.xml" />
+    <None Include="Assets\Tiled2Unity\Imported\floor125.tiled2unity.xml" />
+    <None Include="Assets\Tiled2Unity\Imported\floor126.tiled2unity.xml" />
+    <None Include="Assets\Tiled2Unity\Imported\floor127.tiled2unity.xml" />
+    <None Include="Assets\Tiled2Unity\Imported\floor128.tiled2unity.xml" />
+    <None Include="Assets\Tiled2Unity\Imported\floor129.tiled2unity.xml" />
+    <None Include="Assets\Tiled2Unity\Imported\floor13.tiled2unity.xml" />
+    <None Include="Assets\Tiled2Unity\Imported\floor130.tiled2unity.xml" />
+    <None Include="Assets\Tiled2Unity\Imported\floor131.tiled2unity.xml" />
+    <None Include="Assets\Tiled2Unity\Imported\floor132.tiled2unity.xml" />
+    <None Include="Assets\Tiled2Unity\Imported\floor133.tiled2unity.xml" />
+    <None Include="Assets\Tiled2Unity\Imported\floor134.tiled2unity.xml" />
+    <None Include="Assets\Tiled2Unity\Imported\floor135.tiled2unity.xml" />
+    <None Include="Assets\Tiled2Unity\Imported\floor136.tiled2unity.xml" />
+    <None Include="Assets\Tiled2Unity\Imported\floor137.tiled2unity.xml" />
+    <None Include="Assets\Tiled2Unity\Imported\floor138.tiled2unity.xml" />
+    <None Include="Assets\Tiled2Unity\Imported\floor139.tiled2unity.xml" />
+    <None Include="Assets\Tiled2Unity\Imported\floor14.tiled2unity.xml" />
+    <None Include="Assets\Tiled2Unity\Imported\floor140.tiled2unity.xml" />
+    <None Include="Assets\Tiled2Unity\Imported\floor141.tiled2unity.xml" />
+    <None Include="Assets\Tiled2Unity\Imported\floor142.tiled2unity.xml" />
+    <None Include="Assets\Tiled2Unity\Imported\floor143.tiled2unity.xml" />
+    <None Include="Assets\Tiled2Unity\Imported\floor144.tiled2unity.xml" />
+    <None Include="Assets\Tiled2Unity\Imported\floor145.tiled2unity.xml" />
+    <None Include="Assets\Tiled2Unity\Imported\floor146.tiled2unity.xml" />
+    <None Include="Assets\Tiled2Unity\Imported\floor147.tiled2unity.xml" />
+    <None Include="Assets\Tiled2Unity\Imported\floor148.tiled2unity.xml" />
+    <None Include="Assets\Tiled2Unity\Imported\floor149.tiled2unity.xml" />
+    <None Include="Assets\Tiled2Unity\Imported\floor15.tiled2unity.xml" />
+    <None Include="Assets\Tiled2Unity\Imported\floor150.tiled2unity.xml" />
+    <None Include="Assets\Tiled2Unity\Imported\floor151.tiled2unity.xml" />
+    <None Include="Assets\Tiled2Unity\Imported\floor152.tiled2unity.xml" />
+    <None Include="Assets\Tiled2Unity\Imported\floor16.tiled2unity.xml" />
+    <None Include="Assets\Tiled2Unity\Imported\floor17.tiled2unity.xml" />
+    <None Include="Assets\Tiled2Unity\Imported\floor18.tiled2unity.xml" />
+    <None Include="Assets\Tiled2Unity\Imported\floor19.tiled2unity.xml" />
+    <None Include="Assets\Tiled2Unity\Imported\floor2.tiled2unity.xml" />
+    <None Include="Assets\Tiled2Unity\Imported\floor20.tiled2unity.xml" />
+    <None Include="Assets\Tiled2Unity\Imported\floor21.tiled2unity.xml" />
+    <None Include="Assets\Tiled2Unity\Imported\floor22.tiled2unity.xml" />
+    <None Include="Assets\Tiled2Unity\Imported\floor23.tiled2unity.xml" />
+    <None Include="Assets\Tiled2Unity\Imported\floor24.tiled2unity.xml" />
+    <None Include="Assets\Tiled2Unity\Imported\floor25.tiled2unity.xml" />
+    <None Include="Assets\Tiled2Unity\Imported\floor26.tiled2unity.xml" />
+    <None Include="Assets\Tiled2Unity\Imported\floor27.tiled2unity.xml" />
+    <None Include="Assets\Tiled2Unity\Imported\floor28.tiled2unity.xml" />
+    <None Include="Assets\Tiled2Unity\Imported\floor29.tiled2unity.xml" />
+    <None Include="Assets\Tiled2Unity\Imported\floor3.tiled2unity.xml" />
+    <None Include="Assets\Tiled2Unity\Imported\floor30.tiled2unity.xml" />
+    <None Include="Assets\Tiled2Unity\Imported\floor31.tiled2unity.xml" />
+    <None Include="Assets\Tiled2Unity\Imported\floor32.tiled2unity.xml" />
+    <None Include="Assets\Tiled2Unity\Imported\floor33.tiled2unity.xml" />
+    <None Include="Assets\Tiled2Unity\Imported\floor34.tiled2unity.xml" />
+    <None Include="Assets\Tiled2Unity\Imported\floor35.tiled2unity.xml" />
+    <None Include="Assets\Tiled2Unity\Imported\floor36.tiled2unity.xml" />
+    <None Include="Assets\Tiled2Unity\Imported\floor37.tiled2unity.xml" />
+    <None Include="Assets\Tiled2Unity\Imported\floor38.tiled2unity.xml" />
+    <None Include="Assets\Tiled2Unity\Imported\floor39.tiled2unity.xml" />
+    <None Include="Assets\Tiled2Unity\Imported\floor4.tiled2unity.xml" />
+    <None Include="Assets\Tiled2Unity\Imported\floor40.tiled2unity.xml" />
+    <None Include="Assets\Tiled2Unity\Imported\floor41.tiled2unity.xml" />
+    <None Include="Assets\Tiled2Unity\Imported\floor42.tiled2unity.xml" />
+    <None Include="Assets\Tiled2Unity\Imported\floor43.tiled2unity.xml" />
+    <None Include="Assets\Tiled2Unity\Imported\floor44.tiled2unity.xml" />
+    <None Include="Assets\Tiled2Unity\Imported\floor45.tiled2unity.xml" />
+    <None Include="Assets\Tiled2Unity\Imported\floor46.tiled2unity.xml" />
+    <None Include="Assets\Tiled2Unity\Imported\floor47.tiled2unity.xml" />
+    <None Include="Assets\Tiled2Unity\Imported\floor48.tiled2unity.xml" />
+    <None Include="Assets\Tiled2Unity\Imported\floor49.tiled2unity.xml" />
+    <None Include="Assets\Tiled2Unity\Imported\floor5.tiled2unity.xml" />
+    <None Include="Assets\Tiled2Unity\Imported\floor50.tiled2unity.xml" />
+    <None Include="Assets\Tiled2Unity\Imported\floor51.tiled2unity.xml" />
+    <None Include="Assets\Tiled2Unity\Imported\floor52.tiled2unity.xml" />
+    <None Include="Assets\Tiled2Unity\Imported\floor53.tiled2unity.xml" />
+    <None Include="Assets\Tiled2Unity\Imported\floor54.tiled2unity.xml" />
+    <None Include="Assets\Tiled2Unity\Imported\floor55.tiled2unity.xml" />
+    <None Include="Assets\Tiled2Unity\Imported\floor56.tiled2unity.xml" />
+    <None Include="Assets\Tiled2Unity\Imported\floor57.tiled2unity.xml" />
+    <None Include="Assets\Tiled2Unity\Imported\floor58.tiled2unity.xml" />
+    <None Include="Assets\Tiled2Unity\Imported\floor59.tiled2unity.xml" />
+    <None Include="Assets\Tiled2Unity\Imported\floor6.tiled2unity.xml" />
+    <None Include="Assets\Tiled2Unity\Imported\floor60.tiled2unity.xml" />
+    <None Include="Assets\Tiled2Unity\Imported\floor61.tiled2unity.xml" />
+    <None Include="Assets\Tiled2Unity\Imported\floor62.tiled2unity.xml" />
+    <None Include="Assets\Tiled2Unity\Imported\floor63.tiled2unity.xml" />
+    <None Include="Assets\Tiled2Unity\Imported\floor64.tiled2unity.xml" />
+    <None Include="Assets\Tiled2Unity\Imported\floor65.tiled2unity.xml" />
+    <None Include="Assets\Tiled2Unity\Imported\floor66.tiled2unity.xml" />
+    <None Include="Assets\Tiled2Unity\Imported\floor67.tiled2unity.xml" />
+    <None Include="Assets\Tiled2Unity\Imported\floor68.tiled2unity.xml" />
+    <None Include="Assets\Tiled2Unity\Imported\floor69.tiled2unity.xml" />
+    <None Include="Assets\Tiled2Unity\Imported\floor7.tiled2unity.xml" />
+    <None Include="Assets\Tiled2Unity\Imported\floor70.tiled2unity.xml" />
+    <None Include="Assets\Tiled2Unity\Imported\floor71.tiled2unity.xml" />
+    <None Include="Assets\Tiled2Unity\Imported\floor72.tiled2unity.xml" />
+    <None Include="Assets\Tiled2Unity\Imported\floor73.tiled2unity.xml" />
+    <None Include="Assets\Tiled2Unity\Imported\floor74.tiled2unity.xml" />
+    <None Include="Assets\Tiled2Unity\Imported\floor75.tiled2unity.xml" />
+    <None Include="Assets\Tiled2Unity\Imported\floor76.tiled2unity.xml" />
+    <None Include="Assets\Tiled2Unity\Imported\floor77.tiled2unity.xml" />
+    <None Include="Assets\Tiled2Unity\Imported\floor78.tiled2unity.xml" />
+    <None Include="Assets\Tiled2Unity\Imported\floor79.tiled2unity.xml" />
+    <None Include="Assets\Tiled2Unity\Imported\floor8.tiled2unity.xml" />
+    <None Include="Assets\Tiled2Unity\Imported\floor80.tiled2unity.xml" />
+    <None Include="Assets\Tiled2Unity\Imported\floor81.tiled2unity.xml" />
+    <None Include="Assets\Tiled2Unity\Imported\floor82.tiled2unity.xml" />
+    <None Include="Assets\Tiled2Unity\Imported\floor83.tiled2unity.xml" />
+    <None Include="Assets\Tiled2Unity\Imported\floor84.tiled2unity.xml" />
+    <None Include="Assets\Tiled2Unity\Imported\floor85.tiled2unity.xml" />
+    <None Include="Assets\Tiled2Unity\Imported\floor86.tiled2unity.xml" />
+    <None Include="Assets\Tiled2Unity\Imported\floor87.tiled2unity.xml" />
+    <None Include="Assets\Tiled2Unity\Imported\floor88.tiled2unity.xml" />
+    <None Include="Assets\Tiled2Unity\Imported\floor89.tiled2unity.xml" />
+    <None Include="Assets\Tiled2Unity\Imported\floor9.tiled2unity.xml" />
+    <None Include="Assets\Tiled2Unity\Imported\floor90.tiled2unity.xml" />
+    <None Include="Assets\Tiled2Unity\Imported\floor91.tiled2unity.xml" />
+    <None Include="Assets\Tiled2Unity\Imported\floor92.tiled2unity.xml" />
+    <None Include="Assets\Tiled2Unity\Imported\floor93.tiled2unity.xml" />
+    <None Include="Assets\Tiled2Unity\Imported\floor94.tiled2unity.xml" />
+    <None Include="Assets\Tiled2Unity\Imported\floor95.tiled2unity.xml" />
+    <None Include="Assets\Tiled2Unity\Imported\floor96.tiled2unity.xml" />
+    <None Include="Assets\Tiled2Unity\Imported\floor97.tiled2unity.xml" />
+    <None Include="Assets\Tiled2Unity\Imported\floor98.tiled2unity.xml" />
+    <None Include="Assets\Tiled2Unity\Imported\floor99.tiled2unity.xml" />
+    <None Include="Assets\Tiled2Unity\Imported\largeRoom.tiled2unity.xml" />
+    <None Include="Assets\Tiled2Unity\Imported\largeRoomDemo.tiled2unity.xml" />
+    <None Include="Assets\Tiled2Unity\Imported\largeWalls.tiled2unity.xml" />
+    <None Include="Assets\Tiled2Unity\Imported\leftPathOne.tiled2unity.xml" />
+    <None Include="Assets\Tiled2Unity\Imported\leftPathTwo.tiled2unity.xml" />
+    <None Include="Assets\Tiled2Unity\Imported\leftPathZero.tiled2unity.xml" />
+    <None Include="Assets\Tiled2Unity\Imported\mediumRoom.tiled2unity.xml" />
+    <None Include="Assets\Tiled2Unity\Imported\mediumRoomDemo.tiled2unity.xml" />
+    <None Include="Assets\Tiled2Unity\Imported\mediumWalls.tiled2unity.xml" />
+    <None Include="Assets\Tiled2Unity\Imported\middlePathOne.tiled2unity.xml" />
+    <None Include="Assets\Tiled2Unity\Imported\middlePathTwo.tiled2unity.xml" />
+    <None Include="Assets\Tiled2Unity\Imported\middlePathZero.tiled2unity.xml" />
+    <None Include="Assets\Tiled2Unity\Imported\miniMap_base.tiled2unity.xml" />
+    <None Include="Assets\Tiled2Unity\Imported\rightPathOne.tiled2unity.xml" />
+    <None Include="Assets\Tiled2Unity\Imported\rightPathTwo.tiled2unity.xml" />
+    <None Include="Assets\Tiled2Unity\Imported\rightPathZero.tiled2unity.xml" />
+    <None Include="Assets\Tiled2Unity\Imported\sampleLargeRoom.tiled2unity.xml" />
+    <None Include="Assets\Tiled2Unity\Imported\sampleMediumRoom.tiled2unity.xml" />
+    <None Include="Assets\Tiled2Unity\Imported\sampleSmallRoom.tiled2unity.xml" />
+    <None Include="Assets\Tiled2Unity\Imported\smallRoom.tiled2unity.xml" />
+    <None Include="Assets\Tiled2Unity\Imported\smallRoomDemo.tiled2unity.xml" />
+    <None Include="Assets\Tiled2Unity\Imported\smallWalls.tiled2unity.xml" />
+    <None Include="Assets\Tiled2Unity\Imported\start.tiled2unity.xml" />
+    <None Include="Assets\Tiled2Unity\Imported\startRoom.tiled2unity.xml" />
+    <None Include="Assets\Tiled2Unity\License.txt" />
+    <None Include="Assets\Tiled2Unity\Materials\_ReadMe.txt" />
+    <None Include="Assets\Tiled2Unity\Meshes\_ReadMe.txt" />
+    <None Include="Assets\Tiled2Unity\Prefabs\_ReadMe.txt" />
+    <None Include="Assets\Tiled2Unity\Shaders\Tiled2Unity.cginc" />
+    <None Include="Assets\Tiled2Unity\Shaders\shaColorKey-Instanced.shader" />
+    <None Include="Assets\Tiled2Unity\Shaders\shaColorKey.shader" />
+    <None Include="Assets\Tiled2Unity\Shaders\shaDefault-Instanced.shader" />
+    <None Include="Assets\Tiled2Unity\Shaders\shaDefault.shader" />
+    <None Include="Assets\Tiled2Unity\Shaders\shaDepth-Instanced.shader" />
+    <None Include="Assets\Tiled2Unity\Shaders\shaDepth.shader" />
+    <None Include="Assets\Tiled2Unity\Shaders\shaDepthColorKey-Instanced.shader" />
+    <None Include="Assets\Tiled2Unity\Shaders\shaDepthColorKey.shader" />
+    <None Include="Assets\Tiled2Unity\Shaders\shaDiffuseDepth-Instanced.shader" />
+    <None Include="Assets\Tiled2Unity\Shaders\shaDiffuseDepth.shader" />
+    <None Include="Assets\Tiled2Unity\Textures\_ReadMe.txt" />
+    <None Include="Assets\Tiled2Unity\Tiled2Unity.export.txt" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <Target Name="GenerateTargetFrameworkMonikerAttribute" />
+</Project>

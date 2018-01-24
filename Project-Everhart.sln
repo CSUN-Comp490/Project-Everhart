@@ -1,9 +1,7 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
-# Visual Studio 2015
+# Visual Studio 2017
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Project-Everhart", "Project-Everhart.csproj", "{DB8C0D27-95E2-E946-7F99-87AC6816E624}"
-EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Project-Everhart.Editor", "Project-Everhart.Editor.csproj", "{CDE5A327-D09A-7949-DD71-02CF135E9EEB}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -15,10 +13,6 @@ Global
 		{DB8C0D27-95E2-E946-7F99-87AC6816E624}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{DB8C0D27-95E2-E946-7F99-87AC6816E624}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{DB8C0D27-95E2-E946-7F99-87AC6816E624}.Release|Any CPU.Build.0 = Release|Any CPU
-		{CDE5A327-D09A-7949-DD71-02CF135E9EEB}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{CDE5A327-D09A-7949-DD71-02CF135E9EEB}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{CDE5A327-D09A-7949-DD71-02CF135E9EEB}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{CDE5A327-D09A-7949-DD71-02CF135E9EEB}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
