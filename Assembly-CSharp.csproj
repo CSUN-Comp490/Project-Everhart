@@ -9,7 +9,7 @@
     <ProductVersion>10.0.20506</ProductVersion>
     <SchemaVersion>2.0</SchemaVersion>
     <RootNamespace></RootNamespace>
-    <ProjectGuid>{891BD2E6-80A2-6310-849F-1F485FB0E250}</ProjectGuid>
+    <ProjectGuid>{29B2A4B4-B4BA-6590-7666-77BD228C1583}</ProjectGuid>
     <OutputType>Library</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
     <AssemblyName>Assembly-CSharp</AssemblyName>
@@ -84,7 +84,6 @@
      <Compile Include="Assets\Tiled2Unity\Scripts\Runtime\TmxObject.cs" />
      <None Include="Assets\Tiled2Unity\Imported\floor72.tiled2unity.xml" />
      <None Include="Assets\Tiled2Unity\Shaders\shaDiffuseDepth-Instanced.shader" />
-     <None Include="Assets\Tiled2Unity\Imported\sampleLargeRoom.tiled2unity.xml" />
      <None Include="Assets\Tiled2Unity\Imported\floor14.tiled2unity.xml" />
      <None Include="Assets\Tiled2Unity\Imported\floor48.tiled2unity.xml" />
      <None Include="Assets\Tiled2Unity\Imported\floor128.tiled2unity.xml" />
@@ -106,7 +105,6 @@
      <None Include="Assets\Tiled2Unity\Shaders\shaDepth-Instanced.shader" />
      <None Include="Assets\Tiled2Unity\Imported\floor64.tiled2unity.xml" />
      <None Include="Assets\Tiled2Unity\Imported\floor39.tiled2unity.xml" />
-     <None Include="Assets\Tiled2Unity\Prefabs\_ReadMe.txt" />
      <None Include="Assets\Tiled2Unity\Imported\floor92.tiled2unity.xml" />
      <None Include="Assets\Tiled2Unity\Imported\floor49.tiled2unity.xml" />
      <None Include="Assets\Tiled2Unity\Imported\floor110.tiled2unity.xml" />
@@ -159,7 +157,6 @@
      <None Include="Assets\Tiled2Unity\Imported\floor121.tiled2unity.xml" />
      <None Include="Assets\Tiled2Unity\Imported\floor22.tiled2unity.xml" />
      <None Include="Assets\Tiled2Unity\Imported\floor90.tiled2unity.xml" />
-     <None Include="Assets\Tiled2Unity\Imported\sampleSmallRoom.tiled2unity.xml" />
      <None Include="Assets\Tiled2Unity\Imported\floor147.tiled2unity.xml" />
      <None Include="Assets\Tiled2Unity\Imported\floor7.tiled2unity.xml" />
      <None Include="Assets\Tiled2Unity\Imported\floor18.tiled2unity.xml" />
@@ -227,7 +224,6 @@
      <None Include="Assets\Tiled2Unity\Imported\floor124.tiled2unity.xml" />
      <None Include="Assets\Tiled2Unity\Imported\floor20.tiled2unity.xml" />
      <None Include="Assets\Tiled2Unity\Imported\mediumRoomDemo.tiled2unity.xml" />
-     <None Include="Assets\Tiled2Unity\Imported\sampleMediumRoom.tiled2unity.xml" />
      <None Include="Assets\Tiled2Unity\Imported\floor34.tiled2unity.xml" />
      <None Include="Assets\Tiled2Unity\Imported\floor53.tiled2unity.xml" />
      <None Include="Assets\Tiled2Unity\Shaders\shaColorKey-Instanced.shader" />
@@ -353,7 +349,7 @@
  <HintPath>C:/Program Files/Unity/Editor/Data/PlaybackEngines/windowsstandalonesupport/UnityEditor.WindowsStandalone.Extensions.dll</HintPath>
  </Reference>
  <Reference Include="SyntaxTree.Mono.Cecil">
- <HintPath>C:/Users/Sam/Desktop/Project-Everhart-master - Copy/Assets/UnityVS/Editor/SyntaxTree.Mono.Cecil.dll</HintPath>
+ <HintPath>C:/Users/Sam/Documents/School/CSUN/Fall 2017/COMP490/Project Everhart/Project-Everhart/Assets/UnityVS/Editor/SyntaxTree.Mono.Cecil.dll</HintPath>
  </Reference>
  <Reference Include="UnityEngine.Advertisements">
  <HintPath>C:/Users/Sam/AppData/LocalLow/Unity/cache/packages/packages.unity.com/com.unity.ads@2.0.3/UnityEngine.Advertisements.dll</HintPath>
