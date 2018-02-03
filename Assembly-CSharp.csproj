@@ -51,14 +51,17 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
+     <Compile Include="Assets\Scripts\BasicEnemy.cs" />
      <Compile Include="Assets\Scripts\CoinBehavior.cs" />
      <Compile Include="Assets\Scripts\Control.cs" />
+     <Compile Include="Assets\Scripts\EnemyTerritory.cs" />
      <Compile Include="Assets\Scripts\Exit.cs" />
      <Compile Include="Assets\Scripts\Gameover.cs" />
-     <Compile Include="Assets\Scripts\MapBuilder.cs" />
+     <Compile Include="Assets\Scripts\LevelBuilder.cs" />
      <Compile Include="Assets\Scripts\MockMenuCode.cs" />
      <Compile Include="Assets\Scripts\Playerrules.cs" />
      <Compile Include="Assets\Scripts\potpower.cs" />
+     <Compile Include="Assets\Scripts\RoomBuilder.cs" />
      <Compile Include="Assets\Scripts\ScoreManager.cs" />
      <Compile Include="Assets\Scripts\Skeleton.cs" />
      <Compile Include="Assets\Scripts\Teleport.cs" />
