@@ -4,19 +4,18 @@ using UnityEngine;
 
 public class RoomBuilder : MonoBehaviour {
 
-	public Transform walls;
-	public Transform entrance;
-	public Transform exit;
-	public Transform finalExit;
+	public GameObject walls;
+	public GameObject entrance;
+	public GameObject exit;
+	public GameObject finalExit;
 	public GameObject[] floorPrefabs = new GameObject[4];
+	//public GameObject[] actualTiles = new GameObject[4];
 	public int[,] floorTiles;
 	public float size;
 	public float squareLength = 3.2f;
 	public float wallWidth = 6.4f;
 	public float tileWidth = 9.6f;
 	public bool isFinalExit;
-
-	//add function to delete all instances to "reset" the world
 
 	void Start () {
 		//initialize array of floorTiles to 0 (empty)
@@ -38,17 +37,22 @@ public class RoomBuilder : MonoBehaviour {
 			100f - (wallWidth) - ((size*2f)*(tileWidth)),0f);
 
 		//place wall prefab
-		Instantiate(walls,new Vector3((size-1f)*100f,100f,0f),Quaternion.identity);
+		Instantiate(walls,new Vector3((size-1f)*100f,100f,0f),Quaternion.identity,this.transform);
 
 		//place exit
 		isFinalExit = false;
-		if (!isFinalExit) Instantiate(exit,upperRight,Quaternion.identity);
-		else Instantiate(finalExit,upperRight,Quaternion.identity);
-		floorTiles[0,((int)size*2)] = 1; //temp set upperRight spot to 1 (occupied)
+		int a = Random.Range(0,(int)size*2);
+		Vector3 exitPosition = new Vector3 (((size-1f)*100f) + wallWidth + (a*tileWidth),100f - wallWidth,0f);
+		if (!isFinalExit) Instantiate(exit,exitPosition,Quaternion.identity,this.transform);
+		else Instantiate(finalExit,exitPosition,Quaternion.identity,this.transform);
+		floorTiles[0,a] = 1; 
 
 		//place entrance
-		Instantiate(entrance,bottomLeft,Quaternion.identity);
-		floorTiles[((int)size*2),0] = 1; //temp set bottomLeft spot to 1 (occupied)
+		int b = Random.Range(0,(int)size*2);
+		Vector3 entrancePosition = new Vector3(((size-1f)*100f) + (wallWidth) + (b*tileWidth),
+			100f - (wallWidth) - ((size*2f)*(tileWidth)),0f);
+		Instantiate(entrance,entrancePosition,Quaternion.identity,this.transform);
+		floorTiles[((int)size*2),b] = 1;
 
 		//for each remaining index spot place a random prefab
 		for(int i = 0; i < (((int)size*2)+1); i++)
@@ -61,7 +65,7 @@ public class RoomBuilder : MonoBehaviour {
 					//pick random floor prefab from array
 					GameObject randomFloorTile = Instantiate(floorPrefab,
 						new Vector3(((size-1f)*100f)+(wallWidth)+(j*tileWidth), 100f-(wallWidth)-(i*tileWidth), 0f),
-						Quaternion.identity) as GameObject;
+						Quaternion.identity,this.transform);
 					floorTiles[i,j] = 1;
 				}
 			}
@@ -71,6 +75,6 @@ public class RoomBuilder : MonoBehaviour {
 
 	void Update () 
 	{
-		
+				
 	}
 }

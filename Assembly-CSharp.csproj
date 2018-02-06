@@ -51,10 +51,8 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
-     <Compile Include="Assets\Scripts\BasicEnemy.cs" />
      <Compile Include="Assets\Scripts\CoinBehavior.cs" />
      <Compile Include="Assets\Scripts\Control.cs" />
-     <Compile Include="Assets\Scripts\EnemyTerritory.cs" />
      <Compile Include="Assets\Scripts\Exit.cs" />
      <Compile Include="Assets\Scripts\Gameover.cs" />
      <Compile Include="Assets\Scripts\LevelBuilder.cs" />
