@@ -20,6 +20,7 @@ public class LevelBuilder : MonoBehaviour
 		Instantiate(smallRoom,this.transform);
 		Instantiate(mediumRoom,this.transform);
 		Instantiate(largeRoom,this.transform);
+
 		//connect the rooms
 
 	}

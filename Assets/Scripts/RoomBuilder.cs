@@ -6,7 +6,6 @@ public class RoomBuilder : MonoBehaviour {
 
 	public GameObject startPrefab, finalPrefab, walls, entrance, exit, finalExit;
 	public GameObject[] floorPrefabs = new GameObject[4];
-	//public GameObject[] actualTiles = new GameObject[4];
 	public int[,] floorTiles;
 	public float size; //(final=-2,start=-1,small=1,medium=2,large=3)
 	public int orientation, a, b; //variables for entrance/exit placement
