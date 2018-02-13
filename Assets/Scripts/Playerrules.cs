@@ -122,7 +122,7 @@ public class Playerrules : MonoBehaviour
 
     }
     void OnCollisionEnter2D(Collision2D other)
-    {
+    {	
         if (other.gameObject.tag == "Monster")
         {
             Damage(-1);

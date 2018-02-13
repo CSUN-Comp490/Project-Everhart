@@ -1,7 +1,7 @@
 ﻿<?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <!--Tiled2Unity generated xml data-->
 <!--Do not modify by hand-->
-<!--Last exported: 2/6/2018 1:18:10 PM-->
+<!--Last exported: 2/12/2018 5:44:37 PM-->
 <Tiled2Unity version="1.0.13.0">
   <AssignMaterial mesh="mediumWalls_mesh_0001" material="terrain" />
   <AssignMaterial mesh="mediumWalls_mesh_0002" material="Shading" />
@@ -22,20 +22,20 @@
     </GameObject>
     <GameObject name="Wall Collisions" x="0" y="0" z="0">
       <ObjectLayer offsetX="0" offsetY="0" color="#ff808080" />
-      <GameObject name="RectangleObject" x="0" y="0" rotation="0" layer="">
-        <RectangleObjectComponent tmx-object-id="3" tmx-object-name="" tmx-object-type="" tmx-object-x="0" tmx-object-y="0" tmx-object-width="608" tmx-object-height="64" tmx-object-rotation="0" />
+      <GameObject name="med wall collision 4" x="0" y="0" rotation="0" tag="Wall" layer="Wall">
+        <RectangleObjectComponent tmx-object-id="3" tmx-object-name="med wall collision 4" tmx-object-type="Wall" tmx-object-x="0" tmx-object-y="0" tmx-object-width="608" tmx-object-height="64" tmx-object-rotation="0" />
         <BoxCollider2D width="60.8" height="6.4" />
       </GameObject>
-      <GameObject name="RectangleObject" x="0" y="-6.4" rotation="0" layer="">
-        <RectangleObjectComponent tmx-object-id="4" tmx-object-name="" tmx-object-type="" tmx-object-x="0" tmx-object-y="64" tmx-object-width="64" tmx-object-height="480" tmx-object-rotation="0" />
+      <GameObject name="med wall collision 3" x="0" y="-6.4" rotation="0" tag="Wall" layer="Wall">
+        <RectangleObjectComponent tmx-object-id="4" tmx-object-name="med wall collision 3" tmx-object-type="Wall" tmx-object-x="0" tmx-object-y="64" tmx-object-width="64" tmx-object-height="480" tmx-object-rotation="0" />
         <BoxCollider2D width="6.4" height="48" />
       </GameObject>
-      <GameObject name="RectangleObject" x="54.4" y="-6.4" rotation="0" layer="">
-        <RectangleObjectComponent tmx-object-id="6" tmx-object-name="" tmx-object-type="" tmx-object-x="544" tmx-object-y="64" tmx-object-width="64" tmx-object-height="480" tmx-object-rotation="0" />
+      <GameObject name="med wall collision 2" x="54.4" y="-6.4" rotation="0" tag="Wall" layer="Wall">
+        <RectangleObjectComponent tmx-object-id="6" tmx-object-name="med wall collision 2" tmx-object-type="Wall" tmx-object-x="544" tmx-object-y="64" tmx-object-width="64" tmx-object-height="480" tmx-object-rotation="0" />
         <BoxCollider2D width="6.4" height="48" />
       </GameObject>
-      <GameObject name="RectangleObject" x="0" y="-54.4" rotation="0" layer="">
-        <RectangleObjectComponent tmx-object-id="7" tmx-object-name="" tmx-object-type="" tmx-object-x="0" tmx-object-y="544" tmx-object-width="608" tmx-object-height="64" tmx-object-rotation="0" />
+      <GameObject name="med wall collision 1" x="0" y="-54.4" rotation="0" tag="Wall" layer="Wall">
+        <RectangleObjectComponent tmx-object-id="7" tmx-object-name="med wall collision 1" tmx-object-type="Wall" tmx-object-x="0" tmx-object-y="544" tmx-object-width="608" tmx-object-height="64" tmx-object-rotation="0" />
         <BoxCollider2D width="60.8" height="6.4" />
       </GameObject>
     </GameObject>

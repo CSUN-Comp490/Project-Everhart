@@ -29,5 +29,6 @@ namespace Tiled2Unity
 
         [Tooltip("Rotation of object in Tiled TMX file")]
         public float TmxRotation;
+
     }
 }
