@@ -1,22 +1,28 @@
 ﻿<?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <!--Tiled2Unity generated xml data-->
 <!--Do not modify by hand-->
-<!--Last exported: 11/1/2017 1:51:01 AM-->
+<!--Last exported: 2/14/2018 12:28:49 PM-->
 <Tiled2Unity version="1.0.13.0">
   <AssignMaterial mesh="floor13_mesh_0001" material="terrain" />
   <Prefab name="floor13" orientation="Orthogonal" staggerAxis="Y" staggerIndex="Odd" hexSideLength="0" numLayers="1" numTilesWide="3" numTilesHigh="3" tileWidth="32" tileHeight="32" exportScale="0.1" mapWidthInPixels="96" mapHeightInPixels="96" backgroundColor="#808080">
     <GameObject name="Tile Layer 1" x="0" y="0" z="0">
       <TileLayer offsetX="0" offsetY="0" />
       <GameObject name="terrain" x="0" y="0" mesh="floor13_mesh_0001" sortingLayerName="" sortingOrder="0" opacity="1" />
+      <GameObject name="Collision">
+        <PolygonCollider2D>
+          <Path>6.4,0 3.2,0 3.2,-3.2 6.4,-3.2</Path>
+          <Path>3.2,-6.4 0,-6.4 0,-9.6 3.2,-9.6</Path>
+        </PolygonCollider2D>
+      </GameObject>
     </GameObject>
     <GameObject name="Collisions" x="0" y="0" z="0">
       <ObjectLayer offsetX="0" offsetY="0" color="#ff808080" />
-      <GameObject name="RectangleObject" x="3.2" y="0" rotation="0" layer="">
-        <RectangleObjectComponent tmx-object-id="1" tmx-object-name="" tmx-object-type="" tmx-object-x="32" tmx-object-y="0" tmx-object-width="32" tmx-object-height="32" tmx-object-rotation="0" />
+      <GameObject name="hole collision" x="3.2" y="0" rotation="0" tag="Hole" layer="Hole">
+        <RectangleObjectComponent tmx-object-id="1" tmx-object-name="hole collision" tmx-object-type="Hole" tmx-object-x="32" tmx-object-y="0" tmx-object-width="32" tmx-object-height="32" tmx-object-rotation="0" />
         <BoxCollider2D width="3.2" height="3.2" />
       </GameObject>
-      <GameObject name="RectangleObject" x="0" y="-6.4" rotation="0" layer="">
-        <RectangleObjectComponent tmx-object-id="9" tmx-object-name="" tmx-object-type="" tmx-object-x="0" tmx-object-y="64" tmx-object-width="32" tmx-object-height="32" tmx-object-rotation="0" />
+      <GameObject name="hole collision" x="0" y="-6.4" rotation="0" tag="Hole" layer="Hole">
+        <RectangleObjectComponent tmx-object-id="9" tmx-object-name="hole collision" tmx-object-type="Hole" tmx-object-x="0" tmx-object-y="64" tmx-object-width="32" tmx-object-height="32" tmx-object-rotation="0" />
         <BoxCollider2D width="3.2" height="3.2" />
       </GameObject>
     </GameObject>
