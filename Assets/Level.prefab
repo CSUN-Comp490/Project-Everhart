@@ -1,0 +1,74 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!1001 &100100000
+Prefab:
+  m_ObjectHideFlags: 1
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 0}
+    m_Modifications: []
+    m_RemovedComponents: []
+  m_ParentPrefab: {fileID: 0}
+  m_RootGameObject: {fileID: 1074053045826988}
+  m_IsPrefabParent: 1
+--- !u!1 &1074053045826988
+GameObject:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  serializedVersion: 5
+  m_Component:
+  - component: {fileID: 4087368750429518}
+  - component: {fileID: 114242121844937754}
+  - component: {fileID: 210033101721175978}
+  m_Layer: 0
+  m_Name: Level
+  m_TagString: Level
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &4087368750429518
+Transform:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1074053045826988}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &114242121844937754
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1074053045826988}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c256ca94eb4dbd941808dbdf6809fc93, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  start: {fileID: 1172422367697562, guid: eb10f88fd2ebf3144bdef29936bc8c42, type: 2}
+  final: {fileID: 1462338143155806, guid: 6a81b4d0a81218a41904440064b71a29, type: 2}
+  small: {fileID: 1336695157297038, guid: ad512a6542f7e9241b9e2ce2bd6c1d94, type: 2}
+  medium: {fileID: 1631877402478298, guid: 7c4211178bcb0b844aafa6009cf10e14, type: 2}
+  large: {fileID: 1136557703658792, guid: 2501a26ab4d70b94882a3e2b4ff71e59, type: 2}
+  startSpawn: {x: 0, y: 0, z: 0}
+  finalSpawn: {x: 0, y: 0, z: 0}
+  smallSpawn: {x: 0, y: 0, z: 0}
+  mediumSpawn: {x: 0, y: 0, z: 0}
+  largeSpawn: {x: 0, y: 0, z: 0}
+--- !u!210 &210033101721175978
+SortingGroup:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1074053045826988}
+  m_Enabled: 1
+  m_SortingLayerID: -175267175
+  m_SortingLayer: 1
+  m_SortingOrder: 0

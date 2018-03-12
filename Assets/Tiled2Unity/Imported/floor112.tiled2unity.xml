@@ -1,7 +1,7 @@
 ﻿<?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <!--Tiled2Unity generated xml data-->
 <!--Do not modify by hand-->
-<!--Last exported: 2/14/2018 12:37:12 PM-->
+<!--Last exported: 2/21/2018 12:39:41 PM-->
 <Tiled2Unity version="1.0.13.0">
   <AssignMaterial mesh="floor112_mesh_0001" material="terrain" />
   <Prefab name="floor112" orientation="Orthogonal" staggerAxis="Y" staggerIndex="Odd" hexSideLength="0" numLayers="1" numTilesWide="3" numTilesHigh="3" tileWidth="32" tileHeight="32" exportScale="0.1" mapWidthInPixels="96" mapHeightInPixels="96" backgroundColor="#808080">
@@ -16,9 +16,9 @@
     </GameObject>
     <GameObject name="Collisions" x="0" y="0" z="-0.333333343">
       <ObjectLayer offsetX="0" offsetY="0" color="#ff808080" />
-      <GameObject name="hole collisions" x="9.6" y="0" rotation="90" tag="Hole" layer="Hole">
-        <RectangleObjectComponent tmx-object-id="19" tmx-object-name="hole collisions" tmx-object-type="Hole" tmx-object-x="96" tmx-object-y="0" tmx-object-width="32" tmx-object-height="96" tmx-object-rotation="90" />
-        <BoxCollider2D width="3.2" height="9.6" />
+      <GameObject name="hole collision" x="0" y="0" rotation="0" tag="Hole" layer="Hole">
+        <RectangleObjectComponent tmx-object-id="21" tmx-object-name="hole collision" tmx-object-type="Hole" tmx-object-x="0" tmx-object-y="0" tmx-object-width="96" tmx-object-height="32" tmx-object-rotation="0" />
+        <BoxCollider2D width="9.6" height="3.2" />
       </GameObject>
     </GameObject>
   </Prefab>

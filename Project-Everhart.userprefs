@@ -1,11 +1,11 @@
 ﻿<Properties StartupItem="Assembly-CSharp.csproj">
   <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" PreferredExecutionTarget="Unity.Instance.Unity Editor" />
-  <MonoDevelop.Ide.Workbench ActiveDocument="Assets\Scripts\RoomBuilder.cs">
+  <MonoDevelop.Ide.Workbench ActiveDocument="Assets\Scripts\Playerrules.cs">
     <Files>
-      <File FileName="Assets\Scripts\Skeleton.cs" Line="1" Column="1" />
-      <File FileName="Assets\Scripts\Playerrules.cs" Line="1" Column="1" />
-      <File FileName="Assets\Scripts\RoomBuilder.cs" Line="8" Column="54" />
-      <File FileName="Assets\Scripts\LevelBuilder.cs" Line="1" Column="1" />
+      <File FileName="Assets\Scripts\PlayerBehaviour.cs" Line="59" Column="24" />
+      <File FileName="Assets\Scripts\GameManager.cs" Line="59" Column="43" NotebookId="1" />
+      <File FileName="Assets\Scripts\RoomBuilder.cs" Line="32" Column="46" NotebookId="1" />
+      <File FileName="Assets\Scripts\Playerrules.cs" Line="172" Column="65" NotebookId="1" />
     </Files>
   </MonoDevelop.Ide.Workbench>
   <MonoDevelop.Ide.DebuggingService.Breakpoints>

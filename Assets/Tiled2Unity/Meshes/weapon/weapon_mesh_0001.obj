@@ -1,0 +1,24 @@
+﻿# Tiled2Unity generated file. Do not modify by hand.
+# Wavefront file for 'weapon_mesh_0001.obj'
+
+# Vertices (Count = 4)
+v 0 -3.2 -1
+v -3.2 -3.2 -1
+v -3.2 0 -1
+v 0 0 -1
+
+# Texture cooridinates (Count = 4)
+vt 0.390625 0.03157896
+vt 0.40625 0.03157896
+vt 0.40625 0.04210526
+vt 0.390625 0.04210526
+
+# Normal
+vn 0 0 -1
+
+# Mesh description
+g weapon_mesh_0001
+
+# Faces
+f 1/1/1 2/2/1 3/3/1 4/4/1
+

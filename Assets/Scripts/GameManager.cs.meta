@@ -1,0 +1,20 @@
+fileFormatVersion: 2
+guid: ce4f47e7488a8c5428b27f4675a87ca9
+timeCreated: 1519628158
+licenseType: Free
+MonoImporter:
+  externalObjects: {}
+  serializedVersion: 2
+  defaultReferences:
+  - camera: {fileID: 20566831308321916, guid: f9b4663fd5728ef478b2a128d6904a24, type: 2}
+  - player: {fileID: 1015730477657878, guid: cd1eb8011f9f1404cbcd07ba015d2f1e, type: 2}
+  - start: {fileID: 1172422367697562, guid: eb10f88fd2ebf3144bdef29936bc8c42, type: 2}
+  - final: {fileID: 1462338143155806, guid: 6a81b4d0a81218a41904440064b71a29, type: 2}
+  - small: {fileID: 1336695157297038, guid: ad512a6542f7e9241b9e2ce2bd6c1d94, type: 2}
+  - medium: {fileID: 1631877402478298, guid: 7c4211178bcb0b844aafa6009cf10e14, type: 2}
+  - large: {fileID: 1136557703658792, guid: 2501a26ab4d70b94882a3e2b4ff71e59, type: 2}
+  executionOrder: 0
+  icon: {instanceID: 0}
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

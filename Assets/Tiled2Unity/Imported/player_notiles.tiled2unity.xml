@@ -1,0 +1,15 @@
+﻿<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<!--Tiled2Unity generated xml data-->
+<!--Do not modify by hand-->
+<!--Last exported: 2/24/2018 11:28:24 AM-->
+<Tiled2Unity version="1.0.13.0">
+  <Prefab name="player_notiles" orientation="Orthogonal" staggerAxis="Y" staggerIndex="Odd" hexSideLength="0" numLayers="0" numTilesWide="1" numTilesHigh="1" tileWidth="32" tileHeight="32" exportScale="0.1" mapWidthInPixels="32" mapHeightInPixels="32" backgroundColor="#808080">
+    <GameObject name="Collisions" x="0" y="0" z="0">
+      <ObjectLayer offsetX="0" offsetY="0" color="#ff808080" />
+      <GameObject name="player collision" x="0" y="0" rotation="0" tag="Player" layer="Player">
+        <RectangleObjectComponent tmx-object-id="1" tmx-object-name="player collision" tmx-object-type="Player" tmx-object-x="0" tmx-object-y="0" tmx-object-width="32" tmx-object-height="32" tmx-object-rotation="0" />
+        <BoxCollider2D width="3.2" height="3.2" />
+      </GameObject>
+    </GameObject>
+  </Prefab>
+</Tiled2Unity>

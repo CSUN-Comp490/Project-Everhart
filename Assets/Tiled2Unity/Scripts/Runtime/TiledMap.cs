@@ -90,7 +90,7 @@ namespace Tiled2Unity
             Vector3 bottomLeft = new Vector3(0, -GetMapHeightInPixelsScaled()) + pos_w;
 
             // To make gizmo visible, even when using depth-shader shaders, we decrease the z depth by the number of layers
-            float depth_z = -1.0f * this.NumLayers;
+			float depth_z = -1.0f * this.NumLayers;
             pos_w.z += depth_z;
             topLeft.z += depth_z;
             topRight.z += depth_z;

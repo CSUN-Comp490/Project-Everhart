@@ -54,9 +54,11 @@
      <Compile Include="Assets\Scripts\CoinBehavior.cs" />
      <Compile Include="Assets\Scripts\Control.cs" />
      <Compile Include="Assets\Scripts\Exit.cs" />
+     <Compile Include="Assets\Scripts\GameManager.cs" />
      <Compile Include="Assets\Scripts\Gameover.cs" />
      <Compile Include="Assets\Scripts\LevelBuilder.cs" />
      <Compile Include="Assets\Scripts\MockMenuCode.cs" />
+     <Compile Include="Assets\Scripts\PlayerBehaviour.cs" />
      <Compile Include="Assets\Scripts\Playerrules.cs" />
      <Compile Include="Assets\Scripts\potpower.cs" />
      <Compile Include="Assets\Scripts\RoomBuilder.cs" />
@@ -136,6 +138,7 @@
      <None Include="Assets\Tiled2Unity\Shaders\shaDepth.shader" />
      <None Include="Assets\Tiled2Unity\Shaders\shaDiffuseDepth.shader" />
      <None Include="Assets\Tiled2Unity\Imported\mediumWalls.tiled2unity.xml" />
+     <None Include="Assets\Tiled2Unity\Imported\weapon.tiled2unity.xml" />
      <None Include="Assets\Tiled2Unity\Imported\floor65.tiled2unity.xml" />
      <None Include="Assets\Tiled2Unity\Imported\floor43.tiled2unity.xml" />
      <None Include="Assets\Tiled2Unity\Imported\floor73.tiled2unity.xml" />
@@ -169,6 +172,7 @@
      <None Include="Assets\Tiled2Unity\Imported\floor46.tiled2unity.xml" />
      <None Include="Assets\Tiled2Unity\Imported\floor112.tiled2unity.xml" />
      <None Include="Assets\Tiled2Unity\Imported\leftPathTwo.tiled2unity.xml" />
+     <None Include="Assets\Tiled2Unity\Imported\player_notiles.tiled2unity.xml" />
      <None Include="Assets\Tiled2Unity\Imported\leftPathZero.tiled2unity.xml" />
      <None Include="Assets\Tiled2Unity\Imported\middlePathZero.tiled2unity.xml" />
      <None Include="Assets\Tiled2Unity\Imported\floor40.tiled2unity.xml" />
@@ -213,6 +217,7 @@
      <None Include="Assets\Tiled2Unity\Imported\floor109.tiled2unity.xml" />
      <None Include="Assets\Tiled2Unity\Imported\floor50.tiled2unity.xml" />
      <None Include="Assets\Tiled2Unity\Imported\floor74.tiled2unity.xml" />
+     <None Include="Assets\Tiled2Unity\Imported\player.tiled2unity.xml" />
      <None Include="Assets\Tiled2Unity\Imported\floor108.tiled2unity.xml" />
      <None Include="Assets\Tiled2Unity\Imported\floor116.tiled2unity.xml" />
      <None Include="Assets\Tiled2Unity\Imported\floor102.tiled2unity.xml" />
