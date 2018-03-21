@@ -9,7 +9,7 @@
     <ProductVersion>10.0.20506</ProductVersion>
     <SchemaVersion>2.0</SchemaVersion>
     <RootNamespace></RootNamespace>
-    <ProjectGuid>{E9FB4AED-0CD4-F963-44F6-553906F8BC16}</ProjectGuid>
+    <ProjectGuid>{6F316624-358A-AA0D-4582-FB2B73CA15F9}</ProjectGuid>
     <OutputType>Library</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
     <AssemblyName>Assembly-CSharp-Editor</AssemblyName>
@@ -51,6 +51,12 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
+     <Compile Include="Assets\GameSparks\Editor\GameSparksEditorFormUpload.cs" />
+     <Compile Include="Assets\GameSparks\Editor\GameSparksPopUp.cs" />
+     <Compile Include="Assets\GameSparks\Editor\GameSparksRestApi.cs" />
+     <Compile Include="Assets\GameSparks\Editor\GameSparksRestWindow.cs" />
+     <Compile Include="Assets\GameSparks\Editor\GameSparksSettingsEditor.cs" />
+     <Compile Include="Assets\GameSparks\Editor\GameSparksUnityInspector.cs" />
      <Compile Include="Assets\Tiled2Unity\Scripts\Editor\CustomTiledImporterAttribute.cs" />
      <Compile Include="Assets\Tiled2Unity\Scripts\Editor\ICustomTiledImporter.cs" />
      <Compile Include="Assets\Tiled2Unity\Scripts\Editor\ImportTiled2Unity.cs" />
@@ -124,49 +130,49 @@
  <Reference Include="UnityEditor.Graphs">
  <HintPath>C:/Program Files/Unity/Editor/Data/Managed/UnityEditor.Graphs.dll</HintPath>
  </Reference>
- <Reference Include="UnityEditor.Android.Extensions">
- <HintPath>C:/Program Files/Unity/Editor/Data/PlaybackEngines/AndroidPlayer/UnityEditor.Android.Extensions.dll</HintPath>
- </Reference>
- <Reference Include="UnityEditor.iOS.Extensions">
- <HintPath>C:/Program Files/Unity/Editor/Data/PlaybackEngines/iOSSupport/UnityEditor.iOS.Extensions.dll</HintPath>
- </Reference>
  <Reference Include="UnityEditor.WindowsStandalone.Extensions">
  <HintPath>C:/Program Files/Unity/Editor/Data/PlaybackEngines/windowsstandalonesupport/UnityEditor.WindowsStandalone.Extensions.dll</HintPath>
  </Reference>
  <Reference Include="SyntaxTree.Mono.Cecil">
- <HintPath>C:/Users/Sam/Documents/School/CSUN/Fall 2017/COMP490/Project Everhart/Project-Everhart/Assets/UnityVS/Editor/SyntaxTree.Mono.Cecil.dll</HintPath>
+ <HintPath>C:/Users/akiti/Documents/GitHub/Project-Everhart-Game/Assets/UnityVS/Editor/SyntaxTree.Mono.Cecil.dll</HintPath>
  </Reference>
  <Reference Include="UnityEngine.Advertisements">
- <HintPath>C:/Users/Sam/AppData/LocalLow/Unity/cache/packages/packages.unity.com/com.unity.ads@2.0.3/UnityEngine.Advertisements.dll</HintPath>
+ <HintPath>C:/Users/akiti/AppData/LocalLow/Unity/cache/packages/packages.unity.com/com.unity.ads@2.0.3/UnityEngine.Advertisements.dll</HintPath>
  </Reference>
  <Reference Include="UnityEditor.Advertisements">
- <HintPath>C:/Users/Sam/AppData/LocalLow/Unity/cache/packages/packages.unity.com/com.unity.ads@2.0.3/Editor/UnityEditor.Advertisements.dll</HintPath>
+ <HintPath>C:/Users/akiti/AppData/LocalLow/Unity/cache/packages/packages.unity.com/com.unity.ads@2.0.3/Editor/UnityEditor.Advertisements.dll</HintPath>
  </Reference>
  <Reference Include="UnityEngine.Analytics">
- <HintPath>C:/Users/Sam/AppData/LocalLow/Unity/cache/packages/packages.unity.com/com.unity.analytics@2.0.13/UnityEngine.Analytics.dll</HintPath>
+ <HintPath>C:/Users/akiti/AppData/LocalLow/Unity/cache/packages/packages.unity.com/com.unity.analytics@2.0.13/UnityEngine.Analytics.dll</HintPath>
  </Reference>
  <Reference Include="UnityEditor.Analytics">
- <HintPath>C:/Users/Sam/AppData/LocalLow/Unity/cache/packages/packages.unity.com/com.unity.analytics@2.0.13/Editor/UnityEditor.Analytics.dll</HintPath>
+ <HintPath>C:/Users/akiti/AppData/LocalLow/Unity/cache/packages/packages.unity.com/com.unity.analytics@2.0.13/Editor/UnityEditor.Analytics.dll</HintPath>
  </Reference>
  <Reference Include="UnityEngine.Purchasing">
- <HintPath>C:/Users/Sam/AppData/LocalLow/Unity/cache/packages/packages.unity.com/com.unity.purchasing@0.0.19/UnityEngine.Purchasing.dll</HintPath>
+ <HintPath>C:/Users/akiti/AppData/LocalLow/Unity/cache/packages/packages.unity.com/com.unity.purchasing@0.0.19/UnityEngine.Purchasing.dll</HintPath>
  </Reference>
  <Reference Include="UnityEditor.Purchasing">
- <HintPath>C:/Users/Sam/AppData/LocalLow/Unity/cache/packages/packages.unity.com/com.unity.purchasing@0.0.19/Editor/UnityEditor.Purchasing.dll</HintPath>
+ <HintPath>C:/Users/akiti/AppData/LocalLow/Unity/cache/packages/packages.unity.com/com.unity.purchasing@0.0.19/Editor/UnityEditor.Purchasing.dll</HintPath>
  </Reference>
  <Reference Include="UnityEngine.StandardEvents">
- <HintPath>C:/Users/Sam/AppData/LocalLow/Unity/cache/packages/packages.unity.com/com.unity.standardevents@1.0.10/UnityEngine.StandardEvents.dll</HintPath>
+ <HintPath>C:/Users/akiti/AppData/LocalLow/Unity/cache/packages/packages.unity.com/com.unity.standardevents@1.0.10/UnityEngine.StandardEvents.dll</HintPath>
  </Reference>
- <Reference Include="UnityEditor.iOS.Extensions.Xcode">
- <HintPath>C:/Program Files/Unity/Editor/Data/PlaybackEngines/iOSSupport/UnityEditor.iOS.Extensions.Xcode.dll</HintPath>
+ <Reference Include="GameSparks">
+ <HintPath>C:/Users/akiti/Documents/GitHub/Project-Everhart-Game/Assets/GameSparks/Plugins/GameSparks.dll</HintPath>
  </Reference>
- <Reference Include="UnityEditor.iOS.Extensions.Common">
- <HintPath>C:/Program Files/Unity/Editor/Data/PlaybackEngines/iOSSupport/UnityEditor.iOS.Extensions.Common.dll</HintPath>
+ <Reference Include="GameSparksRT">
+ <HintPath>C:/Users/akiti/Documents/GitHub/Project-Everhart-Game/Assets/GameSparks/Plugins/GameSparksRT.dll</HintPath>
+ </Reference>
+ <Reference Include="GameSparks.Api">
+ <HintPath>C:/Users/akiti/Documents/GitHub/Project-Everhart-Game/Assets/GameSparks/Plugins/GameSparks.Api.dll</HintPath>
+ </Reference>
+ <Reference Include="BouncyCastle_GameSparks">
+ <HintPath>C:/Users/akiti/Documents/GitHub/Project-Everhart-Game/Assets/GameSparks/Plugins/BouncyCastle_GameSparks.dll</HintPath>
  </Reference>
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="Assembly-CSharp.csproj">
-      <Project>{29B2A4B4-B4BA-6590-7666-77BD228C1583}</Project>      <Name>Assembly-CSharp</Name>    </ProjectReference>
+      <Project>{924D8E85-128F-43FC-65F4-27C9F5BC8877}</Project>      <Name>Assembly-CSharp</Name>    </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 

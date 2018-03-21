@@ -9,7 +9,7 @@
     <ProductVersion>10.0.20506</ProductVersion>
     <SchemaVersion>2.0</SchemaVersion>
     <RootNamespace></RootNamespace>
-    <ProjectGuid>{29B2A4B4-B4BA-6590-7666-77BD228C1583}</ProjectGuid>
+    <ProjectGuid>{924D8E85-128F-43FC-65F4-27C9F5BC8877}</ProjectGuid>
     <OutputType>Library</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
     <AssemblyName>Assembly-CSharp</AssemblyName>
@@ -51,8 +51,36 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
+     <Compile Include="Assets\GameSparks\ButtonTest.cs" />
+     <Compile Include="Assets\GameSparks\GameSparksRTUnity.cs" />
+     <Compile Include="Assets\GameSparks\GameSparksSettings.cs" />
+     <Compile Include="Assets\GameSparks\GameSparksUnity.cs" />
+     <Compile Include="Assets\GameSparks\LogInPlayer.cs" />
+     <Compile Include="Assets\GameSparks\Platforms\DefaultPlatform.cs" />
+     <Compile Include="Assets\GameSparks\Platforms\IControlledTimer.cs" />
+     <Compile Include="Assets\GameSparks\Platforms\IControlledWebSocket.cs" />
+     <Compile Include="Assets\GameSparks\Platforms\Native\detail\GameSparksNative.cs" />
+     <Compile Include="Assets\GameSparks\Platforms\Native\detail\GameSparksNativePINVOKE.cs" />
+     <Compile Include="Assets\GameSparks\Platforms\Native\detail\NativeWebSocket.cs" />
+     <Compile Include="Assets\GameSparks\Platforms\Native\NativePlatform.cs" />
+     <Compile Include="Assets\GameSparks\Platforms\Native\NativeWebSocket.cs" />
+     <Compile Include="Assets\GameSparks\Platforms\PlatformBase.cs" />
+     <Compile Include="Assets\GameSparks\Platforms\TimerController.cs" />
+     <Compile Include="Assets\GameSparks\Platforms\UnityTimer.cs" />
+     <Compile Include="Assets\GameSparks\Platforms\WebGL\SimpleJson2.cs" />
+     <Compile Include="Assets\GameSparks\Platforms\WebGL\WebGLPlatform.cs" />
+     <Compile Include="Assets\GameSparks\Platforms\WebGL\WebGLWebSocket.cs" />
+     <Compile Include="Assets\GameSparks\Platforms\WebSocketController.cs" />
+     <Compile Include="Assets\GameSparks\RegisterPlayer_HARDCODETEST.cs" />
+     <Compile Include="Assets\GameSparks\RegisterPlayer_Script.cs" />
+     <Compile Include="Assets\GameSparks\TestUI\GameSparksTestUI.cs" />
+     <Compile Include="Assets\GameSparks\Tut_Scripts\AuthenticatePlayer_SampleScript.cs" />
+     <Compile Include="Assets\GameSparks\Tut_Scripts\GameSparksManager.cs" />
+     <Compile Include="Assets\GameSparks\Tut_Scripts\RegisterPlayer_SampleScript.cs" />
+     <Compile Include="Assets\Scripts\BasicEnemy.cs" />
      <Compile Include="Assets\Scripts\CoinBehavior.cs" />
      <Compile Include="Assets\Scripts\Control.cs" />
+     <Compile Include="Assets\Scripts\EnemyTerritory.cs" />
      <Compile Include="Assets\Scripts\Exit.cs" />
      <Compile Include="Assets\Scripts\Gameover.cs" />
      <Compile Include="Assets\Scripts\MapBuilder.cs" />
@@ -87,10 +115,12 @@
      <None Include="Assets\Tiled2Unity\Imported\floor14.tiled2unity.xml" />
      <None Include="Assets\Tiled2Unity\Imported\floor48.tiled2unity.xml" />
      <None Include="Assets\Tiled2Unity\Imported\floor128.tiled2unity.xml" />
+     <None Include="Assets\GameSparks\Plugins\GameSparksRT.xml" />
      <None Include="Assets\Tiled2Unity\Imported\floor134.tiled2unity.xml" />
      <None Include="Assets\Tiled2Unity\Imported\floor28.tiled2unity.xml" />
      <None Include="Assets\Tiled2Unity\Imported\floor100.tiled2unity.xml" />
      <None Include="Assets\Tiled2Unity\Imported\middlePathOne.tiled2unity.xml" />
+     <None Include="Assets\GameSparks\Plugins\Metro\GameSparksRT.xml" />
      <None Include="Assets\Tiled2Unity\Imported\floor21.tiled2unity.xml" />
      <None Include="Assets\Tiled2Unity\Imported\floor57.tiled2unity.xml" />
      <None Include="Assets\Tiled2Unity\Imported\floor44.tiled2unity.xml" />
@@ -147,6 +177,7 @@
      <None Include="Assets\Tiled2Unity\Imported\floor98.tiled2unity.xml" />
      <None Include="Assets\Tiled2Unity\Imported\floor129.tiled2unity.xml" />
      <None Include="Assets\Tiled2Unity\Imported\floor135.tiled2unity.xml" />
+     <None Include="Assets\GameSparks\README.txt" />
      <None Include="Assets\Tiled2Unity\Imported\floor61.tiled2unity.xml" />
      <None Include="Assets\Tiled2Unity\Imported\floor27.tiled2unity.xml" />
      <None Include="Assets\Tiled2Unity\Imported\smallWalls.tiled2unity.xml" />
@@ -235,6 +266,7 @@
      <None Include="Assets\Tiled2Unity\Imported\floor125.tiled2unity.xml" />
      <None Include="Assets\Tiled2Unity\Imported\floor8.tiled2unity.xml" />
      <None Include="Assets\Tiled2Unity\Imported\floor60.tiled2unity.xml" />
+     <None Include="Assets\GameSparks\link.xml" />
      <None Include="Assets\Tiled2Unity\Imported\floor103.tiled2unity.xml" />
      <None Include="Assets\Tiled2Unity\Shaders\shaColorKey.shader" />
      <None Include="Assets\Tiled2Unity\Imported\rightPathZero.tiled2unity.xml" />
@@ -339,38 +371,44 @@
  <Reference Include="UnityEditor.Graphs">
  <HintPath>C:/Program Files/Unity/Editor/Data/Managed/UnityEditor.Graphs.dll</HintPath>
  </Reference>
- <Reference Include="UnityEditor.Android.Extensions">
- <HintPath>C:/Program Files/Unity/Editor/Data/PlaybackEngines/AndroidPlayer/UnityEditor.Android.Extensions.dll</HintPath>
- </Reference>
- <Reference Include="UnityEditor.iOS.Extensions">
- <HintPath>C:/Program Files/Unity/Editor/Data/PlaybackEngines/iOSSupport/UnityEditor.iOS.Extensions.dll</HintPath>
- </Reference>
  <Reference Include="UnityEditor.WindowsStandalone.Extensions">
  <HintPath>C:/Program Files/Unity/Editor/Data/PlaybackEngines/windowsstandalonesupport/UnityEditor.WindowsStandalone.Extensions.dll</HintPath>
  </Reference>
  <Reference Include="SyntaxTree.Mono.Cecil">
- <HintPath>C:/Users/Sam/Documents/School/CSUN/Fall 2017/COMP490/Project Everhart/Project-Everhart/Assets/UnityVS/Editor/SyntaxTree.Mono.Cecil.dll</HintPath>
+ <HintPath>C:/Users/akiti/Documents/GitHub/Project-Everhart-Game/Assets/UnityVS/Editor/SyntaxTree.Mono.Cecil.dll</HintPath>
  </Reference>
  <Reference Include="UnityEngine.Advertisements">
- <HintPath>C:/Users/Sam/AppData/LocalLow/Unity/cache/packages/packages.unity.com/com.unity.ads@2.0.3/UnityEngine.Advertisements.dll</HintPath>
+ <HintPath>C:/Users/akiti/AppData/LocalLow/Unity/cache/packages/packages.unity.com/com.unity.ads@2.0.3/UnityEngine.Advertisements.dll</HintPath>
  </Reference>
  <Reference Include="UnityEditor.Advertisements">
- <HintPath>C:/Users/Sam/AppData/LocalLow/Unity/cache/packages/packages.unity.com/com.unity.ads@2.0.3/Editor/UnityEditor.Advertisements.dll</HintPath>
+ <HintPath>C:/Users/akiti/AppData/LocalLow/Unity/cache/packages/packages.unity.com/com.unity.ads@2.0.3/Editor/UnityEditor.Advertisements.dll</HintPath>
  </Reference>
  <Reference Include="UnityEngine.Analytics">
- <HintPath>C:/Users/Sam/AppData/LocalLow/Unity/cache/packages/packages.unity.com/com.unity.analytics@2.0.13/UnityEngine.Analytics.dll</HintPath>
+ <HintPath>C:/Users/akiti/AppData/LocalLow/Unity/cache/packages/packages.unity.com/com.unity.analytics@2.0.13/UnityEngine.Analytics.dll</HintPath>
  </Reference>
  <Reference Include="UnityEditor.Analytics">
- <HintPath>C:/Users/Sam/AppData/LocalLow/Unity/cache/packages/packages.unity.com/com.unity.analytics@2.0.13/Editor/UnityEditor.Analytics.dll</HintPath>
+ <HintPath>C:/Users/akiti/AppData/LocalLow/Unity/cache/packages/packages.unity.com/com.unity.analytics@2.0.13/Editor/UnityEditor.Analytics.dll</HintPath>
  </Reference>
  <Reference Include="UnityEngine.Purchasing">
- <HintPath>C:/Users/Sam/AppData/LocalLow/Unity/cache/packages/packages.unity.com/com.unity.purchasing@0.0.19/UnityEngine.Purchasing.dll</HintPath>
+ <HintPath>C:/Users/akiti/AppData/LocalLow/Unity/cache/packages/packages.unity.com/com.unity.purchasing@0.0.19/UnityEngine.Purchasing.dll</HintPath>
  </Reference>
  <Reference Include="UnityEditor.Purchasing">
- <HintPath>C:/Users/Sam/AppData/LocalLow/Unity/cache/packages/packages.unity.com/com.unity.purchasing@0.0.19/Editor/UnityEditor.Purchasing.dll</HintPath>
+ <HintPath>C:/Users/akiti/AppData/LocalLow/Unity/cache/packages/packages.unity.com/com.unity.purchasing@0.0.19/Editor/UnityEditor.Purchasing.dll</HintPath>
  </Reference>
  <Reference Include="UnityEngine.StandardEvents">
- <HintPath>C:/Users/Sam/AppData/LocalLow/Unity/cache/packages/packages.unity.com/com.unity.standardevents@1.0.10/UnityEngine.StandardEvents.dll</HintPath>
+ <HintPath>C:/Users/akiti/AppData/LocalLow/Unity/cache/packages/packages.unity.com/com.unity.standardevents@1.0.10/UnityEngine.StandardEvents.dll</HintPath>
+ </Reference>
+ <Reference Include="GameSparks">
+ <HintPath>C:/Users/akiti/Documents/GitHub/Project-Everhart-Game/Assets/GameSparks/Plugins/GameSparks.dll</HintPath>
+ </Reference>
+ <Reference Include="GameSparksRT">
+ <HintPath>C:/Users/akiti/Documents/GitHub/Project-Everhart-Game/Assets/GameSparks/Plugins/GameSparksRT.dll</HintPath>
+ </Reference>
+ <Reference Include="GameSparks.Api">
+ <HintPath>C:/Users/akiti/Documents/GitHub/Project-Everhart-Game/Assets/GameSparks/Plugins/GameSparks.Api.dll</HintPath>
+ </Reference>
+ <Reference Include="BouncyCastle_GameSparks">
+ <HintPath>C:/Users/akiti/Documents/GitHub/Project-Everhart-Game/Assets/GameSparks/Plugins/BouncyCastle_GameSparks.dll</HintPath>
  </Reference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
