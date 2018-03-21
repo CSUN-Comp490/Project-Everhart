@@ -1,6 +1,7 @@
 ﻿using UnityEngine;
 using System.Collections;
 using UnityEngine.UI;
+using UnityEngine.SceneManagement;
 
 public class RegisterPlayer_Script : MonoBehaviour {
 
@@ -26,6 +27,7 @@ public class RegisterPlayer_Script : MonoBehaviour {
 					if(!response.HasErrors)
 					{
 						Debug.Log("Player Registered \n User Name: "+response.DisplayName);
+						SceneManager.LoadScene("Menu");
 					}
 					else
 					{
