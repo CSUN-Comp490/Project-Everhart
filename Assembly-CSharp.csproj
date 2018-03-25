@@ -73,6 +73,7 @@
      <Compile Include="Assets\GameSparks\Platforms\WebSocketController.cs" />
      <Compile Include="Assets\GameSparks\RegisterPlayer_HARDCODETEST.cs" />
      <Compile Include="Assets\GameSparks\RegisterPlayer_Script.cs" />
+     <Compile Include="Assets\GameSparks\SceneSwitch1.cs" />
      <Compile Include="Assets\GameSparks\TestUI\GameSparksTestUI.cs" />
      <Compile Include="Assets\GameSparks\Tut_Scripts\AuthenticatePlayer_SampleScript.cs" />
      <Compile Include="Assets\GameSparks\Tut_Scripts\GameSparksManager.cs" />
@@ -374,6 +375,18 @@
  <Reference Include="UnityEditor.WindowsStandalone.Extensions">
  <HintPath>C:/Program Files/Unity/Editor/Data/PlaybackEngines/windowsstandalonesupport/UnityEditor.WindowsStandalone.Extensions.dll</HintPath>
  </Reference>
+ <Reference Include="BouncyCastle_GameSparks">
+ <HintPath>C:/Users/akiti/Documents/GitHub/Project-Everhart-Game/Assets/GameSparks/Plugins/BouncyCastle_GameSparks.dll</HintPath>
+ </Reference>
+ <Reference Include="GameSparks.Api">
+ <HintPath>C:/Users/akiti/Documents/GitHub/Project-Everhart-Game/Assets/GameSparks/Plugins/GameSparks.Api.dll</HintPath>
+ </Reference>
+ <Reference Include="GameSparks">
+ <HintPath>C:/Users/akiti/Documents/GitHub/Project-Everhart-Game/Assets/GameSparks/Plugins/GameSparks.dll</HintPath>
+ </Reference>
+ <Reference Include="GameSparksRT">
+ <HintPath>C:/Users/akiti/Documents/GitHub/Project-Everhart-Game/Assets/GameSparks/Plugins/GameSparksRT.dll</HintPath>
+ </Reference>
  <Reference Include="SyntaxTree.Mono.Cecil">
  <HintPath>C:/Users/akiti/Documents/GitHub/Project-Everhart-Game/Assets/UnityVS/Editor/SyntaxTree.Mono.Cecil.dll</HintPath>
  </Reference>
@@ -397,18 +410,6 @@
  </Reference>
  <Reference Include="UnityEngine.StandardEvents">
  <HintPath>C:/Users/akiti/AppData/LocalLow/Unity/cache/packages/packages.unity.com/com.unity.standardevents@1.0.10/UnityEngine.StandardEvents.dll</HintPath>
- </Reference>
- <Reference Include="GameSparks">
- <HintPath>C:/Users/akiti/Documents/GitHub/Project-Everhart-Game/Assets/GameSparks/Plugins/GameSparks.dll</HintPath>
- </Reference>
- <Reference Include="GameSparksRT">
- <HintPath>C:/Users/akiti/Documents/GitHub/Project-Everhart-Game/Assets/GameSparks/Plugins/GameSparksRT.dll</HintPath>
- </Reference>
- <Reference Include="GameSparks.Api">
- <HintPath>C:/Users/akiti/Documents/GitHub/Project-Everhart-Game/Assets/GameSparks/Plugins/GameSparks.Api.dll</HintPath>
- </Reference>
- <Reference Include="BouncyCastle_GameSparks">
- <HintPath>C:/Users/akiti/Documents/GitHub/Project-Everhart-Game/Assets/GameSparks/Plugins/BouncyCastle_GameSparks.dll</HintPath>
  </Reference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />

@@ -1,1 +1,4 @@
-sceneSetups: []
+sceneSetups:
+- path: Assets/scenes/CreateAccount.unity
+  isLoaded: 1
+  isActive: 1
