@@ -53,6 +53,8 @@ public class Playerrules : MonoBehaviour
 		resetCamera();
 
 		currentWeapon = weapon;
+		currentWeapon.transform.position = this.transform.position;
+
 		curHp = startHearts * healthPerHeart;
 		maxHp = maxHeartsAmount * healthPerHeart;
 		//checkHp();
@@ -63,8 +65,8 @@ public class Playerrules : MonoBehaviour
 	// Update is called once per frame
 	void Update()
 	{
-		if (useItem != null)
-			useSprite.GetComponent<Image>().sprite = useItem.GetComponent<SpriteRenderer>().sprite;
+		currentWeapon.transform.position = this.transform.position;
+		if (useItem != null) useSprite.GetComponent<Image>().sprite = useItem.GetComponent<SpriteRenderer>().sprite;
 
 		if (!attacking)
 		{
@@ -72,21 +74,25 @@ public class Playerrules : MonoBehaviour
 			{
 				weaponSpawn.GetComponent<Transform>().eulerAngles =new Vector3 (0,0,-90);
 				move(3.2f, 0f,"right");
+				anim.Play("right");
 			}
 			else if (Input.GetKeyDown("left"))
 			{
 				weaponSpawn.GetComponent<Transform>().eulerAngles = new Vector3(0, 0, 90);
 				move(-3.2f, 0f,"left");
+				anim.Play("left");
 			}
 			else if (Input.GetKeyDown("up"))
 			{
 				weaponSpawn.GetComponent<Transform>().eulerAngles = new Vector3(0, 0, 0);
 				move(0f, 3.2f,"up");
+				anim.Play("up");
 			}
 			else if (Input.GetKeyDown("down"))
 			{
 				weaponSpawn.GetComponent<Transform>().eulerAngles = new Vector3(0, 0, 180);
 				move(0f, -3.2f,"down");
+				anim.Play("down");
 			}
 
 		}
@@ -122,33 +128,10 @@ public class Playerrules : MonoBehaviour
 
 	void move(float x, float y, string move)
 	{
-		if (move == "right")
-		{
-			direction = 1;
-			anim.SetTrigger("moveRight");
-		}
-		if (move == "left")
-		{
-			direction = 3;
-			anim.SetTrigger("moveLeft");
-
-		}
-		if (move == "down")
-		{
-			direction = 2;
-			anim.SetTrigger("moveDown");
-		}
-
-		if (move == "up")
-		{
-			direction = 0;
-			anim.SetTrigger("moveUp");
-		}
 		lastMove = move;
 		moveX = x;
 		moveY = y;
-		Vector3 currentPosition = transform.position;
-		this.transform.position = currentPosition + new Vector3 (x, y, 0f);
+		this.transform.position += new Vector3 (x, y, 0f);
 	}
 
 	void OnCollisionEnter2D(Collision2D other)
@@ -216,6 +199,7 @@ public class Playerrules : MonoBehaviour
 				currentPath = 0;
 				transform.position = GetComponentInParent<GameManager>().startSpawn;
 				resetCamera();
+				GetComponentInParent<GameManager>().complete = true;
 			}
 			if (currentPath == 1)
 			{

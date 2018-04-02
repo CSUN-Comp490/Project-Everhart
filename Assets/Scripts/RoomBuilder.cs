@@ -67,11 +67,6 @@ public class RoomBuilder : MonoBehaviour {
 				Instantiate (entrance, entrancePosition, Quaternion.identity, this.transform);
 				floorTiles [((int)size * 2), b] = 1;
 				spawn = new Vector3 (entrancePosition.x + 3.2f, entrancePosition.y - 3.2f, 0f);
-				/*
-				if (size == 1) GetComponentInParent<GameManager>().smallSpawn = new Vector3 (entrancePosition.x + 3.2f, entrancePosition.y - 3.2f, 0f);
-				else if (size == 2) GetComponentInParent<GameManager>().mediumSpawn = new Vector3 (entrancePosition.x + 3.2f, entrancePosition.y - 3.2f, 0f);
-				else if (size == 3) GetComponentInParent<GameManager>().largeSpawn = new Vector3 (entrancePosition.x + 3.2f, entrancePosition.y - 3.2f, 0f);
-				*/
 				}
 			else if (orientation == 1) 
 			{
@@ -88,11 +83,6 @@ public class RoomBuilder : MonoBehaviour {
 				Instantiate (entrance, entrancePosition, Quaternion.identity, this.transform);
 				floorTiles [b,0] = 1;
 				spawn = new Vector3 (entrancePosition.x + 3.2f, entrancePosition.y - 3.2f, 0f);
-				/*
-				if (size == 1) GetComponentInParent<GameManager>().smallSpawn = new Vector3 (entrancePosition.x + 3.2f, entrancePosition.y - 3.2f, 0f);
-				else if (size == 2) GetComponentInParent<GameManager>().mediumSpawn = new Vector3 (entrancePosition.x + 3.2f, entrancePosition.y - 3.2f, 0f);
-				else if (size == 3) GetComponentInParent<GameManager>().largeSpawn = new Vector3 (entrancePosition.x + 3.2f, entrancePosition.y - 3.2f, 0f);
-				*/
 			}
 
 			//for each remaining index spot place a random floor prefab
@@ -113,6 +103,13 @@ public class RoomBuilder : MonoBehaviour {
 
 	void Update () 
 	{
-		
+		if (GetComponentInParent<GameManager>().complete)
+		{
+			foreach(Transform child in transform)
+			{
+				GameObject.Destroy(child.gameObject);
+			}
+			Start();
+		}
 	}
 }
