@@ -1,7 +1,7 @@
 ﻿using UnityEngine;
 using System.Collections;
 using UnityEngine.UI;
-using UnityEngine.SceneManagement;
+//using UnityEngine.SceneManagement;
 
 public class LogInPlayer : MonoBehaviour 
 {
@@ -26,7 +26,7 @@ public class LogInPlayer : MonoBehaviour
 					if(!response.HasErrors)
 					{
 						Debug.Log("Player Authenticated... \n User Name: "+response.DisplayName);
-						SceneManager.LoadScene("Menu");
+					//	SceneManager.LoadScene("Menu");
 					}
 					else
 					{
