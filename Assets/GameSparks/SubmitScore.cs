@@ -18,13 +18,14 @@ public class SubmitScore : MonoBehaviour
 		Debug.Log ("NEW HIGH SCORE \n "+_message.LeaderboardName);
 		highScorePopup.GetComponent<Popup>().CallPopup(_message);
 	}
-	public Button yourButton;
+	public Button submitButton;
 
 	    void Start()
 	    {
-	        Button btn = yourButton.GetComponent<Button>();
+	        Button btn = submitButton.GetComponent<Button>();
 	        btn.onClick.AddListener(PostScoreBttn);
 	    }
+	 
 
 	public void PostScoreBttn()
 	{
@@ -50,7 +51,7 @@ public class SubmitScore : MonoBehaviour
 		Debug.Log ("Fetching Leaderboard Data...");
 
 		new GameSparks.Api.Requests.LeaderboardDataRequest ()
-			.SetLeaderboardShortCode ("HIGHSCORE_LEADERBOARD")
+			.SetLeaderboardShortCode ("LEADERBOARD")
 			.SetEntryCount(int.Parse(entryCount.text)) // we need to parse this text input, since the entry count only takes long
 			.Send ((response) => {
 

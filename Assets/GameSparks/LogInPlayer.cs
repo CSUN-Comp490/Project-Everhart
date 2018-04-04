@@ -20,7 +20,7 @@ public class LogInPlayer : MonoBehaviour
 		Debug.Log ("Authorizing Player...");
 		new GameSparks.Api.Requests.AuthenticationRequest ()
 			.SetUserName (userNameInput.text)
-			.SetPassword (passwordInput.text)
+			.SetPassword (passwordInput.value)
 			.Send ((response) => {
 
 					if(!response.HasErrors)
