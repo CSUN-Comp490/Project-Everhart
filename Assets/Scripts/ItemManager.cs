@@ -4,13 +4,51 @@ using UnityEngine;
 
 public class ItemManager : MonoBehaviour {
 
-	// Use this for initialization
-	void Start () {
+	void Start () 
+	{
 		
 	}
 	
-	// Update is called once per frame
-	void Update () {
+	void Update () 
+	{
+		if(GetComponentInParent<GameManager>().spawnItems) 
+		{
+			spawnItems(GetComponentInParent<GameManager>().currentRoom);
+		}
 		
+		if (GetComponentInParent<GameManager>().complete)
+		{
+			print("items reset");
+			foreach(Transform child in transform)
+			{
+				GameObject.Destroy(child.gameObject);
+			}
+			Start();
+		}
+	}
+
+	void spawnItems(int size)
+	{
+		if (GetComponentInParent<GameManager>().currentRoom == -1) //start room - do nothing
+		{
+			print("item spawn in room " + size);
+		}
+		else if (GetComponentInParent<GameManager>().currentRoom == -2) 
+		{
+			print("item spawn in room " + size);
+		}
+		else if (GetComponentInParent<GameManager>().currentRoom == 1)
+		{
+			print("item spawn in room " + size);
+		}
+		else if (GetComponentInParent<GameManager>().currentRoom == 2)
+		{
+			print("item spawn in room " + size);
+		}
+		else if (GetComponentInParent<GameManager>().currentRoom == 3)
+		{
+			print("item spawn in room " + size);
+		}
+		GetComponentInParent<GameManager>().spawnItems = false;
 	}
 }

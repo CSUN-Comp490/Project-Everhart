@@ -69,7 +69,7 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1399173710048722}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalPosition: {x: 1.608, y: 0.019, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 4991275998796898}
@@ -186,14 +186,11 @@ MonoBehaviour:
   itemsTest: []
   useSprite: {fileID: 0}
   coinsTest: {fileID: 0}
-  direction: 0
-  row: 0
-  column: 0
   currency: 0
-  weaponSpawn: {fileID: 4002651045649108}
-  weapon: {fileID: 1000013166879524, guid: e31a349b0243f3f44bbc6b7ac7d978bf, type: 2}
   useItem: {fileID: 0}
   tomb: {fileID: 1350606066345966, guid: 0e8ec1d847c7cbf42b7f8edf63bb5507, type: 2}
+  weapon: {fileID: 1000013166879524, guid: e31a349b0243f3f44bbc6b7ac7d978bf, type: 2}
+  weaponSpawn: {fileID: 4002651045649108}
   atkRate: 0.5
   nextAtk: 1
   currentRoom: 0

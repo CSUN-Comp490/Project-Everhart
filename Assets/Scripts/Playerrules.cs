@@ -21,20 +21,17 @@ public class Playerrules : MonoBehaviour
 	public GameObject coinsTest;
 	int dice;
 
-	public int direction;
-	public int row;
-	public int column;
-	GameObject player;
 	public int currency = 0;
-	public Transform weaponSpawn;
-	public GameObject weapon;
+
 	public GameObject useItem;
 	public GameObject tomb;
-	GameObject currentWeapon;
-	private bool attacking = false;
 
 	Animator anim;
 
+	public GameObject weapon;
+	public Transform weaponSpawn;
+	GameObject currentWeapon;
+	private bool attacking = false;
 	public float atkRate;
 	public float nextAtk;
 
@@ -53,7 +50,7 @@ public class Playerrules : MonoBehaviour
 		resetCamera();
 
 		currentWeapon = weapon;
-		currentWeapon.transform.position = this.transform.position;
+		weaponSpawn.transform.position = this.transform.position + new Vector3(1.6f,1.6f,0f);
 
 		curHp = startHearts * healthPerHeart;
 		maxHp = maxHeartsAmount * healthPerHeart;
@@ -65,32 +62,35 @@ public class Playerrules : MonoBehaviour
 	// Update is called once per frame
 	void Update()
 	{
-		currentWeapon.transform.position = this.transform.position;
 		if (useItem != null) useSprite.GetComponent<Image>().sprite = useItem.GetComponent<SpriteRenderer>().sprite;
 
 		if (!attacking)
 		{
 			if (Input.GetKeyDown("right"))
 			{
-				weaponSpawn.GetComponent<Transform>().eulerAngles =new Vector3 (0,0,-90);
+				weaponSpawn.GetComponent<Transform>().eulerAngles = new Vector3 (0,0,-90);
+				weaponSpawn.transform.position = this.transform.position + new Vector3(4.8f,-1.6f,0f);
 				move(3.2f, 0f,"right");
 				anim.Play("right");
 			}
 			else if (Input.GetKeyDown("left"))
 			{
 				weaponSpawn.GetComponent<Transform>().eulerAngles = new Vector3(0, 0, 90);
+				weaponSpawn.transform.position = this.transform.position + new Vector3(-1.6f,-1.6f,0f);
 				move(-3.2f, 0f,"left");
 				anim.Play("left");
 			}
 			else if (Input.GetKeyDown("up"))
 			{
 				weaponSpawn.GetComponent<Transform>().eulerAngles = new Vector3(0, 0, 0);
+				weaponSpawn.transform.position = this.transform.position + new Vector3(1.6f,1.6f,0f);
 				move(0f, 3.2f,"up");
 				anim.Play("up");
 			}
 			else if (Input.GetKeyDown("down"))
 			{
 				weaponSpawn.GetComponent<Transform>().eulerAngles = new Vector3(0, 0, 180);
+				weaponSpawn.transform.position = this.transform.position + new Vector3(1.6f,-4.8f,0f);
 				move(0f, -3.2f,"down");
 				anim.Play("down");
 			}
@@ -191,27 +191,40 @@ public class Playerrules : MonoBehaviour
 		}
 		if (other.gameObject.tag == "Exit") 
 		{
-			//temp send player back to start after final room
+			//send player back to start after final room
 			if (currentRoom == -2) 
 			{
 				roomNum = 0;
 				currentRoom = -1;
 				currentPath = 0;
+				GetComponentInParent<GameManager>().roomsComplete++;
 				transform.position = GetComponentInParent<GameManager>().startSpawn;
 				resetCamera();
 				GetComponentInParent<GameManager>().complete = true;
 			}
+			//send player to next room of onePath
 			if (currentPath == 1)
 			{
 				roomNum++;
+				GetComponentInParent<GameManager>().roomsComplete++;
 				currentRoom = GetComponentInParent<GameManager>().oneRooms[roomNum];
+				GetComponentInParent<GameManager>().currentRoom = currentRoom;
+
+				spawnTIE();
+
 				transform.position = GetComponentInParent<GameManager>().oneSpawns[roomNum];
 				resetCamera();
 			}
+			//send player to next room of twoPath
 			if (currentPath == 2)
 			{
 				roomNum++;
+				GetComponentInParent<GameManager>().roomsComplete++;
 				currentRoom = GetComponentInParent<GameManager>().twoRooms[roomNum];
+				GetComponentInParent<GameManager>().currentRoom = currentRoom;
+
+				spawnTIE();
+
 				transform.position = GetComponentInParent<GameManager>().twoSpawns[roomNum];
 				resetCamera();
 			}
@@ -224,6 +237,10 @@ public class Playerrules : MonoBehaviour
 		currentPath = 0;
 		//set to first room in that path
 		currentRoom = GetComponentInParent<GameManager>().zeroRoom;
+		GetComponentInParent<GameManager>().currentRoom = currentRoom;
+
+		spawnTIE();
+
 		//move player
 		transform.position = GetComponentInParent<GameManager>().zeroSpawn;
 		//move camera (temp)
@@ -237,6 +254,10 @@ public class Playerrules : MonoBehaviour
 		currentPath = 1;
 		//set to first room in that path
 		currentRoom = GetComponentInParent<GameManager>().oneRooms[roomNum];
+		GetComponentInParent<GameManager>().currentRoom = currentRoom;
+
+		spawnTIE();
+		
 		//move player
 		transform.position = GetComponentInParent<GameManager>().oneSpawns[roomNum];
 		//move camera (temp)
@@ -250,6 +271,10 @@ public class Playerrules : MonoBehaviour
 		currentPath = 2;
 		//set to first room in that path
 		currentRoom = GetComponentInParent<GameManager>().twoRooms[roomNum];
+		GetComponentInParent<GameManager>().currentRoom = currentRoom;
+
+		spawnTIE();
+
 		//move player
 		transform.position = GetComponentInParent<GameManager>().twoSpawns[roomNum];
 		//move camera (temp)
@@ -271,7 +296,7 @@ public class Playerrules : MonoBehaviour
 		if (currentRoom == 3)
 		{
 			GetComponentInParent<GameManager>().camera.transform.position = new Vector3(440f,60f,-1f);
-			GetComponentInParent<GameManager> ().camera.orthographicSize = 45;
+			GetComponentInParent<GameManager>().camera.orthographicSize = 45;
 		}
 		if (currentRoom == -1)
 		{
@@ -284,6 +309,13 @@ public class Playerrules : MonoBehaviour
 			GetComponentInParent<GameManager> ().camera.orthographicSize = 45;
 		}
 		
+	}
+
+	void spawnTIE()
+	{
+		GetComponentInParent<GameManager>().spawnEnemies = true;
+		GetComponentInParent<GameManager>().spawnItems = true;
+		GetComponentInParent<GameManager>().spawnTraps = true;
 	}
 	/*
 	void checkHp()

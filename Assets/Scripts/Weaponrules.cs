@@ -5,12 +5,15 @@ public class Weaponrules : MonoBehaviour {
 
 	public int range;
 	// Use this for initialization
-	void Start () {
-				StartCoroutine (swing ());
+	void Start () 
+	{
+		StartCoroutine(swing());
 	}
 	
 	// Update is called once per frame
-	void Update () {
+	void Update () 
+	{
+	
 	}
 
 	IEnumerator swing()

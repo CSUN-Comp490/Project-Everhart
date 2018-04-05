@@ -32,6 +32,12 @@ public class GameManager : MonoBehaviour
 	//tracking variables
 	public bool complete;
 	public int levelsComplete = 0;
+	public int totalCurrency = 0;
+	public int roomsComplete = 0;
+	public int enemiesDefeated = 0;
+
+	public int currentRoom;
+	public bool spawnEnemies, spawnItems, spawnTraps;
 
 	void Start () 
 	{
@@ -54,7 +60,12 @@ public class GameManager : MonoBehaviour
 		createPaths(0,doors,rooms);
 		createPaths(1,doors,rooms);
 		createPaths(2,doors,rooms);
+
 		complete = false;
+		currentRoom = GetComponentInChildren<Playerrules>().currentRoom;
+		spawnEnemies = false;
+		spawnItems = false;
+		spawnTraps = false;
 	}
 
 	void Update () 
@@ -62,7 +73,8 @@ public class GameManager : MonoBehaviour
 		if (complete) 
 		{
 			levelsComplete++;
-			print("Levels completed: " + levelsComplete); 
+			print("Levels completed: " + levelsComplete);
+			print("Rooms completed: " + roomsComplete);
 			Start();
 		}
 	}

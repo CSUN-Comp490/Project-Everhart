@@ -4,13 +4,51 @@ using UnityEngine;
 
 public class TrapManager : MonoBehaviour {
 
-	// Use this for initialization
-	void Start () {
+	void Start () 
+	{
 		
 	}
 	
-	// Update is called once per frame
-	void Update () {
+	void Update () 
+	{
+		if(GetComponentInParent<GameManager>().spawnTraps) 
+		{
+			spawnTraps(GetComponentInParent<GameManager>().currentRoom);
+		}
 		
+		if (GetComponentInParent<GameManager>().complete)
+		{
+			print("traps reset");
+			foreach(Transform child in transform)
+			{
+				GameObject.Destroy(child.gameObject);
+			}
+			Start();
+		}
+	}
+
+	void spawnTraps(int size)
+	{
+		if (GetComponentInParent<GameManager>().currentRoom == -1) //start room - do nothing
+		{
+			print("trap spawn in room " + size);
+		}
+		else if (GetComponentInParent<GameManager>().currentRoom == -2) 
+		{
+			print("trap spawn in room " + size);
+		}
+		else if (GetComponentInParent<GameManager>().currentRoom == 1)
+		{
+			print("trap spawn in room " + size);
+		}
+		else if (GetComponentInParent<GameManager>().currentRoom == 2)
+		{
+			print("trap spawn in room " + size);
+		}
+		else if (GetComponentInParent<GameManager>().currentRoom == 3)
+		{
+			print("trap spawn in room " + size);
+		}
+		GetComponentInParent<GameManager>().spawnTraps = false;
 	}
 }
