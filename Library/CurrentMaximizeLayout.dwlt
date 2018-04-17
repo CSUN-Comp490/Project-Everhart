@@ -21,10 +21,10 @@ MonoBehaviour:
     y: 30
     width: 1920
     height: 1067
-  m_MinSize: {x: 709, y: 471}
-  m_MaxSize: {x: 18004, y: 14021}
+  m_MinSize: {x: 713, y: 492}
+  m_MaxSize: {x: 18008, y: 14042}
   vertical: 0
-  controlID: 7980
+  controlID: 6678
 --- !u!114 &2
 MonoBehaviour:
   m_ObjectHideFlags: 52
@@ -125,7 +125,7 @@ MonoBehaviour:
   m_MinSize: {x: 202, y: 421}
   m_MaxSize: {x: 4002, y: 8021}
   vertical: 1
-  controlID: 7981
+  controlID: 6613
 --- !u!114 &4
 MonoBehaviour:
   m_ObjectHideFlags: 52
@@ -144,8 +144,8 @@ MonoBehaviour:
     y: 0
     width: 810
     height: 480
-  m_MinSize: {x: 202, y: 221}
-  m_MaxSize: {x: 4002, y: 4021}
+  m_MinSize: {x: 200, y: 200}
+  m_MaxSize: {x: 4000, y: 4000}
   m_ActualView: {fileID: 2}
   m_Panes:
   - {fileID: 2}
@@ -197,8 +197,8 @@ MonoBehaviour:
     y: 480
     width: 810
     height: 587
-  m_MinSize: {x: 202, y: 221}
-  m_MaxSize: {x: 4002, y: 4021}
+  m_MinSize: {x: 200, y: 200}
+  m_MaxSize: {x: 4000, y: 4000}
   m_ActualView: {fileID: 8}
   m_Panes:
   - {fileID: 7}
@@ -264,14 +264,14 @@ MonoBehaviour:
     height: 566
   m_PersistentViewDataDictionary: {fileID: 0}
   m_SceneLighting: 0
-  lastFramingTime: 238.49592701470365
+  lastFramingTime: 9928.101138408174
   m_2DMode: 1
   m_isRotationLocked: 0
   m_AudioPlay: 0
   m_Position:
-    m_Target: {x: 197.52727, y: 340.24164, z: -6.0429835}
+    m_Target: {x: 240.99211, y: 174.4389, z: -11.185444}
     speed: 2
-    m_Value: {x: 197.52727, y: 340.24164, z: -6.0429835}
+    m_Value: {x: 240.99211, y: 174.4389, z: -11.185444}
   m_RenderMode: 0
   m_ValidateTrueMetals: 0
   m_SceneViewState:
@@ -299,9 +299,9 @@ MonoBehaviour:
     speed: 2
     m_Value: {x: 0, y: 0, z: 0, w: 1}
   m_Size:
-    m_Target: 616.1489
+    m_Target: 22
     speed: 2
-    m_Value: 616.1489
+    m_Value: 22
   m_Ortho:
     m_Target: 1
     speed: 2
@@ -403,10 +403,10 @@ MonoBehaviour:
     y: 0
     width: 554
     height: 1067
-  m_MinSize: {x: 230, y: 471}
-  m_MaxSize: {x: 10000, y: 14021}
+  m_MinSize: {x: 234, y: 492}
+  m_MaxSize: {x: 10004, y: 14042}
   vertical: 1
-  controlID: 7954
+  controlID: 6679
 --- !u!114 &12
 MonoBehaviour:
   m_ObjectHideFlags: 52
@@ -425,8 +425,8 @@ MonoBehaviour:
     y: 0
     width: 554
     height: 263
-  m_MinSize: {x: 204, y: 221}
-  m_MaxSize: {x: 4004, y: 4021}
+  m_MinSize: {x: 200, y: 200}
+  m_MaxSize: {x: 4000, y: 4000}
   m_ActualView: {fileID: 13}
   m_Panes:
   - {fileID: 13}
@@ -460,10 +460,10 @@ MonoBehaviour:
     height: 242
   m_PersistentViewDataDictionary: {fileID: 0}
   m_TreeViewState:
-    scrollPos: {x: 0, y: 79}
-    m_SelectedIDs: 463b0000
-    m_LastClickedID: 15174
-    m_ExpandedIDs: 9efbffff00000000323b0000463b0000
+    scrollPos: {x: 0, y: 0}
+    m_SelectedIDs: 502d0000
+    m_LastClickedID: 0
+    m_ExpandedIDs: aa4ffeff0c64feff3065feff4867feffae6bfeffb470feffb284feff2820ffff5424ffff5245ffff86fbffff00000000f63a00000a3b00006e4400009a46000088490000
     m_RenameOverlay:
       m_UserAcceptedRename: 0
       m_Name: 
@@ -550,19 +550,19 @@ MonoBehaviour:
     m_ShowAllHits: 0
     m_SearchArea: 0
     m_Folders:
-    - Assets/GameSparks
+    - Assets/scenes
   m_ViewMode: 1
   m_StartGridSize: 16
   m_LastFolders:
-  - Assets/GameSparks
+  - Assets/scenes
   m_LastFoldersGridSize: 16
   m_LastProjectPath: C:\Users\akiti\Documents\GitHub\Project-Everhart-Game
   m_IsLocked: 0
   m_FolderTreeState:
     scrollPos: {x: 0, y: 0}
-    m_SelectedIDs: 74290000
-    m_LastClickedID: 10612
-    m_ExpandedIDs: 0000000060280000742900001a2c0000da2f0000dc3b000000ca9a3bffffff7f
+    m_SelectedIDs: 802e0000
+    m_LastClickedID: 11904
+    m_ExpandedIDs: 000000006a2800007e290000242c0000e42f0000a83b000000ca9a3bffffff7f
     m_RenameOverlay:
       m_UserAcceptedRename: 0
       m_Name: 
@@ -590,7 +590,7 @@ MonoBehaviour:
     scrollPos: {x: 0, y: 0}
     m_SelectedIDs: 
     m_LastClickedID: 0
-    m_ExpandedIDs: 0000000060280000742900001a2c0000da2f0000dc3b000000ca9a3bffffff7f
+    m_ExpandedIDs: 000000006a2800007e290000242c0000e42f0000a83b000000ca9a3bffffff7f
     m_RenameOverlay:
       m_UserAcceptedRename: 0
       m_Name: 
@@ -615,10 +615,10 @@ MonoBehaviour:
       m_Icon: {fileID: 0}
       m_ResourceFile: 
   m_ListAreaState:
-    m_SelectedInstanceIDs: 463b0000
-    m_LastClickedInstanceID: 15174
+    m_SelectedInstanceIDs: 502d0000
+    m_LastClickedInstanceID: 11600
     m_HadKeyboardFocusLastEvent: 0
-    m_ExpandedInstanceIDs: d0210000d4210000e4210000d2210000000000001422000000220000e82100002422000022220000c62200000a2200000c220000c045ffffcafafeff122200001a2200009027000076270000f2290000722700005e290000ba6b0000be6b0000
+    m_ExpandedInstanceIDs: d0210000d4210000e4210000d2210000000000001422000000220000e82100002422000022220000c62200000a2200000c220000c045ffffcafafeff122200001a2200009027000076270000f2290000722700005e290000ba6b0000be6b000042060000
     m_RenameOverlay:
       m_UserAcceptedRename: 0
       m_Name: 
@@ -663,8 +663,8 @@ MonoBehaviour:
     y: 0
     width: 556
     height: 1067
-  m_MinSize: {x: 277, y: 71}
-  m_MaxSize: {x: 4002, y: 4021}
+  m_MinSize: {x: 275, y: 50}
+  m_MaxSize: {x: 4000, y: 4000}
   m_ActualView: {fileID: 17}
   m_Panes:
   - {fileID: 17}

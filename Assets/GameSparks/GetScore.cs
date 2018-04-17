@@ -31,8 +31,8 @@ public class GetScore : MonoBehaviour
 	{
 		Debug.Log ("Posting Score To Leaderboard...");
 		new GameSparks.Api.Requests.LogEventRequest ()
-			.SetEventKey("LEADERBOARD_SCORER")
-			.SetEventAttribute("SCORE", scoreInput.text)
+			.SetEventKey("LB_SCORER")
+			.SetEventAttribute("HSCORE", scoreInput.text)
 			.Send ((response) => {
 
 					if(!response.HasErrors)
@@ -63,7 +63,7 @@ public class GetScore : MonoBehaviour
 						{
 							int rank = (int)entry.Rank; // we can get the rank directly
 							string playerName = entry.UserName;
-							string score = entry.JSONData["SCORE"].ToString(); // we need to get the key, in order to get the score
+							string score = entry.JSONData["HSCORE"].ToString(); // we need to get the key, in order to get the score
 							outputData.text += rank+"   Name: "+playerName+"        Score:"+score +"\n"; // addd the score to the output text
 						}
 					}

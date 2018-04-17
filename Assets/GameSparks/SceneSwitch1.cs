@@ -14,6 +14,7 @@ public class SceneSwitch1 : MonoBehaviour
         btn.onClick.AddListener(SwapSceneBttn);
     }
 	
+
 	public void SwapSceneBttn()
 	{
 		SceneManager.LoadScene("CreateAccount");	
