@@ -2,15 +2,6 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-/*
-room locations
-start 0 0 0 
-final 200 0 0 
-small 0 100 0 
-medium 200 100 0 
-large 400 100 0 
- */
-
 public class GameManager : MonoBehaviour 
 {
 	public Camera camera;
@@ -31,13 +22,15 @@ public class GameManager : MonoBehaviour
 
 	//tracking variables
 	public bool complete;
-	public int levelsComplete = 0;
-	public int totalCurrency = 0;
-	public int roomsComplete = 0;
-	public int enemiesDefeated = 0;
+	public int levelsComplete = 0;  //20 points 
+	public int totalCurrency = 0;   //1 point
+	public int roomsComplete = 0;   //5 points
+	public int enemiesDefeated = 0; //5 points
+	public int score = 0;
 
-	public int currentRoom;
-	public bool spawnEnemies, spawnItems, spawnTraps;
+	public int currentRoom, dim;
+	public bool spawnEnemies, spawnItems, spawnTraps, reset;
+	public int[,] possibleSpawns;
 
 	void Start () 
 	{
@@ -63,20 +56,29 @@ public class GameManager : MonoBehaviour
 
 		complete = false;
 		currentRoom = GetComponentInChildren<Playerrules>().currentRoom;
+		reset = false;
 		spawnEnemies = false;
 		spawnItems = false;
 		spawnTraps = false;
+
 	}
 
 	void Update () 
 	{
+		//this.currentRoom = GetComponentInChildren<Playerrules>().currentRoom;
 		if (complete) 
 		{
 			levelsComplete++;
 			print("Levels completed: " + levelsComplete);
 			print("Rooms completed: " + roomsComplete);
+			print("Total currency: " + totalCurrency);
+			print("Enemies Defeated: " + enemiesDefeated);
+			calcScore();
+			print("Score: " + score);
+			reset = true;
 			Start();
 		}
+		if (reset) resetSpawns();
 	}
 
 	void createPaths(int path, List<int> doors, List<int> rooms)
@@ -143,4 +145,30 @@ public class GameManager : MonoBehaviour
 		if (r == 2) p[index] = this.mediumSpawn;
 		if (r == 3) p[index] = this.largeSpawn;
 	}
+
+	void resetSpawns()
+	{
+		if (currentRoom > 0)
+		{
+			dim = ((currentRoom*2)+1)*3;
+			possibleSpawns = new int [dim,dim];
+			for (int i = 0; i < dim; i++)
+			{
+				for (int j = 0; j < dim; j++)
+				{
+					possibleSpawns[i,j] = 0;
+				}
+			}
+			reset = false;
+		}
+		spawnItems = true;
+		spawnEnemies = true;
+		spawnTraps = true;
+	}
+
+	void calcScore()
+	{
+		score = (levelsComplete*20)+(roomsComplete*5)+(enemiesDefeated*5)+(totalCurrency);
+	}
+
 }

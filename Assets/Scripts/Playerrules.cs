@@ -35,7 +35,6 @@ public class Playerrules : MonoBehaviour
 	public float atkRate;
 	public float nextAtk;
 
-	//SW EDITS
 	public int currentRoom; //(final=-2,start=-1,small=1,medium=2,large=3)
 	public int roomNum;
 	public int currentPath; //0, 1, or 2
@@ -44,10 +43,9 @@ public class Playerrules : MonoBehaviour
 	// Use this for initialization
 	void Start()
 	{
-		//SW EDITS
 		currentRoom = -1;
 		transform.position = GetComponentInParent<GameManager>().startSpawn;
-		resetCamera();
+		//resetCamera();
 
 		currentWeapon = weapon;
 		weaponSpawn.transform.position = this.transform.position + new Vector3(1.6f,1.6f,0f);
@@ -145,15 +143,15 @@ public class Playerrules : MonoBehaviour
 		}
 		if (other.gameObject.tag == "Coin")
 		{
-			ScoreManager.score += 1;
+			GetComponentInParent<GameManager>().totalCurrency++;
 		}
 		if(other.gameObject.tag == "Trap")
 		{
 			//Damage(-1);
 		}
-		if (other.gameObject.tag == "Pickups")
+		if (other.gameObject.tag == "Healing Pot")
 		{
-			//Damage(1);
+			//inc player health
 		}
 		if (other.gameObject.tag == "Hole" || other.gameObject.tag == "Lava")
 		{
@@ -199,7 +197,7 @@ public class Playerrules : MonoBehaviour
 				currentPath = 0;
 				GetComponentInParent<GameManager>().roomsComplete++;
 				transform.position = GetComponentInParent<GameManager>().startSpawn;
-				resetCamera();
+				//resetCamera();
 				GetComponentInParent<GameManager>().complete = true;
 			}
 			//send player to next room of onePath
@@ -213,7 +211,7 @@ public class Playerrules : MonoBehaviour
 				spawnTIE();
 
 				transform.position = GetComponentInParent<GameManager>().oneSpawns[roomNum];
-				resetCamera();
+				//resetCamera();
 			}
 			//send player to next room of twoPath
 			if (currentPath == 2)
@@ -226,7 +224,7 @@ public class Playerrules : MonoBehaviour
 				spawnTIE();
 
 				transform.position = GetComponentInParent<GameManager>().twoSpawns[roomNum];
-				resetCamera();
+				//resetCamera();
 			}
 		}
 	}
@@ -244,7 +242,7 @@ public class Playerrules : MonoBehaviour
 		//move player
 		transform.position = GetComponentInParent<GameManager>().zeroSpawn;
 		//move camera (temp)
-		resetCamera();
+		//resetCamera();
 	}
 
 	void sendToOnePath()
@@ -261,7 +259,7 @@ public class Playerrules : MonoBehaviour
 		//move player
 		transform.position = GetComponentInParent<GameManager>().oneSpawns[roomNum];
 		//move camera (temp)
-		resetCamera();
+		//resetCamera();
 	}
 
 	void sendToTwoPath()
@@ -278,7 +276,7 @@ public class Playerrules : MonoBehaviour
 		//move player
 		transform.position = GetComponentInParent<GameManager>().twoSpawns[roomNum];
 		//move camera (temp)
-		resetCamera();
+		//resetCamera();
 	}
 
 	void resetCamera()
@@ -308,11 +306,11 @@ public class Playerrules : MonoBehaviour
 			GetComponentInParent<GameManager>().camera.transform.position = new Vector3(240f,-40f,-1f);
 			GetComponentInParent<GameManager> ().camera.orthographicSize = 45;
 		}
-		
 	}
 
 	void spawnTIE()
 	{
+		GetComponentInParent<GameManager>().reset = true;
 		GetComponentInParent<GameManager>().spawnEnemies = true;
 		GetComponentInParent<GameManager>().spawnItems = true;
 		GetComponentInParent<GameManager>().spawnTraps = true;

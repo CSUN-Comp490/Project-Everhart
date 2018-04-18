@@ -8,7 +8,6 @@ TagManager:
   - Trap
   - MonAtk
   - Player
-  - Monster
   - Coin
   - Pickups
   - 'Destructable '
@@ -29,6 +28,8 @@ TagManager:
   - Path3
   - LevelExit
   - Final Exit
+  - Monster
+  - Healing Pot
   layers:
   - Default
   - TransparentFX

@@ -75,7 +75,7 @@ public class RoomBuilder : MonoBehaviour {
 				exitPosition = new Vector3 (((size - 1f) * 200f) + wallWidth + ((size * 2f)*(tileWidth)), 100f - wallWidth - (a * tileWidth), 0f);
 				Instantiate (exit, exitPosition, Quaternion.identity, this.transform);
 				floorTiles [a,((int)size * 2)] = 1;
-
+	
 				//place entrance
 				b = Random.Range (0, (int)size * 2);
 				entrancePosition = new Vector3 (((size - 1f) * 200f) + (wallWidth),
