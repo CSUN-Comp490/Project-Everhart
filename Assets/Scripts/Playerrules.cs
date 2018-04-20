@@ -9,11 +9,11 @@ public class Playerrules : MonoBehaviour
 	//health stuff
 	public int curHp;
 	public int startHearts = 1;
-	private int maxHeartsAmount = 7;
+	private int maxHeartsAmount = 6;
 	private int maxHp;
 	private int healthPerHeart = 2;
 	private float moveX, moveY;
-	//public Image[] healthImages;
+	public Image[] healthImages;
 	public Sprite[] healthSprites;
 	public GameObject[] enemiesTest;
 	public GameObject[] itemsTest;
@@ -52,7 +52,7 @@ public class Playerrules : MonoBehaviour
 
 		curHp = startHearts * healthPerHeart;
 		maxHp = maxHeartsAmount * healthPerHeart;
-		//checkHp();
+		checkHp();
 		anim = GetComponent<Animator>();
 	}
 
@@ -136,7 +136,7 @@ public class Playerrules : MonoBehaviour
 	{
 		if (other.gameObject.tag == "Monster")
 		{
-			//Damage(-1);
+			Damage(-1);
 			moveX = -moveX;
 			moveY = -moveY;
 			move(moveX,moveY,lastMove);
@@ -144,10 +144,11 @@ public class Playerrules : MonoBehaviour
 		if (other.gameObject.tag == "Coin")
 		{
 			GetComponentInParent<GameManager>().totalCurrency++;
+            ScoreManager.score += 1;
 		}
 		if(other.gameObject.tag == "Trap")
 		{
-			//Damage(-1);
+			Damage(-1);
 		}
 		if (other.gameObject.tag == "Healing Pot")
 		{
@@ -155,7 +156,7 @@ public class Playerrules : MonoBehaviour
 		}
 		if (other.gameObject.tag == "Hole" || other.gameObject.tag == "Lava")
 		{
-			//Damage(-1);
+			Damage(-1);
 			moveX = -moveX;
 			moveY = -moveY;
 			move(moveX, moveY,lastMove);
@@ -315,7 +316,7 @@ public class Playerrules : MonoBehaviour
 		GetComponentInParent<GameManager>().spawnItems = true;
 		GetComponentInParent<GameManager>().spawnTraps = true;
 	}
-	/*
+	
 	void checkHp()
 	{
 		for (int i = 0; i < maxHeartsAmount; i++)
@@ -398,5 +399,5 @@ public class Playerrules : MonoBehaviour
 		checkHp();
 	}
 
-	*/
+	
 }
