@@ -1,0 +1,29 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 11.00
+# Visual Studio 2010
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Project-Everhart-Game", "Assembly-CSharp.csproj", "{924D8E85-128F-43FC-65F4-27C9F5BC8877}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Project-Everhart-Game", "Assembly-CSharp-Editor.csproj", "{6F316624-358A-AA0D-4582-FB2B73CA15F9}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{924D8E85-128F-43FC-65F4-27C9F5BC8877}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{924D8E85-128F-43FC-65F4-27C9F5BC8877}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{924D8E85-128F-43FC-65F4-27C9F5BC8877}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{924D8E85-128F-43FC-65F4-27C9F5BC8877}.Release|Any CPU.Build.0 = Release|Any CPU
+		{6F316624-358A-AA0D-4582-FB2B73CA15F9}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{6F316624-358A-AA0D-4582-FB2B73CA15F9}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{6F316624-358A-AA0D-4582-FB2B73CA15F9}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{6F316624-358A-AA0D-4582-FB2B73CA15F9}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(MonoDevelopProperties) = preSolution
+		StartupItem = Assembly-CSharp.csproj
+	EndGlobalSection
+EndGlobal
