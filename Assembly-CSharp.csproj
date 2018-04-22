@@ -96,6 +96,7 @@
      <Compile Include="Assets\Scripts\potpower.cs" />
      <Compile Include="Assets\Scripts\RoomBuilder.cs" />
      <Compile Include="Assets\Scripts\SceneSwitch.cs" />
+     <Compile Include="Assets\Scripts\SceneSwitch2.cs" />
      <Compile Include="Assets\Scripts\ScoreManager.cs" />
      <Compile Include="Assets\Scripts\Skeleton.cs" />
      <Compile Include="Assets\Scripts\Teleport.cs" />
