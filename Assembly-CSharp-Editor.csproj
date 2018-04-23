@@ -9,7 +9,7 @@
     <ProductVersion>10.0.20506</ProductVersion>
     <SchemaVersion>2.0</SchemaVersion>
     <RootNamespace></RootNamespace>
-    <ProjectGuid>{7EA5C4B6-8361-BD2A-B9AC-B345B1B2654D}</ProjectGuid>
+    <ProjectGuid>{E9FB4AED-0CD4-F963-44F6-553906F8BC16}</ProjectGuid>
     <OutputType>Library</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
     <AssemblyName>Assembly-CSharp-Editor</AssemblyName>
@@ -134,7 +134,7 @@
  <HintPath>C:/Program Files/Unity/Editor/Data/PlaybackEngines/windowsstandalonesupport/UnityEditor.WindowsStandalone.Extensions.dll</HintPath>
  </Reference>
  <Reference Include="SyntaxTree.Mono.Cecil">
- <HintPath>C:/Users/Sam/Desktop/Project-Everhart-Sam/Assets/UnityVS/Editor/SyntaxTree.Mono.Cecil.dll</HintPath>
+ <HintPath>C:/Users/Sam/Documents/School/CSUN/Fall 2017/COMP490/Project Everhart/Project-Everhart/Assets/UnityVS/Editor/SyntaxTree.Mono.Cecil.dll</HintPath>
  </Reference>
  <Reference Include="UnityEngine.Advertisements">
  <HintPath>C:/Users/Sam/AppData/LocalLow/Unity/cache/packages/packages.unity.com/com.unity.ads@2.0.3/UnityEngine.Advertisements.dll</HintPath>
@@ -166,7 +166,7 @@
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="Assembly-CSharp.csproj">
-      <Project>{5F927D9C-5BCD-89A6-7A04-A45FC8ED3EDD}</Project>      <Name>Assembly-CSharp</Name>    </ProjectReference>
+      <Project>{29B2A4B4-B4BA-6590-7666-77BD228C1583}</Project>      <Name>Assembly-CSharp</Name>    </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
