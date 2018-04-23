@@ -11,16 +11,16 @@ Prefab:
   m_ParentPrefab: {fileID: 0}
   m_RootGameObject: {fileID: 1943710027756974}
   m_IsPrefabParent: 1
---- !u!1 &1190690059936890
+--- !u!1 &1222224265983342
 GameObject:
   m_ObjectHideFlags: 1
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
   serializedVersion: 5
   m_Component:
-  - component: {fileID: 4467201399820092}
-  - component: {fileID: 114143605785163698}
-  - component: {fileID: 61933219247444914}
+  - component: {fileID: 4333716155342754}
+  - component: {fileID: 114136440535226118}
+  - component: {fileID: 61453010536543764}
   m_Layer: 11
   m_Name: hole collision
   m_TagString: Hole
@@ -76,23 +76,6 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!1 &1547746735651908
-GameObject:
-  m_ObjectHideFlags: 1
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 100100000}
-  serializedVersion: 5
-  m_Component:
-  - component: {fileID: 4683748397475538}
-  - component: {fileID: 114419140948358926}
-  - component: {fileID: 61052474374790862}
-  m_Layer: 11
-  m_Name: hole collision
-  m_TagString: Hole
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
 --- !u!1 &1707783056925802
 GameObject:
   m_ObjectHideFlags: 1
@@ -107,6 +90,23 @@ GameObject:
   m_Layer: 0
   m_Name: terrain
   m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!1 &1760149733883714
+GameObject:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  serializedVersion: 5
+  m_Component:
+  - component: {fileID: 4953579246272080}
+  - component: {fileID: 114206260185786142}
+  - component: {fileID: 61707736884570412}
+  m_Layer: 11
+  m_Name: hole collision
+  m_TagString: Hole
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -150,8 +150,8 @@ Transform:
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
-  - {fileID: 4467201399820092}
-  - {fileID: 4683748397475538}
+  - {fileID: 4953579246272080}
+  - {fileID: 4333716155342754}
   m_Father: {fileID: 4685638491930572}
   m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -168,25 +168,12 @@ Transform:
   m_Father: {fileID: 4776360685045210}
   m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!4 &4467201399820092
+--- !u!4 &4333716155342754
 Transform:
   m_ObjectHideFlags: 1
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 1190690059936890}
-  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 3.2, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_Children: []
-  m_Father: {fileID: 4213051203269708}
-  m_RootOrder: 0
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!4 &4683748397475538
-Transform:
-  m_ObjectHideFlags: 1
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 1547746735651908}
+  m_GameObject: {fileID: 1222224265983342}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: 3.2, y: -6.4, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
@@ -222,6 +209,19 @@ Transform:
   - {fileID: 4048827184559766}
   - {fileID: 4272765351303762}
   m_Father: {fileID: 4685638491930572}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!4 &4953579246272080
+Transform:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1760149733883714}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 3.2, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 4213051203269708}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!23 &23897712382012206
@@ -297,12 +297,12 @@ PolygonCollider2D:
       - {x: 3.2, y: -6.4}
       - {x: 3.2, y: -9.6}
       - {x: 6.4, y: -9.6}
---- !u!61 &61052474374790862
+--- !u!61 &61453010536543764
 BoxCollider2D:
   m_ObjectHideFlags: 1
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 1547746735651908}
+  m_GameObject: {fileID: 1222224265983342}
   m_Enabled: 1
   m_Density: 1
   m_Material: {fileID: 0}
@@ -322,12 +322,12 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 3.2, y: 3.2}
   m_EdgeRadius: 0
---- !u!61 &61933219247444914
+--- !u!61 &61707736884570412
 BoxCollider2D:
   m_ObjectHideFlags: 1
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 1190690059936890}
+  m_GameObject: {fileID: 1760149733883714}
   m_Enabled: 1
   m_Density: 1
   m_Material: {fileID: 0}
@@ -358,12 +358,29 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1874989c5e2da094ea00112c6a895694, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
---- !u!114 &114143605785163698
+--- !u!114 &114136440535226118
 MonoBehaviour:
   m_ObjectHideFlags: 1
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 1190690059936890}
+  m_GameObject: {fileID: 1222224265983342}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a425cb3219d4ebb4796b8e4968d45732, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  TmxId: 1
+  TmxName: hole collision
+  TmxType: Hole
+  TmxPosition: {x: 32, y: 64}
+  TmxSize: {x: 32, y: 32}
+  TmxRotation: 0
+--- !u!114 &114206260185786142
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1760149733883714}
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: a425cb3219d4ebb4796b8e4968d45732, type: 3}
@@ -411,23 +428,6 @@ MonoBehaviour:
   MapWidthInPixels: 96
   MapHeightInPixels: 96
   BackgroundColor: {r: 0.5019608, g: 0.5019608, b: 0.5019608, a: 1}
---- !u!114 &114419140948358926
-MonoBehaviour:
-  m_ObjectHideFlags: 1
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 1547746735651908}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: a425cb3219d4ebb4796b8e4968d45732, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  TmxId: 1
-  TmxName: hole collision
-  TmxType: Hole
-  TmxPosition: {x: 32, y: 64}
-  TmxSize: {x: 32, y: 32}
-  TmxRotation: 0
 --- !u!114 &114745453689318824
 MonoBehaviour:
   m_ObjectHideFlags: 1
