@@ -359,7 +359,6 @@ public class Playerrules : MonoBehaviour
 					int imageIndex = currentHeartHP / healthPerImage;
 					image.sprite = healthSprites[imageIndex];
 					empty = true;
-
 				}
 			}
 		}
@@ -372,7 +371,6 @@ public class Playerrules : MonoBehaviour
 		UpdateHp();
 		if(curHp == 0)
 		{
-
 			gameOver();
 		}
 	}
@@ -381,10 +379,10 @@ public class Playerrules : MonoBehaviour
 	{
 		Destroy(gameObject);
 		Instantiate(tomb, transform.position, transform.rotation);
-		currency = PlayerPrefs.GetInt("Score", 0);
-		currency = ScoreManager.score + currency;
-
-		PlayerPrefs.SetInt("Score", currency);
+		//currency = PlayerPrefs.GetInt("Score", 0);
+		//currency = ScoreManager.score + currency;
+	
+		PlayerPrefs.SetInt("Score", GetComponentInParent<GameManager>().score);
 		SceneManager.LoadScene("GameOver");
 	}
 
