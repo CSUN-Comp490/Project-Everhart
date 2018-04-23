@@ -379,10 +379,13 @@ public class Playerrules : MonoBehaviour
 	{
 		Destroy(gameObject);
 		Instantiate(tomb, transform.position, transform.rotation);
-		//currency = PlayerPrefs.GetInt("Score", 0);
-		//currency = ScoreManager.score + currency;
-	
+
+		PlayerPrefs.GetInt("Score",0);
 		PlayerPrefs.SetInt("Score", GetComponentInParent<GameManager>().score);
+		currency = PlayerPrefs.GetInt("Coins",0);
+		currency += GetComponentInParent<GameManager>().totalCurrency;
+		PlayerPrefs.SetInt("Coins", currency);
+
 		SceneManager.LoadScene("GameOver");
 	}
 

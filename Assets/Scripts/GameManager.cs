@@ -66,13 +66,15 @@ public class GameManager : MonoBehaviour
 	void Update () 
 	{
 		//this.currentRoom = GetComponentInChildren<Playerrules>().currentRoom;
+		print("Rooms completed: " + roomsComplete);
+		print("Total currency: " + totalCurrency);
+		print("Enemies Defeated: " + enemiesDefeated);
+		calcScore();
+		print("Score: " + score);
 		if (complete) 
 		{
 			levelsComplete++;
 			print("Levels completed: " + levelsComplete);
-			print("Rooms completed: " + roomsComplete);
-			print("Total currency: " + totalCurrency);
-			print("Enemies Defeated: " + enemiesDefeated);
 			calcScore();
 			print("Score: " + score);
 			reset = true;
