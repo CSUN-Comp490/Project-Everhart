@@ -877,6 +877,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   room: 0
+  dim: 0
   playerSpawn: {x: 0, y: 0, z: 0}
   exitLocation: {x: 0, y: 0, z: 0}
   spawn: {x: 0, y: 0, z: 0}
@@ -1604,6 +1605,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   room: 0
+  dim: 0
   playerSpawn: {x: 0, y: 0, z: 0}
   exitLocation: {x: 0, y: 0, z: 0}
   spawn: {x: 0, y: 0, z: 0}
@@ -1624,6 +1626,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   room: 0
+  dim: 0
   playerSpawn: {x: 0, y: 0, z: 0}
   exitLocation: {x: 0, y: 0, z: 0}
   spawn: {x: 0, y: 0, z: 0}

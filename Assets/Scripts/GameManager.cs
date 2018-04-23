@@ -28,9 +28,8 @@ public class GameManager : MonoBehaviour
 	public int enemiesDefeated = 0; //5 points
 	public int score = 0;
 
-	public int currentRoom, dim;
+	public int currentRoom;
 	public bool spawnEnemies, spawnItems, spawnTraps, reset;
-	public int[,] possibleSpawns;
 
 	void Start () 
 	{
@@ -150,21 +149,9 @@ public class GameManager : MonoBehaviour
 
 	void resetSpawns()
 	{
-		if (currentRoom > 0)
-		{
-			dim = ((currentRoom*2)+1)*3;
-			possibleSpawns = new int [dim,dim];
-			for (int i = 0; i < dim; i++)
-			{
-				for (int j = 0; j < dim; j++)
-				{
-					possibleSpawns[i,j] = 0;
-				}
-			}
-			reset = false;
-		}
-		spawnItems = true;
+		reset = false;
 		spawnEnemies = true;
+		spawnItems = true;
 		spawnTraps = true;
 	}
 

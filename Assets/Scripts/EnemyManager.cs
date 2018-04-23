@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class EnemyManager : MonoBehaviour {
 
-	public int room;
+	public int room, dim;
 	public Vector3 playerSpawn, exitLocation, spawn;
 	public GameObject[] enemyTypes = new GameObject[1];
 	public int numOfEnemies;
@@ -14,6 +14,8 @@ public class EnemyManager : MonoBehaviour {
 
 	public int x = 0;
 	public int y = 0;
+
+	public int[,] possibleSpawns;
 
 	void Start () 
 	{
@@ -72,6 +74,16 @@ public class EnemyManager : MonoBehaviour {
 				this.exitLocation = GetComponentInParent<GameManager>().large.GetComponent<RoomBuilder>().exitPosition 
 					+ new Vector3(4.8f,-4.8f,0f);
 			}
+
+			dim = ((room*2)+1)*3;
+			possibleSpawns = new int [dim,dim];
+			for (int i = 0; i < dim; i++)
+			{
+				for (int j = 0; j < dim; j++)
+				{
+					possibleSpawns[i,j] = 0;
+				}
+			}
 			
 			this.numOfEnemies = Random.Range((size*2)+1,(size*2)+4);
 			bool spawnAllowed;
@@ -81,15 +93,15 @@ public class EnemyManager : MonoBehaviour {
 				while (!spawnAllowed)
 				{
 					//grab a random spawn point within the room
-					x = Random.Range(0,GetComponentInParent<GameManager>().dim);
-					y = Random.Range(0,GetComponentInParent<GameManager>().dim);
+					x = Random.Range(0,dim);
+					y = Random.Range(0,dim);
 					//create spawn based on random x, y and the size
 					spawn = new Vector3(((size-1f)*200) + wallWidth + (squareLength/2) + (x*squareLength), 
 								100f - wallWidth - (squareLength/2) - (y*squareLength), 0f);
 					//check the spawn to see if it works
 					spawnAllowed = checkSpawn();
 				}
-				GetComponentInParent<GameManager>().possibleSpawns[x,y] = 1;
+				possibleSpawns[x,y] = 1;
 				Instantiate(enemyTypes[Random.Range(0,enemyTypes.Length)], spawn,
 					Quaternion.identity,this.transform);
 			}
@@ -100,7 +112,7 @@ public class EnemyManager : MonoBehaviour {
 	bool checkSpawn ()
 	{
 		//check if there is already an enemy spawned there
-		if (GetComponentInParent<GameManager>().possibleSpawns[x,y] == 1) return false;
+		if (possibleSpawns[x,y] == 1) return false;
 		//dont allow spawns within one space of player's spawn
 		if (spawn == this.playerSpawn + new Vector3(1.6f,-1.6f,0f)) return false;
 		if (spawn == this.playerSpawn + new Vector3(1.6f,1.6f,0f))  return false;

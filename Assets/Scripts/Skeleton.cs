@@ -1,93 +1,77 @@
 ﻿using UnityEngine;
 using System.Collections;
+using System.Collections.Generic;
 
 public class Skeleton : MonoBehaviour {
 
-	
-    public float moveRate = 0.5f;
-    public float nextMove = 0.0f;
 	GameObject skull;
-
-    private bool tool = false;
-    public int patrolx;
-    public int patroly;
-    public int countx = 0;
-    public int county = 0;
-
-    Vector2 start, end;
-
-    
-
-    public GameObject loot;
+    public GameObject player, loot;
     public Transform lootSpawn;
+    public int choice;
+    public float moveRate, nextMove, time, moveX, moveY;
+    public string lastMove;
+    
 	// Use this for initialization
-	void Start () {
-		
+	void Start () 
+    {
+        player = GameObject.FindGameObjectWithTag("Player");
+		moveRate = 0.5f;
 	}
 	
 	// Update is called once per frame
 	void Update ()
     {
-        if(Time.time > nextMove)
+        time = Time.time;
+        if(time > nextMove)
         {
-            nextMove = Time.time + moveRate;
-            patrol();
-
+            nextMove = time + moveRate;
+            skeletonChoice();
         }
-		
-	
 	}
 
-    void move(int x, int y)
+    void move(float x, float y, string move)
+	{
+		lastMove = move;
+		moveX = x;
+		moveY = y;
+		this.transform.position += new Vector3 (x, y, 0f);
+	}
+
+    bool playerNearby()
     {
-       
-        Vector2 start = transform.position;
-        Vector2 end = start + new Vector2(x, y);
-        transform.position = end;
-     
+        if (this.transform.position == (player.transform.position + new Vector3(3.2f,0f,0f))) return true;
+        else if (this.transform.position == (player.transform.position + new Vector3(-3.2f,0f,0f))) return true;
+        else if (this.transform.position == (player.transform.position + new Vector3(0f,3.2f,0f))) return true;
+        else if (this.transform.position == (player.transform.position + new Vector3(0f,-3.2f,0f))) return true;
+        return false;
     }
 
-    void patrol()
-	{
-        if(tool!= true)
+    void attackPlayer() //for now it just moves into player, which will hurt player
+    {
+        Vector3 startPos = this.transform.position;
+        this.transform.position = GetComponent<Playerrules>().transform.position;
+        this.transform.position = startPos;
+    }
+
+    void skeletonChoice()
+    {
+        if (!playerNearby()) //chance to attack or move
         {
-            if (countx < patrolx)
-            {
-                move(1, 0);
-                countx++;
-            }
-            else
-            {
-                move(0, -1);
-                county++;
-
-            }
-            if (countx == patrolx && county == patroly)
-            {
-                tool = true;
-            }
+            choice = Random.Range(0,4);
+            if (choice == 0) move(0f,3.2f,"up");
+            else if (choice == 1) move(0f,-3.2f,"down");
+            else if (choice == 2) move(3.2f,0f,"right");
+            else if (choice == 3) move(-3.2f,0f,"left");
         }
-        else
+        else //just move
         {
-            if (countx > 0)
-            {
-                move(-1, 0);
-                countx--;
-            }
-            else
-            {
-                move(0, 1);
-                county--;
-
-            }
-            if (countx == 0 && county == 0)
-            {
-                tool = false;
-            }
-
-        }
-        
-
+            choice = Random.Range(0,6);
+            if (choice == 0)  move(0f,3.2f,"up");
+            else if (choice == 1) move(0f,-3.2f,"down");
+            else if (choice == 2) move(3.2f,0f,"right");
+            else if (choice == 3) move(-3.2f,0f,"left");
+            else if (choice >= 4) attackPlayer();
+        }  
     }
 
 	void OnCollisionEnter2D (Collision2D other)
@@ -97,6 +81,11 @@ public class Skeleton : MonoBehaviour {
 			Destroy (gameObject);
             Instantiate(loot, lootSpawn.position, lootSpawn.rotation);
         }
-
+        if (other.gameObject.tag == "Wall")
+		{
+			moveX = -moveX;
+			moveY = -moveY;
+			move(moveX, moveY,lastMove);
+		}
 	}
 }
