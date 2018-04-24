@@ -6,6 +6,7 @@ public class Skeleton : MonoBehaviour {
 
 	GameObject skull;
     public GameObject player, loot;
+    public List<GameObject> otherEnemies;
     public Transform lootSpawn;
     public int choice;
     public float moveRate, nextMove, time, moveX, moveY;
@@ -15,6 +16,10 @@ public class Skeleton : MonoBehaviour {
 	void Start () 
     {
         player = GameObject.FindGameObjectWithTag("Player");
+        foreach (GameObject child in GetComponentInParent<Playerrules>().transform)
+        {
+            if (child != this.gameObject) otherEnemies.Add(child);
+        }
 		moveRate = 0.5f;
 	}
 	
@@ -46,6 +51,23 @@ public class Skeleton : MonoBehaviour {
         return false;
     }
 
+    bool skeletionNearby()
+    {
+        Vector3 a = this.transform.position + new Vector3(3.2f,0f,0f);
+        Vector3 b = this.transform.position + new Vector3(-3.2f,0f,0f);
+        Vector3 c = this.transform.position + new Vector3(0f,3.2f,0f);
+        Vector3 d = this.transform.position + new Vector3(0f,-3.2f,0f);
+
+        foreach (GameObject skel in otherEnemies)
+        {
+            if (skel.transform.position == a) return false;
+            if (skel.transform.position == b) return false;
+            if (skel.transform.position == c) return false;
+            if (skel.transform.position == d) return false;
+        }
+        return false;
+    }
+
     void attackPlayer() //for now it just moves into player, which will hurt player
     {
         Vector3 startPos = this.transform.position;
@@ -66,7 +88,7 @@ public class Skeleton : MonoBehaviour {
         else //just move
         {
             choice = Random.Range(0,6);
-            if (choice == 0)  move(0f,3.2f,"up");
+            if (choice == 0) move(0f,3.2f,"up");
             else if (choice == 1) move(0f,-3.2f,"down");
             else if (choice == 2) move(3.2f,0f,"right");
             else if (choice == 3) move(-3.2f,0f,"left");

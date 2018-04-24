@@ -29,7 +29,7 @@ public class Playerrules : MonoBehaviour
 	Animator anim;
 
 	public GameObject weapon;
-	public Transform weaponSpawn;
+	public Transform weaponSpawn, weaponSpawnLeft, weaponSpawnRight;
 	GameObject currentWeapon;
 	private bool attacking = false;
 	public float atkRate;
@@ -48,7 +48,14 @@ public class Playerrules : MonoBehaviour
 		//resetCamera();
 
 		currentWeapon = weapon;
-		weaponSpawn.transform.position = this.transform.position + new Vector3(1.6f,1.6f,0f);
+		weaponSpawn.GetComponent<Transform>().eulerAngles = new Vector3(0, 0, 180);
+		weaponSpawn.transform.position = this.transform.position + new Vector3(1.6f,-4.8f,0f);
+		weaponSpawnLeft.GetComponent<Transform>().eulerAngles = new Vector3(0, 0, -90);
+		weaponSpawnLeft.transform.position = this.transform.position + new Vector3(4.8f,-1.6f,0f);
+		weaponSpawnRight.GetComponent<Transform>().eulerAngles = new Vector3(0, 0, 90);
+		weaponSpawnRight.transform.position = this.transform.position + new Vector3(-1.6f,-1.6f,0f);
+
+		lastMove = "down";
 
 		curHp = startHearts * healthPerHeart;
 		maxHp = maxHeartsAmount * healthPerHeart;
@@ -64,31 +71,51 @@ public class Playerrules : MonoBehaviour
 
 		if (!attacking)
 		{
-			if (Input.GetKeyDown("right"))
+			if (Input.GetKeyDown("d"))
 			{
-				weaponSpawn.GetComponent<Transform>().eulerAngles = new Vector3 (0,0,-90);
+				weaponSpawn.GetComponent<Transform>().eulerAngles = new Vector3(0, 0, -90);
 				weaponSpawn.transform.position = this.transform.position + new Vector3(4.8f,-1.6f,0f);
+				weaponSpawnRight.GetComponent<Transform>().eulerAngles = new Vector3(0, 0, 180);
+				weaponSpawnRight.transform.position = this.transform.position + new Vector3(1.6f,-4.8f,0f);
+				weaponSpawnLeft.GetComponent<Transform>().eulerAngles = new Vector3(0, 0, 0);
+				weaponSpawnLeft.transform.position = this.transform.position + new Vector3(1.6f,1.6f,0f);
+
 				move(3.2f, 0f,"right");
 				anim.Play("right");
 			}
-			else if (Input.GetKeyDown("left"))
+			else if (Input.GetKeyDown("a"))
 			{
 				weaponSpawn.GetComponent<Transform>().eulerAngles = new Vector3(0, 0, 90);
 				weaponSpawn.transform.position = this.transform.position + new Vector3(-1.6f,-1.6f,0f);
+				weaponSpawnRight.GetComponent<Transform>().eulerAngles = new Vector3(0, 0, 0);
+				weaponSpawnRight.transform.position = this.transform.position + new Vector3(1.6f,1.6f,0f);
+				weaponSpawnLeft.GetComponent<Transform>().eulerAngles = new Vector3(0, 0, 180);
+				weaponSpawnLeft.transform.position = this.transform.position + new Vector3(1.6f,-4.8f,0f);
+				
 				move(-3.2f, 0f,"left");
 				anim.Play("left");
 			}
-			else if (Input.GetKeyDown("up"))
+			else if (Input.GetKeyDown("w"))
 			{
 				weaponSpawn.GetComponent<Transform>().eulerAngles = new Vector3(0, 0, 0);
 				weaponSpawn.transform.position = this.transform.position + new Vector3(1.6f,1.6f,0f);
+				weaponSpawnRight.GetComponent<Transform>().eulerAngles = new Vector3(0, 0, -90);
+				weaponSpawnRight.transform.position = this.transform.position + new Vector3(4.8f,-1.6f,0f);
+				weaponSpawnLeft.GetComponent<Transform>().eulerAngles = new Vector3(0, 0, 90);
+				weaponSpawnLeft.transform.position = this.transform.position + new Vector3(-1.6f,-1.6f,0f);
+
 				move(0f, 3.2f,"up");
 				anim.Play("up");
 			}
-			else if (Input.GetKeyDown("down"))
+			else if (Input.GetKeyDown("s"))
 			{
 				weaponSpawn.GetComponent<Transform>().eulerAngles = new Vector3(0, 0, 180);
 				weaponSpawn.transform.position = this.transform.position + new Vector3(1.6f,-4.8f,0f);
+				weaponSpawnRight.GetComponent<Transform>().eulerAngles = new Vector3(0, 0, 90);
+				weaponSpawnRight.transform.position = this.transform.position + new Vector3(-1.6f,-1.6f,0f);
+				weaponSpawnLeft.GetComponent<Transform>().eulerAngles = new Vector3(0, 0, -90);
+				weaponSpawnLeft.transform.position = this.transform.position + new Vector3(4.8f,-1.6f,0f);
+
 				move(0f, -3.2f,"down");
 				anim.Play("down");
 			}
@@ -100,17 +127,35 @@ public class Playerrules : MonoBehaviour
 		{
 			Instantiate (useItem, weaponSpawn.position, weaponSpawn.rotation);
 		}
-		if (Input.GetKeyDown ("j")) 
+
+		//weapon attacks
+		if (Input.GetKeyDown("up") && Time.time > nextAtk)
 		{
-			PlayerPrefs.SetInt (enemiesTest [0].name, 1);
+			if (lastMove == "up") StartCoroutine(attackUp());
+			else if (lastMove == "right") StartCoroutine(attackLeft());
+			else if (lastMove == "left") StartCoroutine(attackRight());
 		}
-		if (Input.GetKeyDown("left ctrl") && Time.time > nextAtk)
+		if (Input.GetKeyDown("left") && Time.time > nextAtk)
 		{
-			StartCoroutine(attack());
+			if (lastMove == "up") StartCoroutine(attackLeft());
+			else if (lastMove == "down") StartCoroutine(attackRight());
+			else if (lastMove == "left") StartCoroutine(attackUp());
+		}
+		if (Input.GetKeyDown("right") && Time.time > nextAtk)
+		{
+			if (lastMove == "up") StartCoroutine(attackRight());
+			else if (lastMove == "down") StartCoroutine(attackLeft());
+			else if (lastMove == "right") StartCoroutine(attackUp());
+		}
+		if (Input.GetKeyDown("down") && Time.time > nextAtk)
+		{
+			if (lastMove == "down") StartCoroutine(attackUp());
+			else if (lastMove == "right") StartCoroutine(attackRight());
+			else if (lastMove == "left") StartCoroutine(attackLeft());
 		}
 	}
 
-	IEnumerator attack()
+	IEnumerator attackUp()
 	{
 		attacking = true;
 		float timer = 0.0f;
@@ -120,8 +165,33 @@ public class Playerrules : MonoBehaviour
 			timer += Time.deltaTime;
 			yield return null;
 		}
-		attacking = false;
-			
+		attacking = false;	
+	}
+
+	IEnumerator attackLeft()
+	{
+		attacking = true;
+		float timer = 0.0f;
+		Instantiate(currentWeapon, weaponSpawnLeft.position, weaponSpawnLeft.rotation);
+		while (timer < atkRate)
+		{
+			timer += Time.deltaTime;
+			yield return null;
+		}
+		attacking = false;	
+	}
+
+	IEnumerator attackRight()
+	{
+		attacking = true;
+		float timer = 0.0f;
+		Instantiate(currentWeapon, weaponSpawnRight.position, weaponSpawnRight.rotation);
+		while (timer < atkRate)
+		{
+			timer += Time.deltaTime;
+			yield return null;
+		}
+		attacking = false;	
 	}
 
 	void move(float x, float y, string move)
