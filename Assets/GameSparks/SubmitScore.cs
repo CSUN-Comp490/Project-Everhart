@@ -5,12 +5,15 @@ using System;
 
 public class SubmitScore : MonoBehaviour 
 {
-	public Text scoreInput, entryCount, outputData;
+	public Text entryCount, outputData;
+	public int scoreInput;
 	public GameObject highScorePopup;
 
 	void Awake () 
 	{
 		GameSparks.Api.Messages.NewHighScoreMessage.Listener += HighScoreMessageHandler; // assign the New High Score message
+		scoreInput = PlayerPrefs.GetInt("Score");
+		outputData.text = scoreInput.ToString();
 	}
 
 	void HighScoreMessageHandler (GameSparks.Api.Messages.NewHighScoreMessage _message)
@@ -31,8 +34,8 @@ public class SubmitScore : MonoBehaviour
 	{
 		Debug.Log ("Posting Score To Leaderboard...");
 		new GameSparks.Api.Requests.LogEventRequest ()
-			.SetEventKey("LEADERBOARD_SCORER")
-			.SetEventAttribute("SCORE", scoreInput.text)
+			.SetEventKey("LB_SCORER")
+			.SetEventAttribute("HSCORE", scoreInput)
 			.Send ((response) => {
 
 					if(!response.HasErrors)
