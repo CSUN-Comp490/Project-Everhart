@@ -9,7 +9,7 @@ public class Playerrules : MonoBehaviour
 	//health stuff
 	public int curHp;
 	public int startHearts = 1;
-	private int maxHeartsAmount = 6;
+	public int maxHeartsAmount = 6;
 	private int maxHp;
 	private int healthPerHeart = 2;
 	private float moveX, moveY;
@@ -219,10 +219,18 @@ public class Playerrules : MonoBehaviour
 		if(other.gameObject.tag == "Trap")
 		{
 			Damage(-1);
+			moveX = -moveX;
+			moveY = -moveY;
+			move(moveX,moveY,lastMove);
 		}
 		if (other.gameObject.tag == "Healing Pot")
 		{
-			//inc player health
+			if (curHp != startHearts*2) Damage(1);
+			else
+			{
+				AddHeartContainer();
+				Damage(1);
+			}
 		}
 		if (other.gameObject.tag == "Hole" || other.gameObject.tag == "Lava")
 		{

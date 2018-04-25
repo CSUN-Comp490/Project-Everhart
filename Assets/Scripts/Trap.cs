@@ -3,18 +3,13 @@ using System.Collections.Generic;
 using UnityEngine;
 
 public class Trap : MonoBehaviour {
-    public int row, column;
-    // Use this for initialization
+    Animator animator;
     void Start()
     {
-       // transform.position = new Vector2(row, column);
+        animator = GetComponent<Animator>();
     }
-
-    // Update is called once per frame
     void Update()
     {
 
     }
-
-  
 }

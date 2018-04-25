@@ -3,21 +3,24 @@ using System.Collections;
 
 public class potpower : MonoBehaviour {
 
-	public int row, column;
-	// Use this for initialization
-	void Start () {
-		//transform.position = new Vector2 (row, column);	
+	void Start () 
+	{	
 	}
 	
-	// Update is called once per frame
-	void Update () {
+	void Update () 
+	{
 	
 	}
 
 	void OnCollisionEnter2D (Collision2D other)
 	{
 		if (other.gameObject.tag == "Player") {
-			Destroy (gameObject);
+			if (other.gameObject.GetComponent<Playerrules>().curHp 
+				!= other.gameObject.GetComponent<Playerrules>().maxHeartsAmount*2)
+			{
+				Destroy (gameObject);
+			}
+			
 		}
 
 	}
