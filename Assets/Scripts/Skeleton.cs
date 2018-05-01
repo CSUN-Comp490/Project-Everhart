@@ -103,7 +103,7 @@ public class Skeleton : MonoBehaviour {
 			Destroy (gameObject);
             Instantiate(loot, lootSpawn.position, lootSpawn.rotation);
         }
-        if (other.gameObject.tag == "Wall")
+        if ((other.gameObject.tag == "Wall") || (other.gameObject.tag == "Hole"))
 		{
 			moveX = -moveX;
 			moveY = -moveY;

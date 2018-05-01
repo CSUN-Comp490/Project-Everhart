@@ -23,7 +23,7 @@ Vector3 bottomLeft = new Vector3 (((size - 1f) * 200f) + (wallWidth),
 
 public class ItemManager : MonoBehaviour {
 
-	public int room,dim;
+	public int room,dim,levelsCompleted;
 	public Vector3 playerSpawn, exitLocation, spawn;
 	public GameObject[] itemTypes = new GameObject[5];
 	public int numOfItems;
@@ -38,7 +38,7 @@ public class ItemManager : MonoBehaviour {
 
 	void Start () 
 	{
-		
+		levelsCompleted = GetComponentInParent<GameManager>().levelsComplete;
 	}
 	
 	void Update () 
@@ -104,7 +104,7 @@ public class ItemManager : MonoBehaviour {
 				}
 			}
 			
-			this.numOfItems = Random.Range((size*2)+2,(size*2)+5);
+			this.numOfItems = Random.Range((size*2)+3,(size*2)+6);
 			//this.numOfItems = 1;
 			bool spawnAllowed;
 			for (int i = 0; i < numOfItems; i++)

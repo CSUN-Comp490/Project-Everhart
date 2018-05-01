@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class EnemyManager : MonoBehaviour {
 
-	public int room, dim;
+	public int room, dim, levelsCompleted;
 	public Vector3 playerSpawn, exitLocation, spawn;
 	public GameObject[] enemyTypes = new GameObject[1];
 	public int numOfEnemies;
@@ -19,7 +19,7 @@ public class EnemyManager : MonoBehaviour {
 
 	void Start () 
 	{
-		
+		levelsCompleted = GetComponentInParent<GameManager>().levelsComplete;
 	}
 	
 	void Update () 
@@ -85,7 +85,7 @@ public class EnemyManager : MonoBehaviour {
 				}
 			}
 			
-			this.numOfEnemies = Random.Range((size*2)+1,(size*2)+4);
+			this.numOfEnemies = Random.Range((size*2)+levelsCompleted,(size*2)+3+levelsCompleted);
 			bool spawnAllowed;
 			for (int i = 0; i < numOfEnemies; i++)
 			{

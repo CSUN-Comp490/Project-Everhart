@@ -1,6 +1,6 @@
 fileFormatVersion: 2
 guid: 44a4c97f41dc1ef4b938230011e7dd77
-timeCreated: 1520446970
+timeCreated: 1525153139
 licenseType: Free
 TextureImporter:
   fileIDToRecycleName: {}
@@ -115,6 +115,10 @@ TextureImporter:
       - {x: 104, y: -115}
       - {x: 104, y: 102}
       - {x: 95, y: 103}
+    - - {x: 12.886843, y: -16}
+      - {x: 12.892303, y: 16}
+      - {x: -14.033794, y: 16}
+      - {x: -13.930021, y: -16}
     physicsShape:
     - - {x: 104, y: 16}
       - {x: 98, y: 36}
@@ -145,6 +149,12 @@ TextureImporter:
       - {x: -86, y: -132}
       - {x: 82, y: -132}
       - {x: 104, y: -110}
+    - - {x: 16, y: -16}
+      - {x: 16, y: 12.035057}
+      - {x: 11.92017, y: 16}
+      - {x: -12.288788, y: 16}
+      - {x: -16, y: 11.715307}
+      - {x: -16, y: -16}
   spritePackingTag: 
   userData: 
   assetBundleName: 

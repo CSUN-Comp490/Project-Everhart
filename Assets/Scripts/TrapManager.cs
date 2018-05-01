@@ -4,9 +4,9 @@ using UnityEngine;
 
 public class TrapManager : MonoBehaviour {
 
-	public int room,dim;
+	public int room,dim,levelsCompleted;
 	public Vector3 playerSpawn, exitLocation, spawn;
-	public GameObject[] trapTypes = new GameObject[1];
+	public GameObject[] trapTypes = new GameObject[10];
 	public int numOfTraps;
 	public const float squareLength = 3.2f; //width/length of one square
 	public const float wallWidth = 6.4f; //width of the wall prefabs
@@ -16,10 +16,12 @@ public class TrapManager : MonoBehaviour {
 	public int y = 0;
 
 	public int[,] possibleSpawns;
+	public GameObject SpawnTester;
 
 	void Start () 
 	{
-		
+		//Instantiate(SpawnTester, playerSpawn, Quaternion.identity, this.transform);
+		levelsCompleted = GetComponentInParent<GameManager>().levelsComplete;
 	}
 	
 	void Update () 
@@ -85,9 +87,9 @@ public class TrapManager : MonoBehaviour {
 				}
 			}
 			
-			this.numOfTraps = Random.Range((size*2),(size*2)+3);
+			this.numOfTraps = Random.Range((size*2)+levelsCompleted,(size*2)+3+levelsCompleted);
 			//this.numOfItems = 1;
-			bool spawnAllowed;
+			bool spawnAllowed, inCollider;
 			for (int i = 0; i < numOfTraps; i++)
 			{
 				spawnAllowed = false;
@@ -100,6 +102,16 @@ public class TrapManager : MonoBehaviour {
 					spawn = new Vector3(((size-1f)*200) + wallWidth + (squareLength/2) + (x*squareLength), 
 								100f - wallWidth - (squareLength/2) - (y*squareLength), 0f);
 					//check the spawn to see if it works
+
+					/*
+					SpawnTester.transform.position = spawn;
+					if (SpawnTester.GetComponent<SpawnTester>().inCollider)
+					{	
+						print("SpawnTester was inside a collider");
+						spawnAllowed = false;
+					}
+					*/
+
 					spawnAllowed = checkSpawn();
 				}
 				possibleSpawns[x,y] = 1;

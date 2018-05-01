@@ -202,6 +202,24 @@ public class Playerrules : MonoBehaviour
 		this.transform.position += new Vector3 (x, y, 0f);
 	}
 
+	void OnTriggerEnter2D(Collider2D other)
+    {
+        if (other.gameObject.tag == "arrows")
+        {
+            Damage(-1);
+			moveX = -moveX;
+			moveY = -moveY;
+			move(moveX,moveY,lastMove);
+        }
+		if(other.gameObject.tag == "Saw")
+		{
+			Damage(-1);
+			moveX = -moveX;
+			moveY = -moveY;
+			move(moveX,moveY,lastMove);
+		}
+    }
+
 	void OnCollisionEnter2D(Collision2D other)
 	{
 		if (other.gameObject.tag == "Monster")
@@ -215,13 +233,6 @@ public class Playerrules : MonoBehaviour
 		{
 			GetComponentInParent<GameManager>().totalCurrency++;
             ScoreManager.score += 1;
-		}
-		if(other.gameObject.tag == "Trap")
-		{
-			Damage(-1);
-			moveX = -moveX;
-			moveY = -moveY;
-			move(moveX,moveY,lastMove);
 		}
 		if (other.gameObject.tag == "Healing Pot")
 		{
