@@ -26,3 +26,6 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/scenes/GameManager.unity
     guid: d19f44bbbb0a1774787897380dd6ec2b
+  - enabled: 1
+    path: Assets/scenes/QuitMenu.unity
+    guid: 81b70cc7006ba3942b2334e3d41a969c

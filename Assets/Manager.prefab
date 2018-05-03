@@ -942,6 +942,7 @@ MonoBehaviour:
   spawn: {x: 0, y: 0, z: 0}
   enemyTypes:
   - {fileID: 1492649916310412, guid: c2014db427b07a7478b5c5bff62257ac, type: 2}
+  boss: {fileID: 1549456930538880, guid: 0709c551ebc8f6f43aea3dcb9588e656, type: 2}
   numOfEnemies: 0
   x: 0
   y: 0
@@ -1205,6 +1206,7 @@ MonoBehaviour:
   spawnItems: 0
   spawnTraps: 0
   reset: 0
+  bossDead: 0
 --- !u!114 &114464625097458122
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -1707,6 +1709,11 @@ MonoBehaviour:
   exitLocation: {x: 0, y: 0, z: 0}
   spawn: {x: 0, y: 0, z: 0}
   itemTypes:
+  - {fileID: 1469879588785906, guid: 2b33a37762060cc46a3a6daf2a939b63, type: 2}
+  - {fileID: 1469879588785906, guid: 2b33a37762060cc46a3a6daf2a939b63, type: 2}
+  - {fileID: 1469879588785906, guid: 2b33a37762060cc46a3a6daf2a939b63, type: 2}
+  - {fileID: 1469879588785906, guid: 2b33a37762060cc46a3a6daf2a939b63, type: 2}
+  - {fileID: 1469879588785906, guid: 2b33a37762060cc46a3a6daf2a939b63, type: 2}
   - {fileID: 1469879588785906, guid: 2b33a37762060cc46a3a6daf2a939b63, type: 2}
   - {fileID: 1469879588785906, guid: 2b33a37762060cc46a3a6daf2a939b63, type: 2}
   - {fileID: 1469879588785906, guid: 2b33a37762060cc46a3a6daf2a939b63, type: 2}

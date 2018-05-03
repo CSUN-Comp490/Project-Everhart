@@ -30,6 +30,15 @@ TagManager:
   - Final Exit
   - Monster
   - Healing Pot
+  - arrows
+  - GoLeft
+  - Saw
+  - GoRight
+  - GoDown
+  - GoUp
+  - Boss
+  - Fireball
+  - Flame
   layers:
   - Default
   - TransparentFX

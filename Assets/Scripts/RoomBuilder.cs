@@ -36,6 +36,8 @@ public class RoomBuilder : MonoBehaviour {
 		{
 			Instantiate (walls, new Vector3 (200f, 0f, 0f), Quaternion.identity, this.transform);
 			spawn = new Vector3(200f + wallWidth + 32f, 0f - wallWidth - 60.8f, 0f);
+			entrancePosition = spawn;
+			exitPosition = new Vector3(238.4f,-9.6f,0f);
 		}
 		//small/med/large rooms
 		else 

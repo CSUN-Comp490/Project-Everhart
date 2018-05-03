@@ -128,14 +128,28 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b189828b883e29f4cbb01ab3fd7c4f9a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  player: {fileID: 0}
+  loot: {fileID: 0}
+  lootChoices:
+  - {fileID: 1469879588785906, guid: 2b33a37762060cc46a3a6daf2a939b63, type: 2}
+  - {fileID: 1469879588785906, guid: 2b33a37762060cc46a3a6daf2a939b63, type: 2}
+  - {fileID: 1469879588785906, guid: 2b33a37762060cc46a3a6daf2a939b63, type: 2}
+  - {fileID: 1469879588785906, guid: 2b33a37762060cc46a3a6daf2a939b63, type: 2}
+  - {fileID: 1469879588785906, guid: 2b33a37762060cc46a3a6daf2a939b63, type: 2}
+  - {fileID: 1469879588785906, guid: 2b33a37762060cc46a3a6daf2a939b63, type: 2}
+  - {fileID: 1469879588785906, guid: 2b33a37762060cc46a3a6daf2a939b63, type: 2}
+  - {fileID: 1469879588785906, guid: 2b33a37762060cc46a3a6daf2a939b63, type: 2}
+  - {fileID: 1469879588785906, guid: 2b33a37762060cc46a3a6daf2a939b63, type: 2}
+  - {fileID: 1565291726334094, guid: 505f4c04acc4a3b4287bff5dec996fd8, type: 2}
+  otherEnemies: []
+  lootSpawn: {fileID: 4264663695956112}
+  choice: 0
   moveRate: 1
   nextMove: 0.5
-  patrolx: 5
-  patroly: 5
-  countx: 0
-  county: 0
-  loot: {fileID: 1469879588785906, guid: 2b33a37762060cc46a3a6daf2a939b63, type: 2}
-  lootSpawn: {fileID: 4264663695956112}
+  time: 0
+  moveX: 0
+  moveY: 0
+  lastMove: 
 --- !u!212 &212549090451245804
 SpriteRenderer:
   m_ObjectHideFlags: 1

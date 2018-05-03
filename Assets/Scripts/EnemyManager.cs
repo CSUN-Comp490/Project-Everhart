@@ -7,6 +7,7 @@ public class EnemyManager : MonoBehaviour {
 	public int room, dim, levelsCompleted;
 	public Vector3 playerSpawn, exitLocation, spawn;
 	public GameObject[] enemyTypes = new GameObject[1];
+	public GameObject boss;
 	public int numOfEnemies;
 	public const float squareLength = 3.2f; //width/length of one square
 	public const float wallWidth = 6.4f; //width of the wall prefabs
@@ -45,14 +46,13 @@ public class EnemyManager : MonoBehaviour {
 		if (room == -1) //start room - do nothing
 		{
 			this.playerSpawn = GetComponentInParent<GameManager>().startSpawn;
-			this.exitLocation = GetComponentInParent<GameManager>().start.GetComponent<RoomBuilder>().exitPosition 
-				+ new Vector3(4.8f,-4.8f,0f);
 		}
 		else if (room == -2) 
 		{
 			this.playerSpawn = GetComponentInParent<GameManager>().finalSpawn;
-			this.exitLocation = GetComponentInParent<GameManager>().final.GetComponent<RoomBuilder>().exitPosition 
-				+ new Vector3(4.8f,-4.8f,0f);
+			this.exitLocation = GetComponentInParent<GameManager>().final.GetComponent<RoomBuilder>().exitPosition;
+
+			Instantiate(boss, this.exitLocation + new Vector3(3.2f,-6.4f,0f) , Quaternion.identity, this.transform);
 		}
 		else //in rooms 1, 2, or 3
 		{

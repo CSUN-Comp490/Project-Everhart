@@ -47,14 +47,29 @@ public class TrapManager : MonoBehaviour {
 		if (room == -1) //start room - do nothing
 		{
 			this.playerSpawn = GetComponentInParent<GameManager>().startSpawn;
-			this.exitLocation = GetComponentInParent<GameManager>().start.GetComponent<RoomBuilder>().exitPosition 
-				+ new Vector3(4.8f,-4.8f,0f);
 		}
 		else if (room == -2) 
 		{
 			this.playerSpawn = GetComponentInParent<GameManager>().finalSpawn;
-			this.exitLocation = GetComponentInParent<GameManager>().final.GetComponent<RoomBuilder>().exitPosition 
-				+ new Vector3(4.8f,-4.8f,0f);
+			this.exitLocation = GetComponentInParent<GameManager>().final.GetComponent<RoomBuilder>().exitPosition;
+
+
+			if (levelsCompleted >= 3)
+			{
+
+			}
+			else if (levelsCompleted >= 6)
+			{
+
+			}
+			else if (levelsCompleted >= 9)
+			{
+
+			}
+			else if (levelsCompleted >= 12)
+			{
+				
+			}
 		}
 		else //in rooms 1, 2, or 3
 		{

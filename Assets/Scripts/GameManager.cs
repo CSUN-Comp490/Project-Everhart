@@ -29,7 +29,7 @@ public class GameManager : MonoBehaviour
 	public int score = 0;
 
 	public int currentRoom;
-	public bool spawnEnemies, spawnItems, spawnTraps, reset;
+	public bool spawnEnemies, spawnItems, spawnTraps, reset, bossDead;
 
 	void Start () 
 	{
@@ -59,6 +59,7 @@ public class GameManager : MonoBehaviour
 		spawnEnemies = false;
 		spawnItems = false;
 		spawnTraps = false;
+		bossDead = false;
 
 	}
 
@@ -159,5 +160,4 @@ public class GameManager : MonoBehaviour
 	{
 		score = (levelsComplete*20)+(roomsComplete*5)+(enemiesDefeated*5)+(totalCurrency);
 	}
-
 }

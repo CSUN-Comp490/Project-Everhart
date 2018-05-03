@@ -128,26 +128,26 @@ public class Playerrules : MonoBehaviour
 			Instantiate (useItem, weaponSpawn.position, weaponSpawn.rotation);
 		}
 
-		//weapon attacks
-		if (Input.GetKeyDown("up") && Time.time > nextAtk)
+		//weapon attacks - (Input.GetKeyDown("up") && Time.time > nextAtk)
+		if (Input.GetKeyDown("up") && !attacking)
 		{
 			if (lastMove == "up") StartCoroutine(attackUp());
 			else if (lastMove == "right") StartCoroutine(attackLeft());
 			else if (lastMove == "left") StartCoroutine(attackRight());
 		}
-		if (Input.GetKeyDown("left") && Time.time > nextAtk)
+		if (Input.GetKeyDown("left") && !attacking)
 		{
 			if (lastMove == "up") StartCoroutine(attackLeft());
 			else if (lastMove == "down") StartCoroutine(attackRight());
 			else if (lastMove == "left") StartCoroutine(attackUp());
 		}
-		if (Input.GetKeyDown("right") && Time.time > nextAtk)
+		if (Input.GetKeyDown("right") && !attacking)
 		{
 			if (lastMove == "up") StartCoroutine(attackRight());
 			else if (lastMove == "down") StartCoroutine(attackLeft());
 			else if (lastMove == "right") StartCoroutine(attackUp());
 		}
-		if (Input.GetKeyDown("down") && Time.time > nextAtk)
+		if (Input.GetKeyDown("down") && !attacking)
 		{
 			if (lastMove == "down") StartCoroutine(attackUp());
 			else if (lastMove == "right") StartCoroutine(attackRight());
@@ -229,6 +229,27 @@ public class Playerrules : MonoBehaviour
 			moveY = -moveY;
 			move(moveX,moveY,lastMove);
 		}
+		if (other.gameObject.tag == "Boss")
+		{
+			Damage(-1);
+			moveX = -moveX;
+			moveY = -moveY;
+			move(moveX,moveY,lastMove);
+		}
+		if (other.gameObject.tag == "Flame")
+		{
+			Damage(-1);
+			moveX = -moveX;
+			moveY = -moveY;
+			move(moveX,moveY,lastMove);
+		}
+		if (other.gameObject.tag == "Fireball")
+		{
+			Damage(-1);
+			moveX = -moveX;
+			moveY = -moveY;
+			move(moveX,moveY,lastMove);
+		}
 		if (other.gameObject.tag == "Coin")
 		{
 			GetComponentInParent<GameManager>().totalCurrency++;
@@ -280,7 +301,7 @@ public class Playerrules : MonoBehaviour
 		if (other.gameObject.tag == "Exit") 
 		{
 			//send player back to start after final room
-			if (currentRoom == -2) 
+			if ((currentRoom == -2) && (GetComponentInParent<GameManager>().bossDead))
 			{
 				roomNum = 0;
 				currentRoom = -1;

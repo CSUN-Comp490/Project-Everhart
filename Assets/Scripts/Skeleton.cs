@@ -6,6 +6,7 @@ public class Skeleton : MonoBehaviour {
 
 	GameObject skull;
     public GameObject player, loot;
+    public GameObject[] lootChoices = new GameObject[10];
     public List<GameObject> otherEnemies;
     public Transform lootSpawn;
     public int choice;
@@ -16,11 +17,7 @@ public class Skeleton : MonoBehaviour {
 	void Start () 
     {
         player = GameObject.FindGameObjectWithTag("Player");
-        foreach (GameObject child in GetComponentInParent<Playerrules>().transform)
-        {
-            if (child != this.gameObject) otherEnemies.Add(child);
-        }
-		moveRate = 0.5f;
+        loot = lootChoices[Random.Range(0,lootChoices.Length)];
 	}
 	
 	// Update is called once per frame
@@ -101,6 +98,7 @@ public class Skeleton : MonoBehaviour {
 		if (other.gameObject.tag == "Weapon") 
 		{
 			Destroy (gameObject);
+            GetComponentInParent<GameManager>().enemiesDefeated++;
             Instantiate(loot, lootSpawn.position, lootSpawn.rotation);
         }
         if ((other.gameObject.tag == "Wall") || (other.gameObject.tag == "Hole"))
