@@ -38,13 +38,14 @@ public class ItemManager : MonoBehaviour {
 
 	void Start () 
 	{
-		levelsCompleted = GetComponentInParent<GameManager>().levelsComplete;
+		
 	}
 	
 	void Update () 
 	{
 		this.room = GetComponentInParent<GameManager>().currentRoom;
-		if( (GetComponentInParent<GameManager>().spawnItems) && (room != -2) )
+		this.levelsCompleted = GetComponentInParent<GameManager>().levelsComplete;
+		if( (GetComponentInParent<GameManager>().spawnItems))
 		{
 			spawnItems(room);
 		}
@@ -72,6 +73,15 @@ public class ItemManager : MonoBehaviour {
 			this.playerSpawn = GetComponentInParent<GameManager>().finalSpawn;
 			this.exitLocation = GetComponentInParent<GameManager>().final.GetComponent<RoomBuilder>().exitPosition 
 				+ new Vector3(4.8f,-4.8f,0f);
+
+			Instantiate(itemTypes[0],new Vector3(240f,-33.6f,0f),Quaternion.identity,this.transform);
+			Instantiate(itemTypes[8],new Vector3(240f,-40f,0f),Quaternion.identity,this.transform);
+			Instantiate(itemTypes[0],new Vector3(240f,-46.4f,0f),Quaternion.identity,this.transform);
+
+			Instantiate(itemTypes[0],new Vector3(208f,-33.6f,0f),Quaternion.identity,this.transform);
+			Instantiate(itemTypes[0],new Vector3(208f,-46.4f,0f),Quaternion.identity,this.transform);
+			Instantiate(itemTypes[0],new Vector3(272f,-33.6f,0f),Quaternion.identity,this.transform);
+			Instantiate(itemTypes[0],new Vector3(272f,-46.4f,0f),Quaternion.identity,this.transform);
 		}
 		else //in rooms 1, 2, or 3
 		{

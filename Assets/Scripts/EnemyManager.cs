@@ -20,11 +20,12 @@ public class EnemyManager : MonoBehaviour {
 
 	void Start () 
 	{
-		levelsCompleted = GetComponentInParent<GameManager>().levelsComplete;
+
 	}
 	
 	void Update () 
 	{
+		this.levelsCompleted = GetComponentInParent<GameManager>().levelsComplete;
 		this.room = GetComponentInParent<GameManager>().currentRoom;
 		if(GetComponentInParent<GameManager>().spawnEnemies) 
 		{

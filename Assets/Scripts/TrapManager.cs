@@ -20,14 +20,14 @@ public class TrapManager : MonoBehaviour {
 
 	void Start () 
 	{
-		//Instantiate(SpawnTester, playerSpawn, Quaternion.identity, this.transform);
-		levelsCompleted = GetComponentInParent<GameManager>().levelsComplete;
+
 	}
 	
 	void Update () 
 	{
+		this.levelsCompleted = GetComponentInParent<GameManager>().levelsComplete;
 		this.room = GetComponentInParent<GameManager>().currentRoom;
-		if( (GetComponentInParent<GameManager>().spawnTraps) && (room != -2) )
+		if( (GetComponentInParent<GameManager>().spawnTraps))
 		{
 			spawnTraps(room);
 		}
@@ -53,22 +53,39 @@ public class TrapManager : MonoBehaviour {
 			this.playerSpawn = GetComponentInParent<GameManager>().finalSpawn;
 			this.exitLocation = GetComponentInParent<GameManager>().final.GetComponent<RoomBuilder>().exitPosition;
 
+			//Spikes = trapTypes[0]
+			//LArrow = trapTypes[4]
+			//RArrow = trapTypes[6]
+			//LRSaw = trapTypes[8]
+			//UDSaw = trapTypes[10]
 
+			//Instantiate(trapTypes[],new Vector3(f,f,f),Quaternion.identity,this.transform);
+			//200,0,0
+			Instantiate(trapTypes[0],new Vector3(208f,-40f,0f),Quaternion.identity,this.transform);
+			Instantiate(trapTypes[0],new Vector3(272f,-40f,0f),Quaternion.identity,this.transform);
+			Instantiate(trapTypes[0],new Vector3(240f,-27.2f,0f),Quaternion.identity,this.transform);
+			Instantiate(trapTypes[0],new Vector3(240f,-52.8f,0f),Quaternion.identity,this.transform);
+			if (levelsCompleted >= 1)
+			{
+				Instantiate(trapTypes[6],new Vector3(211.2f,-30.4f,0f),Quaternion.identity,this.transform);
+				Instantiate(trapTypes[4],new Vector3(268.8f,-49.6f,0f),Quaternion.identity,this.transform);
+			}
 			if (levelsCompleted >= 3)
 			{
-
+				Instantiate(trapTypes[8],new Vector3(227.2f,-52.8f,0f),Quaternion.identity,this.transform);
+				Instantiate(trapTypes[8],new Vector3(252.8f,-52.8f,0f),Quaternion.identity,this.transform);
 			}
-			else if (levelsCompleted >= 6)
+			if (levelsCompleted >= 5)
 			{
-
+				Instantiate(trapTypes[10],new Vector3(249.6f,-15.4f,0f),Quaternion.identity,this.transform);
+				Instantiate(trapTypes[10],new Vector3(230.4f,-15.4f,0f),Quaternion.identity,this.transform);
 			}
-			else if (levelsCompleted >= 9)
+			if (levelsCompleted >= 7)
 			{
-
-			}
-			else if (levelsCompleted >= 12)
-			{
-				
+				//Instantiate(trapTypes[10],new Vector3(f,f,0f),Quaternion.identity,this.transform);
+				//Instantiate(trapTypes[10],new Vector3(f,f,0f),Quaternion.identity,this.transform);
+				//Instantiate(trapTypes[4],new Vector3(f,f,0f),Quaternion.identity,this.transform);
+				//Instantiate(trapTypes[6],new Vector3(f,f,0f),Quaternion.identity,this.transform);
 			}
 		}
 		else //in rooms 1, 2, or 3

@@ -253,7 +253,7 @@ public class Playerrules : MonoBehaviour
 		if (other.gameObject.tag == "Coin")
 		{
 			GetComponentInParent<GameManager>().totalCurrency++;
-            ScoreManager.score += 1;
+            //ScoreManager.score += 1;
 		}
 		if (other.gameObject.tag == "Healing Pot")
 		{

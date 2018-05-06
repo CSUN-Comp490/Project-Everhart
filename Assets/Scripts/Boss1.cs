@@ -27,6 +27,16 @@ public class Boss1 : MonoBehaviour
         player = GameObject.FindGameObjectWithTag("Player");
         anim = GetComponent<Animator>();
         spawn = this.transform.position;
+
+        hp = 1 + GetComponentInParent<GameManager>().levelsComplete;
+
+    /* 
+        if (GetComponentInParent<GameManager>().levelsComplete > 0)
+        {
+            hp = GetComponentInParent<GameManager>().levelsComplete;
+        }
+        else hp = 1;
+        */
     }
 
     // Update is called once per frame
@@ -110,12 +120,13 @@ public class Boss1 : MonoBehaviour
             Destroy(gameObject);
             GetComponentInParent<GameManager>().enemiesDefeated++;
             GetComponentInParent<GameManager>().bossDead = true;
-            Instantiate(loot1, spawn + new Vector3(1.6f,1.6f,0f), lootSpawn.rotation);
-            Instantiate(loot2, spawn + new Vector3(-4.8f,1.6f,0f), lootSpawn.rotation);
-            Instantiate(loot3, spawn + new Vector3(-4.8f,-1.6f,0f), lootSpawn.rotation);
-            Instantiate(loot4, spawn + new Vector3(-1.6f,1.6f,0f), lootSpawn.rotation);
-            Instantiate(loot5, spawn + new Vector3(-1.6f,-1.6f,0f), lootSpawn.rotation);
-            Instantiate(loot6, spawn + new Vector3(1.6f,-1.6f,0f), lootSpawn.rotation);
+            Transform trans = GetComponentInParent<EnemyManager>().transform;
+            Instantiate(loot1, spawn + new Vector3(1.6f,1.6f,0f), lootSpawn.rotation, trans);
+            Instantiate(loot2, spawn + new Vector3(-4.8f,1.6f,0f), lootSpawn.rotation, trans);
+            Instantiate(loot3, spawn + new Vector3(-4.8f,-1.6f,0f), lootSpawn.rotation, trans);
+            Instantiate(loot4, spawn + new Vector3(-1.6f,1.6f,0f), lootSpawn.rotation, trans);
+            Instantiate(loot5, spawn + new Vector3(-1.6f,-1.6f,0f), lootSpawn.rotation, trans);
+            Instantiate(loot6, spawn + new Vector3(1.6f,-1.6f,0f), lootSpawn.rotation, trans);
         }
     }
 

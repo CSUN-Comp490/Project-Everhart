@@ -26,6 +26,7 @@ public class GameManager : MonoBehaviour
 	public int totalCurrency = 0;   //1 point
 	public int roomsComplete = 0;   //5 points
 	public int enemiesDefeated = 0; //5 points
+	public int healthCollected = 0; //-5 points
 	public int score = 0;
 
 	public int currentRoom;
@@ -66,17 +67,13 @@ public class GameManager : MonoBehaviour
 	void Update () 
 	{
 		//this.currentRoom = GetComponentInChildren<Playerrules>().currentRoom;
-		print("Rooms completed: " + roomsComplete);
-		print("Total currency: " + totalCurrency);
-		print("Enemies Defeated: " + enemiesDefeated);
 		calcScore();
-		print("Score: " + score);
+		ScoreManager.score = score;
 		if (complete) 
 		{
 			levelsComplete++;
-			print("Levels completed: " + levelsComplete);
 			calcScore();
-			print("Score: " + score);
+			ScoreManager.score = score;
 			reset = true;
 			Start();
 		}
@@ -158,6 +155,6 @@ public class GameManager : MonoBehaviour
 
 	void calcScore()
 	{
-		score = (levelsComplete*20)+(roomsComplete*5)+(enemiesDefeated*5)+(totalCurrency);
+		score = (levelsComplete*20)+(roomsComplete*5)+(enemiesDefeated*5)+(totalCurrency)+(healthCollected*(-5));
 	}
 }
