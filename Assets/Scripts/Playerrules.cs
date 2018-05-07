@@ -280,6 +280,7 @@ public class Playerrules : MonoBehaviour
 				AddHeartContainer();
 				Damage(1);
 			}
+			GetComponentInParent<GameManager>().healthCollected++;
 		}
 		if (other.gameObject.tag == "Hole" || other.gameObject.tag == "Lava")
 		{
