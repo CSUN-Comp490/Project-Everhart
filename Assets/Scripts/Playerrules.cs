@@ -3,6 +3,11 @@ using System.Collections;
 using UnityEngine.UI;
 using Random = UnityEngine.Random;
 using UnityEngine.SceneManagement;
+using GameSparks;
+using GameSparks.Core;
+using GameSparks.Platforms;
+using GameSparks.Platforms.WebGL;
+using GameSparks.Platforms.Native;
 
 public class Playerrules : MonoBehaviour
 {
@@ -61,6 +66,18 @@ public class Playerrules : MonoBehaviour
 		maxHp = maxHeartsAmount * healthPerHeart;
 		checkHp();
 		anim = GetComponent<Animator>();
+
+		new GameSparks.Api.Requests.LogEventRequest().SetEventKey("LOAD_PLAYER").Send((response) => {
+		    if (!response.HasErrors) {
+		        Debug.Log("Received Player Data From GameSparks...");
+		        GSData data = response.ScriptData.GetGSData("player_Data");
+		        currency = (int)data.GetInt("playerGold");
+		        PlayerPrefs.SetInt("Coins", currency);
+
+		    } else {
+		        Debug.Log("Error Loading Player Data...");
+		    }
+});
 	}
 
 
@@ -492,9 +509,23 @@ public class Playerrules : MonoBehaviour
 
 		PlayerPrefs.GetInt("Score",0);
 		PlayerPrefs.SetInt("Score", GetComponentInParent<GameManager>().score);
-		currency = PlayerPrefs.GetInt("Coins",0);
+		//currency = PlayerPrefs.GetInt("Coins",0);
 		currency += GetComponentInParent<GameManager>().totalCurrency;
 		PlayerPrefs.SetInt("Coins", currency);
+		new GameSparks.Api.Requests.LogEventRequest ()
+			.SetEventKey ("SAVE_PLAYER")
+			.SetEventAttribute ("GOLD", currency)
+			.Send ((response) => {
+
+						if(!response.HasErrors)
+						{
+							Debug.Log("Gold Saved to GameSparks...");
+						}
+						else
+						{
+							Debug.Log("Error Saving Gold...");
+						}
+				});
 
 		SceneManager.LoadScene("GameOver");
 	}
