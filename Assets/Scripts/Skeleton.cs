@@ -99,7 +99,8 @@ public class Skeleton : MonoBehaviour {
 		{
 			Destroy (gameObject);
             GetComponentInParent<GameManager>().enemiesDefeated++;
-            Instantiate(loot, lootSpawn.position, lootSpawn.rotation);
+            Transform trans = GetComponentInParent<EnemyManager>().transform;
+            Instantiate(loot, lootSpawn.position, lootSpawn.rotation, trans);
         }
         if ((other.gameObject.tag == "Wall") || (other.gameObject.tag == "Hole"))
 		{

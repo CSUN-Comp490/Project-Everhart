@@ -30,20 +30,13 @@ public class GameManager : MonoBehaviour
 	public int score = 0;
 
 	public int currentRoom;
-	public bool spawnEnemies, spawnItems, spawnTraps, reset, bossDead;
+	public bool spawnEnemies, spawnItems, spawnTraps, bossDead;
 
 	void Start () 
 	{
-		/*
-		Instantiate(start,new Vector3(0,0,0),Quaternion.identity,this.transform);
-		Instantiate(final,new Vector3(200,0,0),Quaternion.identity,this.transform);
-		Instantiate(small,new Vector3(0,100,0),Quaternion.identity,this.transform);
-		Instantiate(medium,new Vector3(200,100,0),Quaternion.identity,this.transform);
-		Instantiate(large,new Vector3(400,100,0),Quaternion.identity,this.transform);
-		*/
 		//establish spawn locations for each room
-		startSpawn = start.GetComponent<RoomBuilder>().spawn;
-		finalSpawn = final.GetComponent<RoomBuilder>().spawn;
+		startSpawn = new Vector3(19.2f,-28.8f,0f);
+		finalSpawn = new Vector3(238.4f,-67.2f,0f);
 		smallSpawn = small.GetComponent<RoomBuilder>().spawn;
 		mediumSpawn = medium.GetComponent<RoomBuilder>().spawn;
 		largeSpawn = large.GetComponent<RoomBuilder>().spawn;
@@ -56,7 +49,6 @@ public class GameManager : MonoBehaviour
 
 		complete = false;
 		currentRoom = GetComponentInChildren<Playerrules>().currentRoom;
-		reset = false;
 		spawnEnemies = false;
 		spawnItems = false;
 		spawnTraps = false;
@@ -74,10 +66,11 @@ public class GameManager : MonoBehaviour
 			levelsComplete++;
 			calcScore();
 			ScoreManager.score = score;
-			reset = true;
+			GetComponentInChildren<EnemyManager>().reset = true;
+			GetComponentInChildren<ItemManager>().reset = true;
+			GetComponentInChildren<TrapManager>().reset = true;
 			Start();
 		}
-		if (reset) resetSpawns();
 	}
 
 	void createPaths(int path, List<int> doors, List<int> rooms)
@@ -143,14 +136,6 @@ public class GameManager : MonoBehaviour
 		if (r == 1) p[index] = this.smallSpawn;
 		if (r == 2) p[index] = this.mediumSpawn;
 		if (r == 3) p[index] = this.largeSpawn;
-	}
-
-	void resetSpawns()
-	{
-		reset = false;
-		spawnEnemies = true;
-		spawnItems = true;
-		spawnTraps = true;
 	}
 
 	void calcScore()

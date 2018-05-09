@@ -2,6 +2,7 @@ using UnityEngine;
 using System.Collections;
 using UnityEngine.UI;
 using System;
+using UnityEngine.SceneManagement;
 
 public class SubmitScore : MonoBehaviour 
 {
@@ -41,6 +42,7 @@ public class SubmitScore : MonoBehaviour
 					if(!response.HasErrors)
 					{
 						Debug.Log("Score Posted Sucessfully...");
+						SceneManager.LoadScene("Menu");
 					}
 					else
 					{

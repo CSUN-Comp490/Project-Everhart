@@ -16,11 +16,12 @@ public class TrapManager : MonoBehaviour {
 	public int y = 0;
 
 	public int[,] possibleSpawns;
-	public GameObject SpawnTester;
+	
+	public bool reset;
 
 	void Start () 
 	{
-
+		reset = false;
 	}
 	
 	void Update () 
@@ -32,7 +33,7 @@ public class TrapManager : MonoBehaviour {
 			spawnTraps(room);
 		}
 		
-		if (GetComponentInParent<GameManager>().reset)
+		if (reset)
 		{
 			foreach(Transform child in transform)
 			{

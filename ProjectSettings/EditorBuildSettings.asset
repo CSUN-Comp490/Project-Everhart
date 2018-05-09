@@ -8,24 +8,21 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/scenes/LogIn.unity
     guid: c52ab06e7acc9de4ea123a35ddfa2faa
-  - enabled: 0
-    path: Assets/scenes/MainGame.unity
-    guid: 8b56df8b599fdc343b471fbe5e6c287b
   - enabled: 1
-    path: Assets/scenes/Shop.unity
-    guid: 96ca6552e028d441ab4097cba537ea76
+    path: Assets/scenes/CreateAccount.unity
+    guid: 52c41c785aaaa5440ba5a1731b9d32e1
   - enabled: 1
     path: Assets/scenes/Menu.unity
     guid: 18778e8281939466395fd812688d8d75
   - enabled: 1
-    path: Assets/scenes/GameOver.unity
-    guid: 9828a6b011a5d481689cdb37b506c48e
-  - enabled: 1
-    path: Assets/scenes/CreateAccount.unity
-    guid: 52c41c785aaaa5440ba5a1731b9d32e1
+    path: Assets/scenes/Shop.unity
+    guid: 96ca6552e028d441ab4097cba537ea76
   - enabled: 1
     path: Assets/scenes/GameManager.unity
     guid: d19f44bbbb0a1774787897380dd6ec2b
   - enabled: 1
     path: Assets/scenes/QuitMenu.unity
     guid: 81b70cc7006ba3942b2334e3d41a969c
+  - enabled: 1
+    path: Assets/scenes/GameOver.unity
+    guid: 9828a6b011a5d481689cdb37b506c48e

@@ -18,9 +18,11 @@ public class EnemyManager : MonoBehaviour {
 
 	public int[,] possibleSpawns;
 
+	public bool reset;
+
 	void Start () 
 	{
-
+		reset = false;
 	}
 	
 	void Update () 
@@ -32,7 +34,7 @@ public class EnemyManager : MonoBehaviour {
 			spawnEnemies(room);
 		}
 		
-		if (GetComponentInParent<GameManager>().reset)
+		if (reset)
 		{
 			foreach(Transform child in transform)
 			{

@@ -1,12 +1,12 @@
 WindowsStandalone
 SceneListBegin?
 Assets/scenes/LogIn.unity
-Assets/scenes/Shop.unity
-Assets/scenes/Menu.unity
-Assets/scenes/GameOver.unity
 Assets/scenes/CreateAccount.unity
+Assets/scenes/Menu.unity
+Assets/scenes/Shop.unity
 Assets/scenes/GameManager.unity
 Assets/scenes/QuitMenu.unity
+Assets/scenes/GameOver.unity
 SceneListEnd?
 05524b8f659e7bfe5756d1335fec24ba Assembly-CSharp.dll:.GameSparksRTUnity
 05524b8f659e7bfe5756d1335fec24ba UnityEngine.Timeline.dll:UnityEngine.Timeline.ActivationPlayableAsset
@@ -138,7 +138,7 @@ bc68edb0af574bf79f9550ead8ebae5c UnityEngine.HoloLens.dll:UnityEngine.Audio.Audi
 c2275a8bfbb9f9942cad75ecdfded41d UnityEngine.HoloLens.dll:UnityEngine.XR.WSA.SpatialMappingCollider
 45f3431f0103c41611e8d4eec3d439df UnityEngine.HoloLens.dll:UnityEngine.XR.WSA.SpatialMappingRenderer
 253abbf7373cff6d2f542ae3b2ce1277 Assembly-CSharp.dll:.Popup
-9ccf636f738b10d4d5109186caa48c22 Assembly-CSharp.dll:.ItemManager
+6b9e37ae5f6dec07700d428e0dff4cff Assembly-CSharp.dll:.ItemManager
 296db3b4b21c343102327891b797e936 Assembly-CSharp.dll:.Leaderboard_SampleScript
 82e377d7d56b955359be4b3785f58bb5 Assembly-CSharp.dll:.fireball
 3728c1c1eb93a442c517ae93a0134ab9 Assembly-CSharp.dll:.SubmitScore
@@ -149,11 +149,11 @@ d7f0f32d2a204edd775097283fbf8b82 Assembly-CSharp.dll:.Playerrules
 05524b8f659e7bfe5756d1335fec24ba Assembly-CSharp.dll:.potpower
 1f5e5d32a397a14ea2238e622327a549 Assembly-CSharp.dll:.PauseMenu
 b6bfeb1d7b3c060752971987db1d489c Assembly-CSharp.dll:.Boss1
-a208b5f4ccab6a13dae1575eefe86ff7 Assembly-CSharp.dll:.EnemyManager
+ca60a22161ccf88a7f38928410d998cd Assembly-CSharp.dll:.EnemyManager
 05524b8f659e7bfe5756d1335fec24ba UnityEngine.Advertisements.dll:UnityEngine.Advertisements.CallbackExecutor
 05524b8f659e7bfe5756d1335fec24ba UnityEngine.Advertisements.dll:UnityEngine.Advertisements.Editor.Placeholder
 dd5481137759597d614818793c90a7fe Assembly-CSharp.dll:.ArrowBehaviour
-110aaac254e1a9f70f195fc0fee13a5a Assembly-CSharp.dll:.GameManager
+5be3ff1cdd9894a30c28c8a7cc56783b Assembly-CSharp.dll:.GameManager
 f149f24230a6358c2804c5fae71459a2 Assembly-CSharp.dll:Tiled2Unity.TileAnimator
 dd5481137759597d614818793c90a7fe Assembly-CSharp.dll:.LeftArrowsBehavior
 fc1e0f4d8439d9928083474691511a13 UnityEngine.Networking.dll:UnityEngine.Networking.NetworkAnimator
@@ -201,7 +201,7 @@ e7cc82fe8897044aa37890c5eb3bfb9f Assembly-CSharp.dll:.GameSparksUnity
 b6a4e0f46582e1b4ea27adb53405c4c7 Assembly-CSharp.dll:Tiled2Unity.SpriteDepthInMap
 05524b8f659e7bfe5756d1335fec24ba Assembly-CSharp.dll:.CoinBehavior
 db0ebe82947767175098a5c19c9847b9 Assembly-CSharp.dll:.SceneSwitch
-fd219377e2baf0f806ed289201d76a75 Assembly-CSharp.dll:.TrapManager
+188968159a9947ec38be4de54428bee4 Assembly-CSharp.dll:.TrapManager
 d290070ecf091336e70150a7db25d112 Assembly-CSharp.dll:Tiled2Unity.ObjectLayer
 dd673688ad324dc5fd16ad22882822f0 Assembly-CSharp.dll:.RoomBuilder
 05524b8f659e7bfe5756d1335fec24ba Assembly-CSharp.dll:.GameSparksManager

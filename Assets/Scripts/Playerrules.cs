@@ -260,6 +260,7 @@ public class Playerrules : MonoBehaviour
 			moveY = -moveY;
 			move(moveX,moveY,lastMove);
 		}
+		/* 
 		if (other.gameObject.tag == "Fireball")
 		{
 			Damage(-1);
@@ -267,6 +268,7 @@ public class Playerrules : MonoBehaviour
 			moveY = -moveY;
 			move(moveX,moveY,lastMove);
 		}
+		*/
 		if (other.gameObject.tag == "Coin")
 		{
 			GetComponentInParent<GameManager>().totalCurrency++;
@@ -439,7 +441,6 @@ public class Playerrules : MonoBehaviour
 
 	void spawnTIE()
 	{
-		GetComponentInParent<GameManager>().reset = true;
 		GetComponentInParent<GameManager>().spawnEnemies = true;
 		GetComponentInParent<GameManager>().spawnItems = true;
 		GetComponentInParent<GameManager>().spawnTraps = true;
